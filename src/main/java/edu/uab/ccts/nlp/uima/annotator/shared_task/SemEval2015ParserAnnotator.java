@@ -21,6 +21,8 @@ import org.uimafit.component.JCasAnnotator_ImplBase;
 import org.uimafit.descriptor.ConfigurationParameter;
 import org.uimafit.util.JCasUtil;
 
+import edu.uab.ccts.nlp.shared_task.SemEval2015Constants;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;

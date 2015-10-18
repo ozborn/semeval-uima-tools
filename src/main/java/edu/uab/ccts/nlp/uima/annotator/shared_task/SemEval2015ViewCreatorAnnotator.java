@@ -14,6 +14,8 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.uimafit.descriptor.ConfigurationParameter;
 
+import edu.uab.ccts.nlp.shared_task.SemEval2015Constants;
+
 /**
  * This file reads in SemEval files into the Semeval PIPED_VIEW and the SEMEVAL_TEXT_VIEW
  * @author ozborn
