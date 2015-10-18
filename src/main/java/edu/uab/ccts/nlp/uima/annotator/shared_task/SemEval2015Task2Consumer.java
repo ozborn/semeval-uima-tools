@@ -26,7 +26,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Writes out the ClearClinical results for SemEval2015 (Task 14) Task 2 (formerly Task C)
+ * Writes out results in extended SemEval2015 format (includes multi disease CUIs)
+ * Originally used to writes out the ClearClinical results for 
+ * SemEval2015 (Task 14) Task 2 (formerly Task C)
  * @author ozborn
  *
  */
@@ -38,7 +40,7 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 			name = PARAM_OUTPUT_DIRECTORY,
 			description = "Path to the output directory for Task 2",
 			defaultValue="src/main/resources/template_results/")
-	private String outputDir = resourceDirPath+"template_results/";
+	private String outputDir = "target/semeval_formt_output/";
 	public static boolean VERBOSE = false;
 
 	public static AnalysisEngineDescription createAnnotatorDescription()
@@ -221,4 +223,9 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 		dd.setAttributes(relSpans);
 	}
 
+	public static AnalysisEngineDescription getDescription() throws ResourceInitializationException {
+		return AnalysisEngineFactory.createEngineDescription(SemEval2015Task2Consumer.class);
+	}	
+	
+	
 }
