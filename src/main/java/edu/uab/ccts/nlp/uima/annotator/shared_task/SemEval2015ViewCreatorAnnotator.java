@@ -7,9 +7,9 @@ import org.apache.commons.io.FileUtils;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.cleartk.util.ViewUriUtil;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.cas.CASException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
+import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.uimafit.descriptor.ConfigurationParameter;
@@ -17,15 +17,13 @@ import org.uimafit.descriptor.ConfigurationParameter;
 import edu.uab.ccts.nlp.shared_task.SemEval2015Constants;
 
 /**
- * This file reads in SemEval files into the Semeval PIPED_VIEW and the SEMEVAL_TEXT_VIEW
+ * This file reads in piped annotation SemEval 2015 files into the PIPED_VIEW 
+ * and the text into defeault/GOLD_VIEW
  * @author ozborn
  *
  */
 public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 
-	static final String defaultTrainingPath = "/Users/ozborn/Dropbox/Public_NLP_Data/semeval-2015-task-14_old/semeval-2015-task-14/subtask-c/data/train";
-	static final String updatedTrainingPath = "/Users/ozborn/Dropbox/public_nlp_data/semeval-2015-task-14-updated/data/train";
-	static final String defaultDevelPath = "/Users/ozborn/Dropbox/Public_NLP_Data/semeval-2015-task-14_updated/data/devel";
 
 	/**
 	 * FIXME Does not populate below
@@ -41,17 +39,10 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 	@Override
 	public void process(JCas jcas) throws AnalysisEngineProcessException {
 		JCas pipedView = null, semevalTextView = null;
-		try
-		{
-			pipedView = jcas.createView(SemEval2015Constants.PIPED_VIEW);
-			semevalTextView = jcas; //Use the default/gold view
-		} catch (CASException e)
-		{
-			e.printStackTrace();
-			System.exit(0);
-		}
+		pipedView = JCasUtil.getView(jcas, SemEval2015Constants.PIPED_VIEW, true);
+		semevalTextView = JCasUtil.getView(jcas, SemEval2015Constants.GOLD_VIEW, true);
 		String name = new File(ViewUriUtil.getURI(jcas).getPath()).getName();
-		//System.out.println(ViewUriUtil.getURI(jcas).getPath()); System.out.flush();
+		System.out.println(ViewUriUtil.getURI(jcas).getPath()); System.out.flush();
 		String[] bits = name.split("-");
 		String prefix = bits[0]+"-"+bits[1];
 		//System.out.println("Prefix was:"+prefix);System.out.flush();

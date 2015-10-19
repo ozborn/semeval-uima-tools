@@ -24,6 +24,8 @@ import java.util.List;
 
 /**
  * Based almost entirely on ClearClinical by James Gung, updated for use with ClearClinical 2.0
+ * 
+ * Designed to read in training piped data to PIPED_VIEW, training text to default/GOLD_VIEW
  * @author jgung, ozborn
  *
  */
@@ -84,11 +86,10 @@ public class SemEval2015CollectionReader extends JCasCollectionReader_ImplBase
 
 	public void getNext(JCas jCas) throws IOException, CollectionException
 	{
-		JCas pipedView,appView;
+		JCas pipedView;
 		try
 		{
 			pipedView = jCas.createView(SemEval2015Constants.PIPED_VIEW);
-			appView = jCas.createView(SemEval2015Constants.APP_VIEW);
 		} catch (CASException ce)
 		{
 			throw new CollectionException(ce);
@@ -100,7 +101,6 @@ public class SemEval2015CollectionReader extends JCasCollectionReader_ImplBase
 		String fileText = FileUtils.readFileToString(textFile);
 
 		jCas.setDocumentText(fileText);
-		appView.setDocumentText(fileText);
 		ViewUriUtil.setURI(jCas, textFile.toURI());
 		pipedView.setDocumentText(annotations);
 	}

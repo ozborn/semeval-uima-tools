@@ -7,9 +7,11 @@ import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
+import org.apache.uima.cas.CASRuntimeException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.resource.ResourceInitializationException;
+import org.apache.uima.util.Level;
 import org.cleartk.semeval2015.type.DiseaseDisorder;
 import org.cleartk.semeval2015.type.DiseaseDisorderAttribute;
 import org.cleartk.semeval2015.type.DisorderRelation;
@@ -26,32 +28,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Writes out results in extended SemEval2015 format (includes multi disease CUIs)
  * Originally used to writes out the ClearClinical results for 
- * SemEval2015 (Task 14) Task 2 (formerly Task C)
+ * SemEval2015 (Task 14) Task 2 (formerly Task C) using APPLICATION_VIEW,
+ * where it assumes the text and annotations are
+ * 
+ * Now additionally writes out results in extended SemEval2015 format 
+ * (includes multi disease CUIs). If the APPLICATION_VIEW is not there,
+ * then it looks in the default view for DiseaseDisorders 
  * @author ozborn
  *
  */
 public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 	
 	public static final String PARAM_OUTPUT_DIRECTORY = "outputDir";
-	public static String resourceDirPath = "src/main/resources/";
 	@ConfigurationParameter(
 			name = PARAM_OUTPUT_DIRECTORY,
-			description = "Path to the output directory for Task 2",
-			defaultValue="src/main/resources/template_results/")
+			description = "Path to the output directory for SemEval Annotations",
+			defaultValue="target/template_results/")
 	private String outputDir = "target/semeval_formt_output/";
+	
+	
 	public static boolean VERBOSE = false;
-
-	public static AnalysisEngineDescription createAnnotatorDescription()
-			throws ResourceInitializationException
-	{
-
-		return AnalysisEngineFactory.createPrimitiveDescription(
-				SemEval2015Task2Consumer.class,
-				SemEval2015Task2Consumer.PARAM_OUTPUT_DIRECTORY,
-				resourceDirPath + "semeval-2015-task-14/subtask-c/data");
-	}
 	
 	public void initialize(UimaContext context) throws ResourceInitializationException
 	{
@@ -75,13 +72,18 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 	public void process(JCas aJCas) throws AnalysisEngineProcessException
 	{
 		JCas appView = null;
-		//Should be using appView, need to copy in annotations to appView for testing
 		try
 		{
-			appView = aJCas.getView(SemEval2015Constants.APP_VIEW);
-		} catch (CASException e)
+			appView = JCasUtil.getView(aJCas,SemEval2015Constants.APP_VIEW,aJCas.getView(SemEval2015Constants.GOLD_VIEW));
+			if(!JCasUtil.exists(appView, DiseaseDisorder.class)) {
+				this.getContext().getLogger().log(Level.SEVERE,
+						"No DiseaseDisorders found in either APP_VIEW or GOLD_VIEW/default");
+					throw new AnalysisEngineProcessException("No DiseaseDisorders in View",null);
+			}
+		} catch (Exception e)
 		{
 			e.printStackTrace();
+			throw new AnalysisEngineProcessException(e);
 		}
 
 		String docid = null;
@@ -99,7 +101,7 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 			for (DiseaseDisorder ds : JCasUtil.select(appView, DiseaseDisorder.class))
 			{
 				associateSpans(appView, ds);
-				String results = getDiseaseDisorderSemEval2015Format(aJCas, docid, ds);
+				String results = getDiseaseDisorderSemEval2015Format(docid, ds);
 				if (VERBOSE) System.out.println(results);
 				writer.write(results + "\n");
 			}
@@ -113,7 +115,7 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 	/**
 	 * FIXME Need to handle multiple lines
 	 */
-	private String getDiseaseDisorderSemEval2015Format(JCas jcas, String docid, DiseaseDisorder dd)
+	private String getDiseaseDisorderSemEval2015Format(String docid, DiseaseDisorder dd)
 	{
 		StringBuffer output_lines = new StringBuffer(2000);
 		output_lines.append(docid);
@@ -194,7 +196,7 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 		return norm + SemEval2015Constants.OUTPUT_SEPERATOR + cue + SemEval2015Constants.OUTPUT_SEPERATOR;
 	}
 
-	public static void associateSpans(JCas jCas, DiseaseDisorder dd)
+	public static FSArray associateSpans(JCas jCas, DiseaseDisorder dd)
 	{
 		List<DiseaseDisorderAttribute> atts = new ArrayList<>();
 		if(!JCasUtil.exists(jCas, DisorderRelation.class)) System.out.println("No disorder relations!");
@@ -221,11 +223,27 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 			relSpans.set(i, ds);
 		}
 		dd.setAttributes(relSpans);
+		return relSpans;
 	}
 
+	
 	public static AnalysisEngineDescription getDescription() throws ResourceInitializationException {
 		return AnalysisEngineFactory.createEngineDescription(SemEval2015Task2Consumer.class);
 	}	
 	
+	
+	/**
+	 * Returns a descriptor for a Consumer that writes annotations to target directory
+	 * @param target_directory
+	 * @return
+	 * @throws ResourceInitializationException
+	 */
+	public static AnalysisEngineDescription getCuilessDescription(String target_directory) throws ResourceInitializationException {
+		return AnalysisEngineFactory.createEngineDescription(
+				SemEval2015Task2Consumer.class
+				,PARAM_OUTPUT_DIRECTORY
+				,target_directory
+				);
+	}	
 	
 }

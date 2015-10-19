@@ -6,10 +6,12 @@ import org.apache.uima.cas.CAS;
 
 public class SemEval2015Constants
 {
+		//INPUT text to apply information extraction to
+        public static final String APP_VIEW = "APPLICATION_VIEW"; //Document text is that which the application (ClearClinical) is trying to annotate
 
-        public static final String APP_VIEW = "APPLICATION_VIEW"; //Has input un-annotated text
-        public static final String PIPED_VIEW = "PIPE_VIEW";
-        public static final String GOLD_VIEW = CAS.NAME_DEFAULT_SOFA; //Has input gold text
+        //Views for INPUT text and annotations for training
+        public static final String PIPED_VIEW = "PIPE_VIEW"; //SemEval 2015 Task 14 INPUT piped text
+        public static final String GOLD_VIEW = CAS.NAME_DEFAULT_SOFA; //SemEval 2015 Task 14 INPUT text (for training classifier)
         
         
         public static final String SEMEVAL_PIPED_EXTENSION = "pipe";
@@ -53,8 +55,13 @@ public class SemEval2015Constants
                 defaultNorms.put(TEMPORAL_RELATION, "none");
         }
 
-	public static final String defaultTrainingPath = "/Users/ozborn/Dropbox/Public_NLP_Data/semeval-2015-task-14_old/semeval-2015-task-14/subtask-c/data/train";
-	public static final String defaultDevelPath = "/Users/ozborn/Dropbox/Public_NLP_Data/semeval-2015-task-14_updated/data/devel";
+    /** Must be constants for params, change as needed */
+	public static final String updatedTrainingPath = 
+			"/Users/ozborn/Dropbox/public_nlp_data/semeval-2015-task-14-updated/data/train";
+	public static final String defaultTrainingPath = 
+			"/Users/ozborn/Dropbox/Public_NLP_Data/semeval-2015-task-14_old/semeval-2015-task-14/subtask-c/data/train";
+	public static final String defaultDevelPath = 
+			"/Users/ozborn/Dropbox/Public_NLP_Data/semeval-2015-task-14_updated/data/devel";
 	public static final String[] semevalExtensions = {
 	SEMEVAL_TEXT_FILE_EXTENSION};
 
