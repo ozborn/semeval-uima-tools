@@ -6,8 +6,6 @@ import org.apache.ctakes.typesystem.type.structured.DocumentID;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.cas.CASException;
-import org.apache.uima.cas.CASRuntimeException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.resource.ResourceInitializationException;
@@ -39,17 +37,17 @@ import java.util.List;
  *
  */
 public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
-	
+
 	public static final String PARAM_OUTPUT_DIRECTORY = "outputDir";
 	@ConfigurationParameter(
 			name = PARAM_OUTPUT_DIRECTORY,
 			description = "Path to the output directory for SemEval Annotations",
 			defaultValue="target/template_results/")
 	private String outputDir = "target/semeval_formt_output/";
-	
-	
+
+
 	public static boolean VERBOSE = false;
-	
+
 	public void initialize(UimaContext context) throws ResourceInitializationException
 	{
 		super.initialize(context);
@@ -72,29 +70,33 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 	public void process(JCas aJCas) throws AnalysisEngineProcessException
 	{
 		JCas appView = null;
+		String docid = null, filepath = null;
 		try
 		{
 			appView = JCasUtil.getView(aJCas,SemEval2015Constants.APP_VIEW,aJCas.getView(SemEval2015Constants.GOLD_VIEW));
 			if(!JCasUtil.exists(appView, DiseaseDisorder.class)) {
-				this.getContext().getLogger().log(Level.SEVERE,
+				this.getContext().getLogger().log(Level.WARNING,
 						"No DiseaseDisorders found in either APP_VIEW or GOLD_VIEW/default");
-					throw new AnalysisEngineProcessException("No DiseaseDisorders in View",null);
 			}
+
+			for (DocumentID di : JCasUtil.select(appView, DocumentID.class))
+			{
+				docid = di.getDocumentID();
+				break;
+			}
+			if(docid==null) {
+				this.getContext().getLogger().log(Level.WARNING,
+						"No DocumentID found in either APP_VIEW or GOLD_VIEW/default");
+				return;
+			}
+			filepath = outputDir + File.separator +
+					docid.substring(0, docid.length() - 4) + "pipe";
+
 		} catch (Exception e)
 		{
 			e.printStackTrace();
 			throw new AnalysisEngineProcessException(e);
 		}
-
-		String docid = null;
-		for (DocumentID di : JCasUtil.select(appView, DocumentID.class))
-		{
-			docid = di.getDocumentID();
-			break;
-		}
-
-		String filepath = outputDir + File.separator +
-				docid.substring(0, docid.length() - 4) + "pipe";
 		try
 		{
 			Writer writer = new FileWriter(filepath);
@@ -126,7 +128,7 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 			DisorderSpan ds = (DisorderSpan) spans.get(i);
 			output_lines.append(ds.getBegin() + "-" + ds.getEnd());
 			if (i != spans.size() - 1) output_lines.append(",");
-//			System.out.print(ds.getCoveredText() + "\t");
+			//			System.out.print(ds.getCoveredText() + "\t");
 		}
 		output_lines.append(SemEval2015Constants.OUTPUT_SEPERATOR);
 		output_lines.append(dd.getCui());
@@ -142,7 +144,7 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 		output_lines.append(fetchAttributeString(atts, SemEval2015Constants.BODY_RELATION));
 		//output_lines.append(fetchAttributeString(atts, SemEval2015Constants.DOCTIME_RELATION));
 		//output_lines.append(fetchAttributeString(atts, SemEval2015Constants.TEMPORAL_RELATION));
-//		System.out.println();
+		//		System.out.println();
 		return output_lines.toString();
 	}
 
@@ -166,23 +168,25 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 						FSArray attspans = dda.getSpans();
 						if (attspans == null)
 						{
-//							System.out.println(dda.getBegin() + " to " + dda.getEnd() + " has no atts!!!!");
+							//							System.out.println(dda.getBegin() + " to " + dda.getEnd() + " has no atts!!!!");
 							continue;
 						}
 						for (int j = 0; j < attspans.size(); j++)
 						{
-							DiseaseDisorderAttribute ds = (DiseaseDisorderAttribute) attspans.get(j);
+							//Not sure why this used to try to get DiseaseDisorderAttribute instead of spans
+							//DiseaseDisorderAttribute ds = (DiseaseDisorderAttribute) attspans.get(j);
+							DisorderSpan ds = (DisorderSpan) attspans.get(j);
 							if (j == 0) cue = (ds.getBegin() + "-" + ds.getEnd());
 							else
 							{
 								cue = cue + "," + ds.getBegin() + "-" + ds.getEnd();
 							}
-//							System.out.print(ds.getCoveredText() + "\t");
+							//							System.out.print(ds.getCoveredText() + "\t");
 
 						}
 						String out = norm + SemEval2015Constants.OUTPUT_SEPERATOR + cue;
-//						if (type.equals(SemEval2015Constants.BODY_RELATION))
-							out += SemEval2015Constants.OUTPUT_SEPERATOR;
+						//						if (type.equals(SemEval2015Constants.BODY_RELATION))
+						out += SemEval2015Constants.OUTPUT_SEPERATOR;
 						return out;
 					} else if (!type.equals(SemEval2015Constants.BODY_RELATION)){
 						return norm;
@@ -226,12 +230,12 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 		return relSpans;
 	}
 
-	
+
 	public static AnalysisEngineDescription getDescription() throws ResourceInitializationException {
 		return AnalysisEngineFactory.createEngineDescription(SemEval2015Task2Consumer.class);
 	}	
-	
-	
+
+
 	/**
 	 * Returns a descriptor for a Consumer that writes annotations to target directory
 	 * @param target_directory
@@ -245,5 +249,5 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 				,target_directory
 				);
 	}	
-	
+
 }
