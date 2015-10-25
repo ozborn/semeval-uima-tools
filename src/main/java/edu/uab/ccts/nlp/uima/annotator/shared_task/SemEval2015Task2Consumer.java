@@ -55,7 +55,7 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 			File out = new File(outputDir);
 			if (!out.exists())
 			{
-				if (!out.mkdir()) System.out.println("Could not make directory " + outputDir);
+				if (!out.mkdirs()) System.out.println("Could not make directory " + outputDir);
 			} else
 			{
 				if (VERBOSE) System.out.println(outputDir + " exists!");
@@ -184,20 +184,13 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 							//							System.out.print(ds.getCoveredText() + "\t");
 
 						}
-						String out = norm + SemEval2015Constants.OUTPUT_SEPERATOR + cue;
-						//						if (type.equals(SemEval2015Constants.BODY_RELATION))
-						out += SemEval2015Constants.OUTPUT_SEPERATOR;
-						return out;
-					} else if (!type.equals(SemEval2015Constants.BODY_RELATION)){
-						return norm;
-					} else
-					{
-						return norm + SemEval2015Constants.OUTPUT_SEPERATOR;
-					}
+					} 
 				}
 			}
 		}
-		return norm + SemEval2015Constants.OUTPUT_SEPERATOR + cue + SemEval2015Constants.OUTPUT_SEPERATOR;
+		String out = norm + SemEval2015Constants.OUTPUT_SEPERATOR + cue;
+		if (!type.equals(SemEval2015Constants.BODY_RELATION)) out += SemEval2015Constants.OUTPUT_SEPERATOR;
+		return out;
 	}
 
 	public static FSArray associateSpans(JCas jCas, DiseaseDisorder dd)

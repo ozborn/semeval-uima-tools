@@ -1,0 +1,2 @@
+classpath*:desc/types/**/*.xml
+classpath*:semeval2015/TypeSystem.xml

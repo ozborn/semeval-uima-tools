@@ -29,6 +29,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * This should be the parser of choice to read in
+ * the multiCUI/multi attribute annotations of SemEval2015
+ * (not SemEval2015TaskCGoldAnnotator which is deprecated)
+ * The previous disease component does not appear to be working though.
+ * This should be moved to the semeval project FIXME
+ * @author ozborn
+ *
+ */
 public class SemEval2015ParserAnnotator extends JCasAnnotator_ImplBase
 {
 	public static final String PARAM_TRAINING = "training";
@@ -133,7 +142,7 @@ public class SemEval2015ParserAnnotator extends JCasAnnotator_ImplBase
 		}
 		List<DisorderSpan> usedSpans = new ArrayList<>();
 		List<DisorderSpan> prevSpans = new ArrayList<>();
-		DiseaseDisorder prev_disease = null;
+		DiseaseDisorder prev_disease = null; //FIXME
 		List<List<DisorderSpan>> disjointSpans = new ArrayList<>();
 		String docId = "";
 		for (String line : pipedView.getDocumentText().split("\n"))
@@ -187,7 +196,7 @@ public class SemEval2015ParserAnnotator extends JCasAnnotator_ImplBase
 					text = text.replaceAll("\\s+", " ");
 					stringCUIMap.put(text, cui);
 				}
-				//Determine if we have seen this disease before
+				//Determine if we have seen this disease before FIXME (not using previous disease)
 				//Required to handle situation where next line is NOT a new disease but an additional anatomical mapping
 				boolean seen_before = true;
 				for(int i=0;i<spans.size();i++){
@@ -200,6 +209,8 @@ public class SemEval2015ParserAnnotator extends JCasAnnotator_ImplBase
 				if(seen_before) {
 					System.out.println(docId+" seen before!"+line); System.out.flush();
 				}
+				
+				/** PREVIOUS STUFF NOT WORKING? **/
 				/*
 	List<DiseaseDisorderAttribute> temp = new ArrayList<DiseaseDisorderAttribute>();
 	DiseaseDisorderAttribute prevbody = null;
