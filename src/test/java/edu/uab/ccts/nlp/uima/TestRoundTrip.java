@@ -35,15 +35,13 @@ public class TestRoundTrip extends TestCase {
     
 	
 	public void testRoundTrip() throws ResourceInitializationException{
-		runRoundTrip(SemEval2015Constants.defaultDevelPath);
-		/*
-		runRoundTrip(SemEval2015Constants.defaultTrainingPath);
-		runRoundTrip(SemEval2015Constants.updatedTrainingPath);
-		*/
+		runRoundTrip(SemEval2015Constants.defaultDevelPath,"target/test/roundtrip/devel");
+		runRoundTrip(SemEval2015Constants.defaultTrainingPath,"target/test/roundtrip/train");
+		runRoundTrip(SemEval2015Constants.updatedTrainingPath,"target/test/roundtrip/updated_train");
 	}
 	
 	
-	public boolean runRoundTrip(String input_dir) throws ResourceInitializationException{
+	public boolean runRoundTrip(String input_dir, String output_dir) throws ResourceInitializationException{
 		
 		boolean passed=false;
 		String textfilepostfix[] = {SemEval2015Constants.SEMEVAL_PIPED_EXTENSION};
@@ -58,7 +56,7 @@ public class TestRoundTrip extends TestCase {
 		
 		AggregateBuilder builder = new AggregateBuilder();
 		builder.add(SemEval2015ParserAnnotator.getDescription());
-		builder.add(SemEval2015Task2Consumer.getCuilessDescription("target/test/roundtrip"));
+		builder.add(SemEval2015Task2Consumer.getCuilessDescription(output_dir));
 		for (JCas jcas : SimplePipeline.iteratePipeline(crd, builder.createAggregateDescription())) {}
 		return passed;
 	}
