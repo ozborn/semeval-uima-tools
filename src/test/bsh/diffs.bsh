@@ -1,3 +1,4 @@
-diff -riw ../../../target/test/roundtrip /Users/ozborn/Dropbox/Public_NLP_Data/semeval-2015-task-14_updated/data/devel/discharge | grep C > ../../../target/test/devel_updated
-diff -riw ../../../target/test/roundtrip /Users/ozborn/Dropbox/Public_NLP_Data/semeval-2015-task-14_old/semeval-2015-task-14/subtask-c/data/train | grep C > ../../../target/test/train_default
-diff -riw ../../../target/test/roundtrip /Users/ozborn/Dropbox/Public_NLP_Data/semeval-2015-task-14_updated/data/train | grep C > ../../../target/test/train_updated
+# Recursive diff not available on Mac? Maybe just Yosemite...
+diff -iw ../../../target/test/roundtrip/devel /Users/ozborn/Dropbox/Public_NLP_Data/semeval-2015-task-14_updated/data/devel/discharge | grep C > ../../../target/test/devel_updated
+diff -iw ../../../target/test/roundtrip/train /Users/ozborn/Dropbox/Public_NLP_Data/semeval-2015-task-14_old/semeval-2015-task-14/subtask-c/data/all_train | grep C > ../../../target/test/train_default
+diff -riw ../../../target/test/roundtrip/updated_train /Users/ozborn/Dropbox/Public_NLP_Data/semeval-2015-task-14_updated/data/all_train | grep C > ../../../target/test/train_updated
