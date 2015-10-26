@@ -100,13 +100,16 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 		try
 		{
 			Writer writer = new FileWriter(filepath);
+			//TreeSet<String> ordered_doc = new TreeSet<String>();
 			for (DiseaseDisorder ds : JCasUtil.select(appView, DiseaseDisorder.class))
 			{
 				associateSpans(appView, ds);
 				String results = getDiseaseDisorderSemEval2015Format(docid, ds);
+				//ordered_doc.add(results);
 				if (VERBOSE) System.out.println(results);
-				writer.write(results + "\n");
+				writer.write(results + "\n"); 
 			}
+			//for(String s : ordered_doc) { writer.write(s + "\n"); }
 			writer.close();
 		} catch (Exception e)
 		{
@@ -117,7 +120,7 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 	/**
 	 * FIXME Need to handle multiple lines
 	 */
-	private String getDiseaseDisorderSemEval2015Format(String docid, DiseaseDisorder dd)
+	private String getDiseaseDisorderSemEval2015Format(String docid, DiseaseDisorder dd )
 	{
 		StringBuffer output_lines = new StringBuffer(2000);
 		output_lines.append(docid);
@@ -131,7 +134,10 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 			//			System.out.print(ds.getCoveredText() + "\t");
 		}
 		output_lines.append(SemEval2015Constants.OUTPUT_SEPERATOR);
-		output_lines.append(dd.getCui());
+		for(int i=0;i<dd.getCuis().size();i++){
+			if(i!=dd.getCuis().size()-1) output_lines.append(dd.getCuis(i)+" ");
+			else output_lines.append(dd.getCuis(i));
+		}
 		output_lines.append(SemEval2015Constants.OUTPUT_SEPERATOR);
 		FSArray atts = dd.getAttributes();
 		output_lines.append(fetchAttributeString(atts, SemEval2015Constants.NEGATION_RELATION));

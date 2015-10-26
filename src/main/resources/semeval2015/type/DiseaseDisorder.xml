@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
 	<name>DiseaseDisorder</name>
-	<description></description>
-	<version></version>
-	<vendor></vendor>
+	<description/>
+	<version/>
+	<vendor/>
 	<imports>
 		<import name="org.cleartk.score.type.TypeSystem"/>
 		<import name="org.apache.ctakes.typesystem.types.TypeSystem"/>
@@ -31,9 +31,9 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-					<name>cui</name>
-					<description></description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
+					<name>cuis</name>
+					<description/>
+					<rangeTypeName>uima.cas.StringArray</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>

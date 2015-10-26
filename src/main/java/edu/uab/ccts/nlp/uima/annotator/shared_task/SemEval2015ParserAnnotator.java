@@ -11,6 +11,7 @@ import org.apache.uima.cas.CASException;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
+import org.apache.uima.jcas.cas.StringArray;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.cleartk.semeval2015.type.DiseaseDisorder;
 import org.cleartk.semeval2015.type.DiseaseDisorderAttribute;
@@ -34,7 +35,6 @@ import java.util.List;
  * the multiCUI/multi attribute annotations of SemEval2015
  * (not SemEval2015TaskCGoldAnnotator which is deprecated)
  * The previous disease component does not appear to be working though.
- * This should be moved to the semeval project FIXME
  * @author ozborn
  *
  */
@@ -140,10 +140,10 @@ public class SemEval2015ParserAnnotator extends JCasAnnotator_ImplBase
 			e.printStackTrace();
 			System.exit(0);
 		}
-		List<DisorderSpan> usedSpans = new ArrayList<>();
-		List<DisorderSpan> prevSpans = new ArrayList<>();
-		DiseaseDisorder prev_disease = null; //FIXME
-		List<List<DisorderSpan>> disjointSpans = new ArrayList<>();
+		
+		//Set up document level holders for disease
+		ArrayList<DiseaseDisorder> docdiseases = new ArrayList<DiseaseDisorder>(pipedView.getDocumentText().split("\n").length);
+		List<List<DisorderSpan>> disjointSpans = new ArrayList<>(); //Keep track of to add in relation
 		String docId = "";
 		for (String line : pipedView.getDocumentText().split("\n"))
 		{
@@ -155,38 +155,29 @@ public class SemEval2015ParserAnnotator extends JCasAnnotator_ImplBase
 				continue;
 			}
 			docId = fields[dd_doc];
-			String cui = fields[dd_cui];
-			//if(cui.equalsIgnoreCase("cui-less")) System.out.println("Found cuiless in:"+fields[0]);
+			String cui_string = fields[dd_cui];
+			
+			//Handle Discontinuous Spans
 			String[] ddSpans = fields[dd_spans].split(",");
-			ArrayList<DisorderSpan> spans = new ArrayList<>();
+			ArrayList<DisorderSpan> cur_spans = new ArrayList<>();
+			FSArray prev_spans = null;
 			String text = "";
 			try
 			{
-				for (String ddSpan : ddSpans)
-				{
+				if(docdiseases.size()!=0) {
+					DiseaseDisorder prev_disease = docdiseases.get(docdiseases.size()-1);
+					prev_spans = prev_disease.getSpans();
+				}
+				for (String ddSpan : ddSpans) {
 					String[] startBegin = ddSpan.split("-");
 					int begin = Integer.parseInt(startBegin[0]);
 					int end = Integer.parseInt(startBegin[1]);
-					DisorderSpan disorder = null;
-					for (DisorderSpan s : usedSpans)
-					{
-						if (s.getBegin() == begin && s.getEnd() == end)
-						{
-							disorder = s;
-							break;
-						}
-					}
-					if (disorder == null)
-					{
-						disorder = new DisorderSpan(goldTextView, begin, end);
-						//Should be using appView, need to copy in annotations to appView for testing
-						disorder.setChunk("");
-						disorder.setCui(cui);
-						disorder.addToIndexes(goldTextView);
-						usedSpans.add(disorder);
-					}
-					spans.add(disorder);
-					String disorderText = disorder.getCoveredText().trim().toLowerCase();
+					DisorderSpan dspan = new DisorderSpan(goldTextView, begin, end);
+					dspan.setChunk("");
+					dspan.setCui(cui_string);
+					dspan.addToIndexes(goldTextView);
+					cur_spans.add(dspan);
+					String disorderText = dspan.getCoveredText().trim().toLowerCase();
 					text += disorderText + " "; //Used only for CUI map
 				}
 				text = text.trim();
@@ -194,14 +185,14 @@ public class SemEval2015ParserAnnotator extends JCasAnnotator_ImplBase
 				{
 					text = text.replaceAll("[\\s\\r\\n]", " "); // replace any newline characters and whatnot
 					text = text.replaceAll("\\s+", " ");
-					stringCUIMap.put(text, cui);
+					stringCUIMap.put(text, cui_string);
 				}
-				//Determine if we have seen this disease before FIXME (not using previous disease)
+				//Determine if we have seen this disease before 
 				//Required to handle situation where next line is NOT a new disease but an additional anatomical mapping
 				boolean seen_before = true;
-				for(int i=0;i<spans.size();i++){
-					DisorderSpan cur = spans.get(i);
-					if(prevSpans==null || !spanSeenBefore(cur,prevSpans)){
+				for(int i=0;i<cur_spans.size();i++){
+					DisorderSpan cur = cur_spans.get(i);
+					if(prev_spans==null || !spanSeenBefore(cur,prev_spans)){
 						seen_before = false;
 						break;
 					}
@@ -209,78 +200,17 @@ public class SemEval2015ParserAnnotator extends JCasAnnotator_ImplBase
 				if(seen_before) {
 					System.out.println(docId+" seen before!"+line); System.out.flush();
 				}
-				
-				/** PREVIOUS STUFF NOT WORKING? **/
-				/*
-	List<DiseaseDisorderAttribute> temp = new ArrayList<DiseaseDisorderAttribute>();
-	DiseaseDisorderAttribute prevbody = null;
-	DiseaseDisorderAttribute prevcourse = null;
-	DiseaseDisorderAttribute prevsubject = null;
-	FSArray prevatts = prev_disease.getAttributes();
-	for (int i=0;i<prevatts.size();i++){
-	DiseaseDisorderAttribute cur = (DiseaseDisorderAttribute) prevatts.get(i);
-	if(cur.getAttributeType().equals(SemEval2015Constants.BODY_RELATION)){
-	prevbody = cur;
-	} else if(cur.getAttributeType().equals(SemEval2015Constants.COURSE_RELATION)){
-	prevcourse = cur;
-	} else if(cur.getAttributeType().equals(SemEval2015Constants.SUBJECT_RELATION)){
-	prevsubject = cur;
-	}
-	}
-	while(temp.size()==0) {
-	extractAttribute(jCas, temp, fields,
-	bl_norm,bl_cue,SemEval2015Constants.BODY_RELATION);
-	if(temp.size()!=0 && prevbody!=null){
-	DiseaseDisorderAttribute bodytest = temp.get(0);
-	if(bodytest.getBegin()!=prevbody.getBegin()||
-	bodytest.getEnd()!=prevbody.getEnd()) {
-	System.out.println("Same disease, different body location");
-	break;
-	}
-	}
-	extractAttribute(jCas, temp, fields,
-	cc_norm,cc_cue,SemEval2015Constants.COURSE_RELATION);
-	if(temp.size()!=0 && prevcourse!=null){
-	DiseaseDisorderAttribute coursetest = temp.get(0);
-	if(coursetest.getBegin()!=prevcourse.getBegin()||
-	coursetest.getEnd()!=prevcourse.getEnd()) {
-	System.out.println("Difference is course!");
-	break;
-	}
-	}
-	extractAttribute(jCas, temp, fields,
-	sc_norm,sc_cue,SemEval2015Constants.SUBJECT_RELATION);
-	if(temp.size()!=0 && prevsubject!=null){
-	DiseaseDisorderAttribute subjecttest = temp.get(0);
-	if(subjecttest.getBegin()!=prevsubject.getBegin()||
-	subjecttest.getEnd()!=prevsubject.getEnd()) {
-	System.out.println("Same disease, different subject!");
-	break;
-	}
-	}
-	System.out.println("Failed to find diff...");
-	System.exit(0);
-	}
-	FSArray joineddiseaseAttributes = new FSArray(jCas,prev_disease.getAttributes().size()+1);
-	FSArray prevdiseaseAttributes = prev_disease.getAttributes();
-	for(int j=0;j<prevdiseaseAttributes.size();j++){
-	joineddiseaseAttributes.set(j,prevdiseaseAttributes.get(j));
-	}
-	joineddiseaseAttributes.set(prev_disease.getAttributes().size(),temp.remove(0));
-	prev_disease.setAttributes(joineddiseaseAttributes);
-	}
-				 */
-				if (spans.size() > 1) /* multi-span disorder */
+				if (cur_spans.size() > 1) /* multi-span disorder */
 				{
-					disjointSpans.add(spans);
+					disjointSpans.add(cur_spans);
 				}
 				//Set up disease
 				DiseaseDisorder disease = new DiseaseDisorder(goldTextView);
-				FSArray relSpans = new FSArray(goldTextView, spans.size());
+				FSArray relSpans = new FSArray(goldTextView, cur_spans.size());
 				int min_begin = -1, max_end = -1;
-				for (int i = 0; i < spans.size(); i++)
+				for (int i = 0; i < cur_spans.size(); i++)
 				{
-					DisorderSpan ds = spans.get(i);
+					DisorderSpan ds = cur_spans.get(i);
 					if (ds.getBegin() < min_begin || min_begin == -1) min_begin = ds.getBegin();
 					if (ds.getEnd() > max_end) max_end = ds.getEnd();
 					relSpans.set(i, ds);
@@ -288,7 +218,13 @@ public class SemEval2015ParserAnnotator extends JCasAnnotator_ImplBase
 				disease.setSpans(relSpans);
 				disease.setBegin(min_begin);
 				disease.setEnd(max_end);
-				disease.setCui(cui);
+				String[] cuis = cui_string.split(" ");
+				StringArray usa = new StringArray(goldTextView,cuis.length);
+				for(int i=0;i<cuis.length;i++){ usa.set(i,cuis[i]); }
+				usa.addToIndexes();
+				disease.setCuis(usa);
+
+				docdiseases.add(disease);
 				disease.addToIndexes(goldTextView);
 				/* Extract attributes */
 				extractAttribute(goldTextView, diseaseAtts, fields,
@@ -348,8 +284,6 @@ public class SemEval2015ParserAnnotator extends JCasAnnotator_ImplBase
 				}
 				disease.setAttributes(diseaseAttributes);
 				//System.out.println("Disease ("+fields[1]+") in "+fields[0]+" set "+diseaseAttributes.size()+" attributes.");
-				prevSpans = spans;
-				prev_disease = disease;
 			} catch (NumberFormatException e)
 			{
 				System.out.println("Piped format error in line: " + line);
@@ -407,11 +341,10 @@ public class SemEval2015ParserAnnotator extends JCasAnnotator_ImplBase
 	 * @param prevSpans
 	 * @return
 	 */
-	private boolean spanSeenBefore(DisorderSpan ds, List<DisorderSpan> prevSpans){
+	private boolean spanSeenBefore(DisorderSpan ds, FSArray prevSpans){
 		for(int j=0;j<prevSpans.size();j++){
-			DisorderSpan old = prevSpans.get(j);
+			DisorderSpan old = (DisorderSpan) prevSpans.get(j);
 			if(ds.getBegin()==old.getBegin() && ds.getEnd()==old.getEnd()) {
-				System.out.println("See before:"+ds.getBegin()+"-"+ds.getEnd());
 				return true;
 			}
 		}
