@@ -31,8 +31,7 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 	public static final String PARAM_TRAINING_PATH = "SemEval2015TrainingPath";
 	@ConfigurationParameter(
 			name = PARAM_TRAINING_PATH,
-			description = "path to training directory",
-			defaultValue = SemEval2015Constants.defaultTrainingPath)
+			description = "path to training directory")
 	private String SemEval2015TrainingPath = SemEval2015Constants.defaultTrainingPath; //Needed default not working FIXME
 
 
