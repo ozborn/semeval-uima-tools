@@ -57,11 +57,14 @@ public class SemEval2015Constants
 
     /** Must be constants for params, change as needed */
 	public static final String updatedTrainingPath = 
-			"/Users/ozborn/Dropbox/Public_NLP_Data/semeval-2015-task-14_updated/data/train";
+			System.getProperty("user.home")+
+			"/Dropbox/Public_NLP_Data/semeval-2015-task-14_updated/data/train";
 	public static final String defaultTrainingPath = 
-			"/Users/ozborn/Dropbox/Public_NLP_Data/semeval-2015-task-14_old/semeval-2015-task-14/subtask-c/data/train";
+			System.getProperty("user.home")+
+			"/Dropbox/Public_NLP_Data/semeval-2015-task-14_old/semeval-2015-task-14/subtask-c/data/train";
 	public static final String defaultDevelPath = 
-			"/Users/ozborn/Dropbox/Public_NLP_Data/semeval-2015-task-14_updated/data/devel";
+			System.getProperty("user.home")+
+			"/Dropbox/Public_NLP_Data/semeval-2015-task-14_updated/data/devel";
 
 
 }
