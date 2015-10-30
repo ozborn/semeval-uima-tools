@@ -110,7 +110,7 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 		}
 		return cuiMap;
 	}
-	public static void createAttributeRelation(JCas jCas, DiseaseDisorder disease, DiseaseDisorderAttribute att)
+	public static void createDiseaseAttributeRelation(JCas jCas, DiseaseDisorder disease, DiseaseDisorderAttribute att)
 	{
 		for (DisorderSpan span : JCasUtil.select(disease.getSpans(), DisorderSpan.class))
 		{
@@ -334,7 +334,7 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 			bl.setSpans(attspans);
 			bl.addToIndexes();
 			dAtts.add(bl);
-			createAttributeRelation(jCas, disease, bl);
+			createDiseaseAttributeRelation(jCas, disease, bl);
 		}
 	}
 	/**
@@ -412,6 +412,13 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 	
 	public static AnalysisEngineDescription getDescription() throws ResourceInitializationException {
 		return AnalysisEngineFactory.createEngineDescription(SemEval2015GoldAttributeParserAnnotator.class);
+	}
+	
+	
+	public static AnalysisEngineDescription getTestingDescription() throws ResourceInitializationException {
+		return AnalysisEngineFactory.createEngineDescription(SemEval2015GoldAttributeParserAnnotator.class,
+				SemEval2015GoldAttributeParserAnnotator.PARAM_TRAINING, false,
+				SemEval2015GoldAttributeParserAnnotator.PARAM_CUI_MAP,"src/main/resources/data/cuiMap.txt");
 	}
 
 }

@@ -27,7 +27,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>stype</name>
-					<description>UMLS Semantic Type</description>
+					<description>UMLS Semantic Type, can be comma separated if there are multiple types</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>

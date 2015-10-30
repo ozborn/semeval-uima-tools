@@ -1,0 +1,3656 @@
+systolic hypertension	C0221155
+esophageal leak	C0341563
+cce	CUI-less
+hiatal hernia	C0019284
+atypical uroepithelial cells	C0522580
+tension ptx	C0264558
+combativeness	CUI-less
+strep a	C0554628
+atypical pneumonia	C1412002
+drunk	C0001969
+thrombi left ventricle	C0587044
+ascites	CUI-less
+right ventricular systolic function depressed	CUI-less
+dysarthira	C0013362
+presyncopal events	C0700200
+vomimitting	C0042963
+platelet count decreased	CUI-less
+poor ejection fraction	CUI-less
+right ventricular hypertrophied	C0162770
+t wave inversions in 2	C0520888
+brain stem reflexes	CUI-less
+neck stiffness	C0151315
+mitral valve disease	C0026265
+ileus	C1258215
+anteroinferior st elevations	CUI-less
+hearing loss	CUI-less
+alzheimer's dementia	C0002395
+cmv positive	CUI-less
+decreased responsiveness	C0478662
+cardiac issues	CUI-less
+hemotympanum	C0019125
+heart irreg irreg	CUI-less
+rul pneumonia	C0585106
+anteroseptal myocardial infarction	C0264699
+abd scaphoid	C0238532
+trapped left lower lobe	C2242587
+hemorrhagic contusion	CUI-less
+pulmonary vascular congestion	C0242073
+c	C0085593
+short of breath	C0013404
+d	C0011991
+e	C0013604
+asymptomatic	CUI-less
+f	CUI-less
+g	CUI-less
+ascitic	CUI-less
+tonsillar cancer	C0558355
+m	CUI-less
+blood	CUI-less
+n	C0027497
+right dominant heart	C0345135
+r	CUI-less
+s	CUI-less
+fixed pupils	CUI-less
+v	C0042963
+w	C0043144
+tibial plateau fx	C0262489
+pneumocystis carinii pneumonia	C0032305
+normal rv systolic function	CUI-less
+ms changes	C0278061
+extremities cool	CUI-less
+voiding difficulty	C0241705
+large amounts of blood	CUI-less
+atrial flutter	C0004239
+hemodynamic complications	CUI-less
+anoxic brain injury	C0003132
+tia	C0007787
+intravascular depletion	CUI-less
+obese	C0028754
+nonverbal	CUI-less
+neurological deficits	CUI-less
+forearm fractures	C1305215
+vegetations aortic valve	C0577870
+shingles	C0019360
+lipoma	C0023798
+acute confusional state	CUI-less
+chb	C0151517
+hallucinations	C0018524
+chf	C0018802
+troponin elevated	CUI-less
+alternation in consciousness	C0234428
+white tongue	CUI-less
+chi	C0085094
+collapsed gallbladder	CUI-less
+defervescence	CUI-less
+systolic hf	C1135191
+regained some strength	CUI-less
+dry mouth	C0043352
+torsion	C1265748
+incision	C0332803
+diastolic dysfunction	C0520863
+renal failure	C0035078
+bilateral hydronephrosis	C0521622
+abnormal wall motion activity	CUI-less
+black stool	C0025222
+bleeding disorder	C1458140
+generalized weakness	C1883552
+cachectic	C0006625
+costovertebral tenderness	C0235634
+perforation	CUI-less
+acute risk to herself	CUI-less
+peripheral vascular disease	C0085096
+bowel symptoms	CUI-less
+localized pain	C0520962
+diplopia	C0012569
+shivering	CUI-less
+anterolateral myocardial infarct	C0155627
+pancreatic pseudocyst	C0030299
+hsv encephalitis	C0276226
+friable mucosa	CUI-less
+taking multiple pills	C0029944
+nasopharyngeal carcinoma	C2931822
+left atrium elongated	C0344711
+systolic murmur at apex	CUI-less
+periodic epileptiform discharges	CUI-less
+rca tortuous	CUI-less
+left upper quadrant pain	C0238552
+pulmonary vascular redistribution	CUI-less
+rc one aneurysm	CUI-less
+high grade b cell lymphoma	C0456863
+oriented times three	CUI-less
+sinus brady	C0085610
+mitral stenosis	C0026269
+cancer	C0006826
+drainage from wound	C0332799
+abrasions	C1302752
+ckd	C0403447
+slow return of bowel function	CUI-less
+failure to thrive	C0015544
+tortuous aorta	CUI-less
+feeling lh	C0220870
+dysuria	C0013428
+fourth heart sound	CUI-less
+displaced fractures	C0585059
+muscle pain	C0231528
+myoclonic jerking	C0027066
+hematocrit decreased	CUI-less
+chills	C0085593
+bleeding esophageal varices	C0155789
+retained product of conception	C0033270
+abdominal wall abscess	C0263105
+noncompliance with medications	CUI-less
+myelocele	C0086664
+genital herpes	C0019342
+lung volumes are low	CUI-less
+black material bowel movement	CUI-less
+right dominant sytem	C0345135
+radiations	CUI-less
+passed bowel movement	CUI-less
+hand laceration	C0432975
+occlusions	C0028778
+cancers	C0006826
+effacement	CUI-less
+poor epiglottic dysflexion	CUI-less
+normal sinus rhythm	CUI-less
+right ventricular systolic function	CUI-less
+vegetation mitral valve	C0577871
+cmo	CUI-less
+enlarged r kidney	CUI-less
+low ejection fraction	CUI-less
+cmv	CUI-less
+abscess	C0000833
+sinus involvement	CUI-less
+coarse rhonchi	C0035508
+appropriate increase hct	CUI-less
+arterial-phase enhancement	CUI-less
+tamponade	C0007177
+resting lvot gradient	CUI-less
+carotid stenosis	C0007282
+changes cardiac function	CUI-less
+impaired fillling physiology	CUI-less
+right atrial diastolic collapse	CUI-less
+pulmonary sequelae	CUI-less
+spillage	C0015376
+drugs	CUI-less
+descending thoracic aorta dilated	C3164874
+hurting himself	C0480203
+hypoxic respiratory failure	CUI-less
+vomitting bright red blood	C0018926
+transtentorial herniation	C2937226
+anterior precordial r wave progression	CUI-less
+compresses cord	C0037926
+complete obstruction	C0001168
+respirtory distress	C0476273
+calciphylaxis	C0006666
+pronator drift	C1504476
+infiltrate	C0332448
+portal flow	CUI-less
+rooting	CUI-less
+cop	C0024117
+yelling	CUI-less
+compalints	CUI-less
+adomen nondistended	CUI-less
+lad	CUI-less
+bruise	C0009938
+wounds redness	C0406833
+polycystic ovaries	C0032460
+renal artery cirrhosis	CUI-less
+polycystic kidney disease	C0022680
+post- obstructive	CUI-less
+heart problems	CUI-less
+staph aureus pneumonia	C2349530
+gastroparesis	C0152020
+lost 37 pounds	CUI-less
+free air	C0032320
+cpp	CUI-less
+pericholecystic fluid collection	CUI-less
+telemetry events	CUI-less
+extravasation of contrast	C1997179
+polymyalgia rheumatica	C0032533
+heard voices	C0424068
+pelvic lymphadenopathy	C1264124
+shift midline structures	CUI-less
+gas present	CUI-less
+gout	C0018099
+foreign bodies	C0016542
+exertional chest discomfort	C0232288
+creatinine decreased	CUI-less
+infarctions embolic	C0264978
+lbp	C0024031
+unstable angina	C0002965
+kidney stones	C0022650
+alcoholic history	CUI-less
+soft tissue abnormalities	CUI-less
+opened eyes	CUI-less
+gynecological cancers	C0006826
+making grammatical errors	CUI-less
+anicteric	CUI-less
+elevated wedge pressure	CUI-less
+skull fracture	C0037304
+pneumothorax	C0032326
+ntnd	CUI-less
+wound	C0043250
+pericarditis	C0031046
+generalize seizure	C0234533
+bruits	CUI-less
+cri	C0022661
+substance abuse	C0740858
+mucosa pale	CUI-less
+diastolic heart failure	C1135196
+1st metacarpal fx	C0272678
+lipohemarthrosis	CUI-less
+poor control blood pressure	CUI-less
+sacral edema	C0235438
+colon cancer	C0007102
+varices esophagus	C0014867
+lower extremity weakness	C0751410
+dry mucous membrane	C0854113
+distended	CUI-less
+ttp	CUI-less
+t1 signal	CUI-less
+aortic valve leaflets stenotic	C0003507
+renal function	CUI-less
+persistent vomiting	C0152165
+retained products	C0033270
+1st degree a-v block	C0085614
+low blood sugar	C0020615
+hearing decreased	CUI-less
+distal asymmetry	CUI-less
+low plt	CUI-less
+infected tunneled catheter	C0588173
+fullness	CUI-less
+lung disease	C0024115
+blood in vomitus	CUI-less
+atrophic musculature	C0026846
+goiter	C0018021
+pulm htn	C0020542
+hemiparesis	C0018989
+oriented to place or time	CUI-less
+acute cardiopulmonary process	C0155671
+st-t changes	CUI-less
+dilated	C0012359
+nodular cirrhotic liver	CUI-less
+nodules lung	C0748164
+pneumothoraces	C0032326
+melanoma	C0025202
+heroin abuse	C0019337
+pneumatosis	C0333139
+hilum lymphadenopathy	C0456973
+circumferential	CUI-less
+exp wheezes	C0231875
+lightheaded	C0220870
+new infarction	C0021308
+copd exacerbation	C0340044
+renal inability to excrete na	CUI-less
+depressed dtrs	CUI-less
+volume overload	C0546817
+palpable dorsalis pedis pulse	CUI-less
+non-q-wave mi	C0542269
+unresponsive to voice	CUI-less
+diziness	C0012833
+collapsed	CUI-less
+thrombus	C0087086
+supraclavicular lad	C0749155
+cva	C0038454
+acute anterior myocardial infarction	C2349195
+cvd	C0007222
+tear	C0043246
+left ventricular enlargement	C0149721
+splinters	C0433651
+mononucleosis	C0272210
+inflammatory fat stranding	CUI-less
+ivda	CUI-less
+speech improved	CUI-less
+peptic ulcer disease	C0030920
+urinary calculi	CUI-less
+hematochezeia	CUI-less
+abdomen non-tender	CUI-less
+withdrawal	C0087169
+jugulovenous distension	CUI-less
+type 2 diabetes	C0011860
+frontal headache	C0239886
+speech	CUI-less
+fall from ladder	C0337212
+dystonia	C0013421
+steroid use	CUI-less
+right hemiparesis	CUI-less
+exercise tolerance	CUI-less
+chronic renal insufficiency	C0022661
+blood clot	C0302148
+drainage site	C1272590
+p-r interval prolongation	CUI-less
+black material vomit	CUI-less
+hypertensive encephalopathy	C0151620
+purulent drainage	CUI-less
+pooling blood	CUI-less
+gaurding	CUI-less
+pneumoniae	C0032285
+recurrent utis	C0262655
+soft tissue mass	C0457193
+language nonfluent	C0349390
+anteverted uterus	CUI-less
+resistive indices remain low	CUI-less
+presyncopal	C0700200
+diffusely low attenuation	CUI-less
+lesion liver	CUI-less
+cervical lymphadenopathy	C0235592
+pneumatized	CUI-less
+spenic lac	C0347636
+wbc decreasing	CUI-less
+fascia defect	C0263977
+vascular territorial herniations	CUI-less
+dyslipidemia	C0242339
+opiate withdrawal	C0029104
+much pooling	CUI-less
+abd nondistended	CUI-less
+wheezy	C0043144
+linear atelectasis	C0264495
+dissection	C0340643
+depressed ms	C0278061
+presbyesophagus	C0262605
+depressed left ventricular function	CUI-less
+aortic stenosis	C0003507
+single vessel cad	C0581374
+poor left ventricular function	CUI-less
+poor decision making	CUI-less
+systolic murmur	CUI-less
+femoral bruits	CUI-less
+variceal bleed	C0333106
+elevated pcwp	CUI-less
+conjunctival hemorrhage	C0009760
+pain	C0030193
+suicidality	CUI-less
+lle	C0239340
+enlarged	C0020564
+brain tumor	C0006118
+respiratory discomcomfort	C0476273
+anomia	C0003113
+ascending cholangitis	C0311273
+hypercalcemia	C0020437
+dysmetria	C0234163
+pelvic instability	C2919586
+hypercalcemic	C0020437
+deep vein thrombosis	C0149871
+left ventricular dilated	C0344911
+sscp	C0151826
+tibial plateau fracture	C0262489
+acute myocardial infarction	C0155626
+scarring	C0008767
+dissection iliac	C0340649
+mental status	CUI-less
+cervical spine fracture	C0262414
+severe respiratory distress	C0748355
+paucity of air	CUI-less
+diabetic	C0011849
+pyelonephritis	C0034186
+depressed ci	CUI-less
+atrial premature depolarizations	CUI-less
+cardiac enzymes	CUI-less
+radial head fracture	C0435577
+non-verbal	CUI-less
+pale	C0030232
+cyanosis	C0010520
+vomiting	C0042963
+metastatic bleed	C0019080
+lung collapse	C0004144
+warmth	C0235218
+elevated blood sugars	C0020456
+enlarged pupil	CUI-less
+right bundle-branch block	C0085615
+numerous diverticuli	C1265782
+lung sounds coarse bilaterally	CUI-less
+fatty infiltrate	C0332448
+coffee ground emesis	C1510416
+dolls	C0234446
+gallbladder distended	CUI-less
+loc	CUI-less
+level of alertness	CUI-less
+intraventricular conduction delay	C0264909
+ra diastolic collapse	CUI-less
+abd distention	CUI-less
+residual fluid	CUI-less
+addison's disease	C0001403
+poor inspiratory effort	CUI-less
+ischemic event	C0022116
+arteriovenous fistula	C0003855
+aortic valve regurgitation	C0003504
+clearing aspirate material	CUI-less
+laceration esphagus	C0347629
+non-convlusive status	CUI-less
+hypotensive	C0520541
+t2dm	C0011860
+intramural hematoma type b	CUI-less
+nonspecific st changes	CUI-less
+scotomas	C0036454
+chronic etoh abuse	C0001973
+diabetes	C0011860
+residual contrast	CUI-less
+hit head	CUI-less
+glycemic control	CUI-less
+stiff neck	C0151315
+ruq tenderness	C3164070
+other concerns	C0159028
+intact to light touch	CUI-less
+retractile testis	C0520578
+passive range of motion	CUI-less
+common femoral artery injury	C0160755
+bandemia	C0741439
+drinking	CUI-less
+difficulty writing	C0584995
+klebsiella pna	C0519030
+consolidation lower lobe	C0521530
+postpartum bleeding	C0032797
+st-t wave changes	CUI-less
+plaque internal carotid arteries	C0004155
+drainage incision	C0332799
+lung collapsed	C0004144
+mediastinal lad	C0520743
+heparin induced thrombocytopenia	C0272285
+hydrocele	C1720771
+irregular rate	CUI-less
+cardiac failure	C0018801
+left anterior fascicular block	C0264912
+distal arch coarctation	C0003492
+acute change	CUI-less
+thrombocytopenia	C0040034
+respiratory instability	C0035204
+in-stent stenosis	CUI-less
+heaped up mucosa	CUI-less
+sputum	C0425512
+line sepsis	C1536163
+thickened	CUI-less
+thrombocytopenic	CUI-less
+dropped bp	C0232107
+extremities warm	CUI-less
+mumble	CUI-less
+obstructed bile duct	C0008370
+afib	C0004238
+myoclonus	C0027066
+do not resuscitate	CUI-less
+relief	CUI-less
+perineal injury	C0272439
+vegetation tricuspid valve	C0577799
+temp	CUI-less
+poor laryngeal sensitivity	CUI-less
+contrast extravasation	C1997179
+loculated l effusion	C1265808
+hematuria	CUI-less
+memory loss	C0751295
+aspergillosis	C0004030
+thyromegly	C0018021
+inability to pass gas	CUI-less
+asystolic arrest	C0018790
+dilated rv	C0344893
+noninsulin-dependent diabetes mellitus	C0011860
+flushed	CUI-less
+type b intramural hematoma	CUI-less
+respiratory issues	C0035204
+fib deformity	C0410724
+rv pressure overload	CUI-less
+enlarged right kidney	CUI-less
+focal weakness	C1883552
+leave against medical advice	CUI-less
+elevated aminotransferases	CUI-less
+lvh	C0149721
+clot	C0302148
+atrial premature complexes	C0033036
+short pr interval	CUI-less
+ovarian cancer	C0029925
+restless legs syndrome	C0035258
+foreign body	C0016542
+triopathy	CUI-less
+biliary ductal dilatation	C0431582
+paralysis	CUI-less
+stiffness	C0427008
+cerebrovascular accident	C0038454
+abd obese	CUI-less
+elevated lfts	CUI-less
+aspiration thin liquid	C0232076
+nonpitting edema	CUI-less
+dilated ra	C0344709
+wide complex tachycardia	CUI-less
+calcifications	CUI-less
+mental status alteration	C0278061
+ecchymoses	CUI-less
+air bubbles	CUI-less
+stress response	CUI-less
+intraventricular hemorrhage	C0240059
+swallowing function	CUI-less
+inability to eat	CUI-less
+lactate elevated	CUI-less
+depressed affect	CUI-less
+atelectasis	C0004144
+gallbladder collapsed	CUI-less
+a-v conduction delay	CUI-less
+non-productive cough	C0850149
+abdomen tenderness	C0232498
+multiple falls	C0000921
+brain metastases	C0563517
+femoral bruit	CUI-less
+elevated white blood cell count	CUI-less
+non-steroidal anti-inflammatory drugs	C0413722
+arrhythmia	C0003811
+blood in oropharynx	CUI-less
+rib fx	C0035522
+polyp	C0032584
+transmigrated bacteria	CUI-less
+abdomen distended	CUI-less
+knee abrasions	C0432860
+dark material vomit	CUI-less
+adomen obese	CUI-less
+pain medication	CUI-less
+buttock wound	C0160558
+able to answer questions	CUI-less
+right ventricular conduction delay	CUI-less
+lv function	CUI-less
+elevated lipase	CUI-less
+tibc low	CUI-less
+hypotension	CUI-less
+dilated ascending aorta	C0345049
+hip fractures	C0019557
+right sided weakness	CUI-less
+pnuemonia	C0032285
+substance use	C0740858
+myalgias	C0231528
+solid organ injury	C0332675
+changes in personality	C0240735
+vertigo	C0042571
+nsaid use	CUI-less
+luminal irregularities	CUI-less
+basal cell carcinoma	C0007117
+narrowing	C1261287
+sinus tach	C0039239
+failed swallow	C0011168
+heart attack	C0027051
+old inferior infarct	C0340321
+dm2	C0011860
+passing gas	C0016204
+w/d	C0087169
+decreased po intake	CUI-less
+aortic aneurysms thoracic	C0162872
+filling pressures	CUI-less
+pleural rub	CUI-less
+multiple renal cysts	C0431718
+apparent distress	CUI-less
+hypertensive urgency	C0745138
+loculated left effusion	C1265808
+postoperative bleeding	C0032788
+pulm contusions	C0347625
+responding to painful stimuli	CUI-less
+heartburn	C0018834
+dry mucous membranes	C0854113
+abdominal distension	CUI-less
+renal cell carcinoma	C0007134
+liver hemangioma	C0238246
+lv systolic function depressed	CUI-less
+plugged with secretions	CUI-less
+pulmonary hyperinflation	C1167782
+abnormal eeg	CUI-less
+acute anterior st elevation myocardial infarction	C1303258
+exhausted	C0392674
+abdomen distention	CUI-less
+forlymphoma	C0024299
+hyperdense material	CUI-less
+st elevations	CUI-less
+stimulus sensitive	CUI-less
+st-t wave abnormalities	CUI-less
+atrial premature beats	C0033036
+lower gi bleed	C0024050
+overdose atenolol	C0573210
+multilobar pna	C0032300
+decreased level of consciousness	CUI-less
+q-waves	CUI-less
+dni	CUI-less
+supraclavicular nose	CUI-less
+speech slurred	CUI-less
+aocd	C0002873
+elevated right sided filling pressures	CUI-less
+flash pulmonary edema	C0155919
+dysphagia	C0011168
+nasal dryness	CUI-less
+dnr	CUI-less
+ampullary mass	CUI-less
+left ventricular systolic function depressed	CUI-less
+lower extremities edema	C0239340
+recurrence ventral hernia	C0267717
+nstemi	C1276061
+hypertrophied	C0020564
+non-specific inferolateral st-t wave changes	CUI-less
+retinopathy	C0011884
+decreased bolus control	CUI-less
+doe	C0231807
+large right atrium	CUI-less
+racoon's eyes	CUI-less
+metastases liver	C0494165
+upset	C1535460
+hypoxemic	CUI-less
+left ventricle dilated	C0344911
+masses left ventricle	CUI-less
+mca aneurysm	C1290398
+food impacted	CUI-less
+intracranial process	CUI-less
+patchy opacities	CUI-less
+deep q waves	CUI-less
+lyme disease	C0024198
+abdominal complaint	C0221098
+stool dark	C0025222
+spinal stenosis	C0037944
+downs syndrome	C0013080
+reperfusion	CUI-less
+carpal tunnel	C0007286
+bladder ca	C0005684
+ectopy	CUI-less
+ventricular fibrillation	C0042510
+mrgs	CUI-less
+wbc trended down	CUI-less
+increasing troponin	CUI-less
+asystolic	C0018790
+reaction to bactrim	C0041755
+elevated left-sided pressures	CUI-less
+lv dilated	C0344911
+heme positive stool	C1321898
+lacunar infarcts	C0585229
+aortic regurgitation	C0003504
+uncal herniation	C0393985
+occult bleeding	C0333282
+hoarseness	C0019825
+cavitary mass	CUI-less
+hemangioma	C0018916
+lll pna	C0584104
+blood loss	C0019080
+narrowing carotids	C0007282
+abd nd	CUI-less
+effusions	C0013687
+sucking chest wall wound	C1264413
+right atrial dilatation	C0344709
+soft- tissue densities	CUI-less
+narrows	C1261287
+cortical dysfunction	CUI-less
+rv volume overload	CUI-less
+twitching	C0231530
+chronic inflammation	C0021376
+positive urinalysis	CUI-less
+urinary infection	C0042029
+hemorrhages	C0019080
+portal hypertension	C0020541
+non-specific st-t wave changes	CUI-less
+dry	C0151908
+uti	C0042029
+bright red blood	CUI-less
+adhesions	C0001511
+incurable disease	CUI-less
+abd nr	CUI-less
+abd nt	CUI-less
+signs of aspiration	CUI-less
+oriented	CUI-less
+range of motion decreased	CUI-less
+facial droop	C0427055
+breath sounds coarse	C0231859
+coagulopathy	C0005779
+cardiac arrest	C0018790
+bilious emesis	C0042963
+abnormally high inr	CUI-less
+fever meningismus	CUI-less
+knee arthritis	C0240111
+bleed of gastropathy	C0941011
+mycoplasma pneumonia	C0032302
+elevated pulmonary pressures	CUI-less
+volume overloaded	C0546817
+ventricular septal defect	C0018818
+ventilator dependence	CUI-less
+met	C2939419
+cirrhosis	C0023890
+dts	C0001957
+vommitted blood	C0018926
+cardiac arrhythmia	C0003811
+renal osteodystrophy	C0035086
+multinodular goiter	C0342208
+white plaque	CUI-less
+focal numbness	C0028643
+hyper k	CUI-less
+neurologic deficits	CUI-less
+diastolic htn	C0235222
+lgi bleed	C0024050
+drainable fluid collections	CUI-less
+subdural hematomas	C0018946
+temp. fracture	C0272461
+diabetic nephropathy	C0011881
+adenomymatosis gallbladder	CUI-less
+edema	C0013604
+runny nose	C1260880
+partial small bowel obstruction	C0281936
+perirenal stranding	CUI-less
+creatinine down	CUI-less
+ulceration esophagus	C0151970
+pulmonary embolus	C0034065
+shortness of breath on exertion	C0231807
+etoh intoxication	C0001969
+respiratory rate	CUI-less
+respirations	CUI-less
+hepatic cysts	C0267834
+pain with urination	C0013428
+dvt	C0149871
+slurring speech	CUI-less
+atelctasis	C0004144
+intracranial bleed	C0151699
+sinus bradycardia	C0085610
+coarse sounds	CUI-less
+colon carcinoma	C0699790
+persistently febrile	C0476474
+hip pain	C0019559
+lm disease	CUI-less
+sober	CUI-less
+nonreactive pupil	CUI-less
+seizure	C0036572
+alzheimer's	C0002395
+gram negative rods	CUI-less
+hyperdense focus	CUI-less
+stool tarry	C0025222
+asbestos exposure	CUI-less
+valvular disease	C0018824
+fluid collection	CUI-less
+fell	C0000921
+benign	CUI-less
+chest tightness	C0232292
+non-st elevation mi	C1276061
+rapid atrial fibrillation	C1281999
+positive leukocyte esterase	CUI-less
+facial lacerations	C1299982
+renal cell cancer	C0007134
+language dysfunction	C0003537
+reactive thrombocytosis	C0457506
+status epilepticus	C0038220
+gastric ulcers	C0341178
+benign positional vertigo	C0155502
+dilated loops small bowel	CUI-less
+gait unsteady	CUI-less
+disoriented	C0233407
+glomerulonephritis	C0017658
+soft tissue compromise	C0263978
+corneal on l on	CUI-less
+bed abnormalities	CUI-less
+mrsa	C0343401
+calcified mass	CUI-less
+belching	C0014724
+glaucoma	C0017601
+esld	CUI-less
+enhancement	CUI-less
+squamous cell carcinoma of the skin	C0553723
+increase hematocrit	CUI-less
+perivascular haziness	CUI-less
+spider angiomata	CUI-less
+left gazed deviation	CUI-less
+contraindication	CUI-less
+decreased pinprick	CUI-less
+complaints	CUI-less
+non-viable small bowel	CUI-less
+photophobia	C0085636
+nausea	C0027497
+congenital heart defect	C0018798
+hematochezia	CUI-less
+lv wall motion abnormalities	CUI-less
+difficulty repeating	C0233742
+abd nontender	CUI-less
+scar	C2004491
+breast carcinoma	C0678222
+mca infarction	C0740392
+costovertebral angle tenderness	C0235634
+night sweats	C0028081
+drowsy	CUI-less
+two-vessel disease	C0581375
+mass	CUI-less
+hyporeflexia	CUI-less
+extra-axial hemorrhage	CUI-less
+asplenic	C0272405
+adomen nontender	CUI-less
+liver masses	C0240225
+upward retraction	CUI-less
+gastric distention	CUI-less
+urgency	CUI-less
+cerebral ischemia	C0917798
+bacterial pneumonia	C0004626
+sleepy	CUI-less
+abnormal septal position	CUI-less
+orthopnea	C0085619
+high grade large b-cell lymphoma	C0456867
+bilateral pleural effusion	C0747635
+extra axial fluid	CUI-less
+metastatic	C1384494
+paced	CUI-less
+palpitation	CUI-less
+mediastinal emphysema	C0025062
+cholangitis	C0008311
+postprocedural complications	C0032787
+right-sided chest pain	C0563275
+arrhythmias	C0003811
+acute leukemia	C0085669
+using morphine	CUI-less
+vegatations	C1285498
+addisons disease	C0001403
+non bleeding ulcer	CUI-less
+blood pressure labile	CUI-less
+deformed	C0302142
+blood stool	C1321898
+fracture vertebra	C0080179
+poor prognosis	CUI-less
+fluid collections abdomen	C0685931
+speech difficulty	C1527347
+tracheobronchomalacia	C0340231
+chest pain radiation	C0232289
+can't walk	CUI-less
+heart rhythm abnormality	C0003811
+obstipation	C0221152
+impaired position sense	C0576690
+dizzy	C0012833
+incarcerated hernia	C0740406
+chronic abdominal pain	C0232491
+vascularity	CUI-less
+renal dysfunction	CUI-less
+osteomyelitis	C0029443
+tattoo	C0221258
+chest pain radiating	C0232289
+postoperative pulmonary edema	C0264501
+thallesemia minor	C0085578
+fibrosis	C0016059
+right drift	CUI-less
+variable block	CUI-less
+lip laceration	C0561241
+extension	C0231450
+lesion stomach	C0679408
+cdiff	C0343386
+crohn's	C0010346
+abdomen non-distended	CUI-less
+renal disease	C0022658
+esrd	C0022661
+sz d/o	C0014544
+leg ulcer	C0023223
+misaligned sternal wires	C1997248
+dilated lv	C0344911
+low qrs voltages	CUI-less
+mrg	CUI-less
+multifactorial	CUI-less
+radiated throughout chest	CUI-less
+consolidation	C0521530
+hepatitis	C0019158
+dilated la	C0344720
+fist degree av block	C0085614
+residual air	CUI-less
+abdominal nondistended	CUI-less
+elevated co2	CUI-less
+nsclc	C0007131
+visual field deficit right	CUI-less
+conduction delay	CUI-less
+oral dysphagia	C2315800
+cystic	C0010709
+fluctuance	CUI-less
+chronic hepatitis b	C0524909
+acute cholecystitis	C0149520
+injuries	C0175677
+pneumonitis	C0032285
+change in mental status	C0278061
+elevation right hemidiaphragm	CUI-less
+methicillin sensitive staphylococcus aureus	C2367273
+atelectatic	C0004144
+right-left neglect	CUI-less
+deep tissue infection	C1290024
+interval change	CUI-less
+hernias	C0019270
+st changes are nonspecific	CUI-less
+flash edema	C0333240
+av nodal disease	CUI-less
+bacteremia	C0004610
+weight loss	CUI-less
+rep depression	C0235063
+carotid bruit	CUI-less
+thrush	C0006849
+opacities	C1265876
+liver palpated	CUI-less
+metabolic acidosis	C0220981
+feeling dizzy	C0012833
+dropping bp	C0232107
+myocardial ischemia	C0151744
+pulmonary consolidation	C0521530
+intraparenchymal hematoma	C2316496
+gallbladder stone	C0008350
+skin itchiness	C0033774
+nasal fracture	C0339848
+cyanotic	C0010520
+unreactive	CUI-less
+peripheral edema	CUI-less
+heart disease	C0018799
+st elevations inferiorly	CUI-less
+decreasing hct	CUI-less
+irregulary irregular	CUI-less
+lytic lesions	CUI-less
+ecchymosis	CUI-less
+heart rate	CUI-less
+abnormal signal	CUI-less
+lgib	C0024050
+mvp	C0026267
+thickened mitral leaflets	C3164530
+cardiac disease	C0018799
+ventricular ectopy	C0151636
+embolic stroke	C0262469
+metastatic adenocarcinoma	C0334277
+flatus	C0016204
+left ventricular systolic function is hyperdynamic	CUI-less
+poor balance	CUI-less
+pericardial tamponade	C0007177
+pleural effusions	C0032227
+vfib arrest	CUI-less
+brain death	CUI-less
+cortical activity	CUI-less
+abdominal aortic aneurysm	C0162871
+aortic sclerosis	C1331537
+tonsillar enlargement	C0272386
+asctes	CUI-less
+drug fever	C1320835
+dehydration	C0011175
+pitting bilaterally	C0333243
+thigh pain	C0241374
+organic mania	C0338831
+focal deficits	CUI-less
+interventricular blood	CUI-less
+aortic valve leaflets deformed	CUI-less
+sacral lesions	CUI-less
+vestibulo-ocular reflex	CUI-less
+exp wheezing	C0231875
+abd distended	CUI-less
+l sided cp	C0541828
+adenomyomatosis gallbladder	CUI-less
+st changes	CUI-less
+knee swelling	CUI-less
+chronic pain	C0150055
+coronary problems	CUI-less
+amyloidosis	C0002726
+induration wound	CUI-less
+abnormal stress echocardiogram	CUI-less
+interstitial edema	C0013604
+abrasion	C1302752
+hypotensive episodes	C0520541
+emphysema	C0034067
+sleep	CUI-less
+epigastric pain	C0232493
+hay fever	C0018621
+respiratory status	CUI-less
+irregular menstrual cycle	C0156404
+hepatitis-c cirrhosis	CUI-less
+density	CUI-less
+infrahilar opacification	CUI-less
+parenchymal opacity	CUI-less
+dilated loops	CUI-less
+left anterior hemi-block	C0155702
+facial weakness	C0427055
+nasal septum spur	C0426460
+tortuous artery	CUI-less
+sleep disorder	C0851578
+nose bloody	C0014591
+le edema	C0239340
+adventitious movements	CUI-less
+persistent fevers	C0476474
+slurred speech	CUI-less
+intracystic pheochromocytoma	C0031511
+oriented to self only	CUI-less
+atrial bigeminy	C0262382
+compression fractures	C0521169
+poor dentition	CUI-less
+cardiapulm changes	CUI-less
+abdominla scars	CUI-less
+prominent loops small bowel	CUI-less
+ectopic beats	CUI-less
+elongated	CUI-less
+faint	C0039070
+opioid overdose	C0572061
+hypodensity	CUI-less
+extravasation of barium	C0015376
+strep a group bacteremia	C0554628
+left anterior descending artery thrombus	C0264690
+oozing	C1446325
+deformity laceration	CUI-less
+ideomotor apraxia	C0234523
+two-vessel coronary artery disease	C0581375
+decreased respiratory status	C0235063
+free intraperitoneal air	C0032320
+pulmonary artery thrombus	C0151947
+sinus mucosal thickening	CUI-less
+tortuous	CUI-less
+rigidity	C0026837
+r/l disorientation	C0422885
+trouble breathing	CUI-less
+uterine fibroid	C0042133
+gallops	CUI-less
+chronic inflammatory change	C0021376
+inappropriate pacemaker response	C0340914
+expiratory wheeze	C0231875
+resp distress	C0476273
+delirium	C0011206
+profound mental retardation	C0020796
+femur fracture	C0015802
+t wave inversions v3 through 6	CUI-less
+peri-valve leaks	C1260873
+intracranial injury	C0347535
+ankle swelling	C1536390
+passing flatus	C0016204
+small vessel dz	C2733158
+dec resp. drive	CUI-less
+intracranial hemorrhage	C0151699
+troponin	CUI-less
+schizoaffective d/o	C0036337
+apraxia	C0003635
+urinary tract infection	C0042029
+arterial anastomotic stenosis	CUI-less
+nodular opacity	CUI-less
+consolidations	C0521530
+abrasion ankle	C0432862
+benign prostatic hypertrophy	C0005001
+tuberous sclerosis	C0041341
+encephalopathy	C0085584
+nad	CUI-less
+respiratory distress syndrome	C1704437
+do not intubate	CUI-less
+anterior mi	C0340293
+lv diastolic dysfunction	C1273070
+concering sign	CUI-less
+atelectasis right	C0004144
+dry eschar	C0521172
+pulmonary artery systolic pressure	CUI-less
+fluid overload	C0546817
+crohns	C0010346
+hepatic abscess	C0023885
+increasing urination	CUI-less
+fibrinogen elevated	CUI-less
+hemodynamics	CUI-less
+white blood cell count rose	CUI-less
+obstruction to flow of contrast	CUI-less
+malnutrition	C0162429
+noncompliance medications	CUI-less
+bb toxicity	C0573209
+mass effect	CUI-less
+elevated systemic pressures	CUI-less
+rv diastolic collapse	C1563062
+mixed dementia	C0349078
+vsd	C0018818
+elevated systolic pressure	CUI-less
+colovesicular fistula	C0268842
+dilated aortic root	C0238669
+nontender	CUI-less
+infarctions	C0021308
+t wave inversions in v3 through 5	CUI-less
+polysubstance overdose	C1571836
+flank tenderness	C0235634
+thyroid condition	C0040128
+cardiac risk factors	CUI-less
+midline shift	CUI-less
+atrial ectopy	C0085611
+fractures ribs	C0035522
+overdose	C0029944
+degenerative joint disease	C0029408
+abd pain	C0000737
+heterogeneous calcified plaquing	CUI-less
+blockages	C0264995
+pneumococcl sepsis	C0152966
+transverse process fracture	C0272511
+ingestion of atenolol	C0568621
+serosanguineous drainage	CUI-less
+malignant hypertension	C0020540
+cervical motion tenderness	CUI-less
+food in the hernia sac	CUI-less
+injection granulomas	C0085654
+hemorrhoids	C0019112
+forearm fracture	C1305215
+hemorrhage	C0019080
+congenitcal spine abnormality	C0158775
+narcotic pain medications	CUI-less
+ferritin elevated	CUI-less
+cutis laxa	C0010495
+forgetful	C0542476
+neuro status	CUI-less
+bowel loops	CUI-less
+psychosis	C0033975
+hypokinesis	C0086439
+diverticulosis	C1510475
+hypokinesia	C0086439
+exposure to chemicals	CUI-less
+visual disturbances	C0547030
+inferior st elevation	CUI-less
+decreased distal pulses bilaterally	CUI-less
+gastroesophageal reflux	C0017168
+congestive heart failure	C0018802
+orbital fracture	C0029184
+net	C0206093
+secretions	CUI-less
+herpes encephalitis	C0276226
+shaky	C0040822
+enlarged paratracheal node	C0520744
+loculated component	CUI-less
+lacunar infarct	C0333559
+grade iv/vi systolic ejection murmur	C0232252
+type b aortic dissection	C0340647
+bullae	C0005758
+allopecia	CUI-less
+rca occlussion	C1290385
+decompensation	CUI-less
+coffee-grounds emesis	C1510416
+edamatous	C0013604
+strain of aggressive fluid	C0080194
+fat stranding	CUI-less
+cavitary infiltrate	CUI-less
+lethargy	C0023380
+engorgement	C0020452
+subarchnoid hemorrhage	C0038525
+dried blood	CUI-less
+episodes of unconsciousness	C0234431
+uremic	C0041948
+left pneumothorax	CUI-less
+papular erythematous lesion	CUI-less
+poorly responsive	C0478662
+erythema wound	C0406833
+peripheral neuropathy	C0031117
+rhonci	C0035508
+watershed stroke	C0333557
+lactose intolerant	C0022951
+aortic dissection, type b	C0340647
+superior rami fracture	C0577726
+hyperpigmented macules	CUI-less
+dropping oxygen saturation	CUI-less
+decreased touch	CUI-less
+wide complex v-tach	C0344429
+fasciculations	C0015644
+gastrointestinal bleed	C0017181
+mitral regurg	C0026266
+diffusely low in attenuation	CUI-less
+elevated psa	CUI-less
+fluid-filled uterus	CUI-less
+atherosclerotic disease	C0004153
+slow to respond	CUI-less
+splenic sequestration	CUI-less
+unable to move his legs	CUI-less
+portal vein thrombus	C0155773
+pitting edema	C0333243
+shift	CUI-less
+low hematocrit	CUI-less
+showed bright red blood	C0019080
+rv function depressed	CUI-less
+aortic valve disease	C1260873
+asymmetric face	CUI-less
+brbpr	CUI-less
+urinary retention	CUI-less
+finger to nose ataxia	C0856552
+large b-cell lymphoma high grade	C0456867
+seizure activity	C0036572
+t wave inversions	CUI-less
+paced rhythm	CUI-less
+myocardial infarctions	C0027051
+aphasia	C0003537
+heart murmurs	CUI-less
+bp fell	CUI-less
+leg pain	C0023222
+allergy	C0020517
+turbulent flow	CUI-less
+nasal septum deviates	C0549397
+ill-appearing	CUI-less
+nonsustained ventricular tachycardia	C2919575
+without strength	C0004093
+infectious consolidation	CUI-less
+pafib	C0235480
+acute renal insufficiency	C0022660
+calcified tips	CUI-less
+poor nutritional status	CUI-less
+hurting yourself	C0480203
+intention tremor	C0234376
+atenolol intake	C0568621
+osteoarthritis	C0029408
+metastases adrenals	C0153691
+left effusion	C0013687
+hemorrhagic stroke	C0553692
+st wave changes	CUI-less
+palpatations	CUI-less
+metastases lungs	C0153676
+bipolar disorder	C0005586
+acute renal failure	C0022660
+not responsive	CUI-less
+anterolateral st elevation	CUI-less
+valvular heart disease	C0018824
+nephrotic range proteinuria	C0445118
+fatty infiltration	C0333575
+atenolol overdose	C0573210
+cataract	C0086543
+back pain	C0004604
+downgoing toes	CUI-less
+pupils pinpoint	CUI-less
+st-t abnormalities	CUI-less
+nonedematous	CUI-less
+lesions	CUI-less
+pulmonary hypertension	C0020542
+sweats	CUI-less
+congestive failure	C0018802
+ext warm	CUI-less
+lymphadenopathy	CUI-less
+airway obstruction	C0001883
+hemetematsis	C0018926
+nevi	C0027960
+iron deficiency	C0240066
+embolus	CUI-less
+non aggressive process	CUI-less
+acute risk to others	CUI-less
+wounds	C0332803
+pulmonary infiltrates	C0034068
+tachycardic	CUI-less
+po intake	CUI-less
+black tarry stools	C0025222
+stenosis in both renal arteries	C0856760
+flutter	C0004239
+wide qrs complex	CUI-less
+vascular congestion	CUI-less
+paneumonia	C0032285
+tachycardia	CUI-less
+acute bleeding	C0333276
+uterine stripe	CUI-less
+passed flatus	C0016204
+alcohol use	CUI-less
+hemetemesis	C0018926
+systolic dysfunction	C0749225
+organomegaly	CUI-less
+irregularly irregular	CUI-less
+extravasation	C0015376
+thrombosis	C0040053
+depressed lvef	CUI-less
+encephalomalacia	C0014068
+chronic alcoholic-induced pancreatitis	C0341470
+headaches	C0018681
+atheroma	C0264956
+nondistended	CUI-less
+multiple rib fractures	C0272567
+cold symptoms	C0009443
+tortuous thoracic aorta	CUI-less
+anteroseptal lateral myocardial infarction	CUI-less
+hives	C0042109
+cord compression	C0037926
+beta-blocker toxicity	C0573209
+severe pain	C0278140
+ischemia	C0022116
+t wave flattening	CUI-less
+asterixis	C0232766
+ischemic	C0022116
+sensation	CUI-less
+intraventricular blood products	CUI-less
+spondylolysis	C0038018
+euthyroid	CUI-less
+osteophyte	C1956089
+orthopedic injuries	CUI-less
+facial movement	CUI-less
+mesenteric injury	C0178324
+enlarged lymph nodes	CUI-less
+tenderness abdomen	C0232498
+alcoholic episodes	CUI-less
+meaningful neurologic function	CUI-less
+posturing	CUI-less
+delerium	C0011206
+contorted	CUI-less
+vegetations	C1285498
+tinnitus	CUI-less
+foci lower lumbar spine	CUI-less
+first degree av block	C0085614
+left ventricle hyperdynamic	CUI-less
+chronic sinusitis	C0149516
+hyperkalemic	CUI-less
+copious amount of secretions	CUI-less
+toxic metabolic abnormalities	CUI-less
+hyperkalemia	CUI-less
+suicide	CUI-less
+ostial lesion	CUI-less
+erythematous	C0041834
+group a strep bacteremia	C0554628
+upper hard palate yellow and discolored	CUI-less
+irreg	CUI-less
+chronic low back pain	C0457949
+abdomen soft	CUI-less
+course upper airway sounds	CUI-less
+hypothyroidism	C0020676
+polypoid mucosal thickening	CUI-less
+aortic valve stenosis	C0003507
+deterioration of mental status	CUI-less
+fever	CUI-less
+rca occluded	C1290385
+mitral leaflets thickened	C3164530
+nsr	CUI-less
+oriented to place and time	CUI-less
+aneurysm of carotid artery	C0340639
+abnormal density	CUI-less
+low amplitude p waves	CUI-less
+lower gi bleeding	C0024050
+olecranon fx	C0555335
+sinistral hypertension	CUI-less
+low grade fevers	CUI-less
+nodular liver	CUI-less
+clinical change	CUI-less
+ptsd	C0038436
+gastric cancer	C0024623
+mitral regurgitation	C0026266
+bronchitis	C0006277
+steroid induced diabetes mellitus	C0589117
+labile blood glucose	CUI-less
+conduction disease	C0264886
+flank pain	C0016199
+intraventricular blood	CUI-less
+bicuspid aortic valve	C0149630
+ecg changes	CUI-less
+infectious colitis	C0277524
+incisions	C0332803
+symptomes	C1457887
+arrest	CUI-less
+lv dysfunction	CUI-less
+myocardial infarction	C0027051
+schizophrenia	C0036341
+malignant	C0006826
+hypercholesterolemia	C0020443
+third heart sound	CUI-less
+upper zone redistribution	CUI-less
+inferior myocardial infarction	C0340305
+cystic area	C0334054
+liver cirrhosis	C0023890
+allergic rhinitis	C2607914
+subcutaneous abscess	C0149777
+ventricular irritability	CUI-less
+sinus disease	C0030469
+cardiac defects	C0018816
+soft tissue swelling	CUI-less
+abdominal stoma	C0459683
+grasp reflex	CUI-less
+parathyroid adenoma	C0262587
+cirrohsis	C0023890
+sternal rub	CUI-less
+sternal click	CUI-less
+lyme	C0024198
+eschar	C0521172
+endstage renal disease	C0022661
+crackles	C0034642
+rectal cancer	C0007113
+blood in the stool	C1321898
+ventricular response rate up	CUI-less
+air-filled colonic loops	CUI-less
+infectious disease	C0004623
+volume of stools	CUI-less
+deformity	C0302142
+headache	C0018681
+unable to rise	CUI-less
+fib	C0232197
+depression in 2	CUI-less
+meningeal carcinomatosis	C0220654
+desatureated	CUI-less
+depression in 5	CUI-less
+non-bleeding proximal stomach lesion	CUI-less
+abnormal pap smears	CUI-less
+impaired relaxation	CUI-less
+distant hs	CUI-less
+rv failure	C2939447
+aortic dissection type b	C0340647
+internal fat	CUI-less
+la enlargement	C0238705
+abdomen bruits	C0221755
+sick sinus syndrome	C0037052
+neglect	CUI-less
+right upper lobe pneumonia	C0585106
+ad	C0002395
+anginal	C0002962
+af	C0004238
+ah	C0233762
+osseous abnormalities	CUI-less
+ai	C0003504
+ulcerations esophagus	C0151970
+sensory changes	CUI-less
+ar	C0003504
+as	C0003507
+multiple injuries	C0026771
+resp. failure	C1145670
+occlusion	C0028778
+portal gastrophathy	CUI-less
+nephrolithiasis	C0392525
+loculated	C1265808
+pancreatitis	C0030305
+compression	CUI-less
+raccoon eyes	CUI-less
+dyskinesis	C0013384
+pleural calcifications	C0264541
+left ama	CUI-less
+propioception	CUI-less
+syndrome of inappropriate diuretic hormone	C0021141
+achalasia	CUI-less
+bm	CUI-less
+bp	CUI-less
+akinesis	C0085623
+passed clots	CUI-less
+idiopathic anemia	CUI-less
+spleen enlarged	CUI-less
+contractures	C0009917
+occlussion	C0028778
+tongue midline	CUI-less
+moans when touched	CUI-less
+decreased hr	C0428977
+metastases mesentary	C0686147
+right ventricular dilated	C0344893
+cp	C0008031
+withdrawel symptoms	C0087169
+wide-complex tachycardia	CUI-less
+autonomic instability	CUI-less
+factor xi deficiency	C0015523
+slower heart rates	C0428977
+chronic lymphocytic leukemia	C0023434
+petechiae	C0031256
+kidney simple cyst	C0268800
+opacity	C1265876
+pallor	C0030232
+atrial septal defect	C0018817
+mediastinal contours widened	CUI-less
+increase in size of the lumen	CUI-less
+hypertrophic	C0020564
+angulated fracture	C0585061
+dm	C0011849
+broad ligament fibroid	C0404480
+dry mucosa	CUI-less
+rheumatic fever	C0035436
+first degree a-v delay	C0085614
+dt	C0001957
+stomach lac	C0434066
+silent mi	C0340324
+scars	C2004491
+aspirating	CUI-less
+acute distress	CUI-less
+increased 02 requirement	CUI-less
+light touch	CUI-less
+metastases soft tissues	C0684686
+eyes were clamped closed	CUI-less
+position sense impaired	CUI-less
+elevated blood glucose	CUI-less
+subcutaneous collection	CUI-less
+fatigued	C0015672
+metastatic disease	C2939419
+decreased bs	CUI-less
+end-stage renal disease	C0022661
+lv thrombus	C0587044
+reactive vascular transformation	CUI-less
+musculoskeletal jerking	CUI-less
+systolic function depressed	CUI-less
+aspiration	CUI-less
+varicose veins	C0042345
+enuresis	C0014394
+paresthesias	C0030554
+abdominal nontender	CUI-less
+thickening	CUI-less
+bradycardiac	C0428977
+frothy sputum	C0577979
+end stage renal disease	C0022661
+post-obstructive	CUI-less
+unresponsiveness	CUI-less
+fx	C0016658
+tortion	C1265748
+esophageal ulcers	C0151970
+hep b virus	C0019163
+alert	CUI-less
+rate	CUI-less
+muscle aches	C0231528
+3-vessel disease	C0340285
+gb	C0018378
+linear densities	CUI-less
+blood bowel movement	CUI-less
+pulmonary effusions	C0032227
+occluded	C0028778
+breast cancer	C0006142
+patent airway	CUI-less
+rhythm	CUI-less
+incomplete hd	CUI-less
+enlarged liver	CUI-less
+rash	C0015230
+aeration left lung	CUI-less
+nipple shadow	CUI-less
+ha	C0018681
+timi three flow	CUI-less
+resp arrest	C0162297
+drug overdose	C0029944
+left ventricular outflow obstruction	C0344917
+hyperparathyroidism	C0020502
+peak systolic velocities	CUI-less
+prolonged p-r interval	CUI-less
+mucosal irregularity	CUI-less
+nonfunctional kidney	CUI-less
+normocytic anemia	C0085577
+poor oxygenation	CUI-less
+temperature spikes	CUI-less
+sleep apnea	C0037315
+fractures	C0016658
+eosinophilic pneumonia	C1527407
+embolic	C0262469
+ocr	CUI-less
+blood pressure	CUI-less
+down's syndrome	C0013080
+fluid collects	CUI-less
+associated symptoms	C0521989
+cerebral contusions	C0750971
+st segment elevations	CUI-less
+significant hematocrit drop	CUI-less
+primary renal neoplasm	C0740457
+cannot keep in fluids	C0235395
+distraction	C0332778
+radiation to his jaw	CUI-less
+gas in colon	CUI-less
+retrocardiac opacification	CUI-less
+transaminitis	CUI-less
+acute bleed	C0333276
+extremities turned in	CUI-less
+hemisphere hemorrhage	C0007784
+shock liver	CUI-less
+low sats	CUI-less
+tunneled catheter infections	C0588173
+retroperitoneal hematoma	CUI-less
+impaired glucose tolerance	C0271650
+blood vomit	C0018926
+chronic kidney failure	C0022661
+thrombosed	C0340704
+midline lesion	CUI-less
+abscess cautery stones	CUI-less
+pericardial effusion	C0031039
+discoid atelectasis	C0264494
+a. fib	C0004238
+elevated digoxin level	CUI-less
+pupils reactive to light	CUI-less
+hypertensive crisis	C0020546
+flank pain right	C0423640
+leukocytosis	C0023518
+anabolic steroid abuse	C0338671
+abdomen warm	CUI-less
+normotensive	CUI-less
+somnolence	CUI-less
+adenocarcinoma	C0001418
+increase creatinine	CUI-less
+rest symptoms	CUI-less
+chronic constipation	C0401149
+chest discomfort	C0235710
+hear voices	C0424068
+liver not palpable	CUI-less
+actively suicidal	CUI-less
+systolic ejection murmur	CUI-less
+gag reflex	CUI-less
+pharyngeal exudate	CUI-less
+dark blood	CUI-less
+tremulousness	C0040822
+emesis	C0042963
+drop in blood pressure	C0520541
+pancreatic mass	CUI-less
+eyes deviated	C0339614
+elevated left sided filling pressures	CUI-less
+prominent loops	CUI-less
+elongated la	C0344711
+emphysematous changes	C0029607
+vomitting	C0042963
+loculated hemorrhage	CUI-less
+mg	CUI-less
+mi	C0027051
+dyssymetric	CUI-less
+right palmomental reflex	CUI-less
+urine output	CUI-less
+desaturations	CUI-less
+renal lesion	CUI-less
+mr	C0026266
+withdrawal seizures	C0586323
+ulcers duodenal	C0013295
+ms	C0026269
+pain back	C0004604
+syncopized	C0039070
+blood third ventricles	CUI-less
+double vision	C0012569
+distention	C0012359
+tricuspid leaflets thickened	C2959459
+prostate carcinoma	C0600139
+mitral valve regurgitation	C0026266
+ns	C0028081
+acutely intoxicated	C0394996
+sbp came back	CUI-less
+nasal bone fractures	C0159322
+underlying mass	CUI-less
+hyperglycemia	C0020456
+left-sided cva	C0586325
+oa	C0029408
+od	C0029944
+mechanical fall	CUI-less
+stricture bile duct	C0235982
+hyperglycemic	C0342243
+infrarenal abdominal aortic aneurysm	C0741151
+toes mute	CUI-less
+st depressions	CUI-less
+abnormal movements	C0392702
+hypokinetic	C0086439
+creatinine improved	CUI-less
+type 1 diabetes	C0011854
+incarceration	CUI-less
+mca infarct	C0740392
+free pelvic fluid	CUI-less
+black tarry stool	C0025222
+depression in v4	CUI-less
+adipose tissue densities	CUI-less
+abscess right flank	C0263108
+atelectasis left	C0004144
+elevated l sided pressures	CUI-less
+pe	C0034065
+tachycardiac	CUI-less
+facial cuts	C0432944
+gi bleeding	C0017181
+left atrium dilated	C0344720
+a-fib	C0004238
+comfort measures	CUI-less
+pr	C0034088
+ps	C0034089
+spondylolisthesis	C0038016
+cardiac enzyme fractions	CUI-less
+st elevation	CUI-less
+drop blood pressure	C0232107
+upgoing	CUI-less
+sedated	CUI-less
+biphasic t waves	CUI-less
+carotid bruits	CUI-less
+exertional cp	C0232288
+diabetes mellitus type 2	C0011860
+s3	CUI-less
+fibrothorax	C2724209
+3vd	C0856738
+s4	CUI-less
+symptoms of aspiration	CUI-less
+apneic	C0003578
+lv wall motion abnormality	CUI-less
+pupils reactive	CUI-less
+abdomen nt	CUI-less
+cerebrovascular event	CUI-less
+bone lucency	CUI-less
+diseased	C0012634
+abdomen nd	CUI-less
+iliac bone fracture	C0347805
+holosystolic murmur	C0232258
+pharyngitis	C0031350
+rbbb	C0085615
+large amounts of clot	C0302148
+diabetes type ii	C0011860
+coronary disease	C0010068
+motor weakness	C1536698
+ataxia	C0004134
+si	CUI-less
+neutropenic	C0027947
+palate elevated	CUI-less
+decreased ejection fraction	CUI-less
+sr	CUI-less
+numbness	C0028643
+carotid artery thrombosis	C0007274
+failure rejection	C0451706
+sx	C1457887
+sz	C0036572
+transient ischemic attack	C0007787
+triple vessel cad	C0340285
+productive cough	C0239134
+regional systolic function	CUI-less
+aortic aneurysm	C0003486
+bronchial secretions	CUI-less
+bleeding problems	CUI-less
+pulmonary overload	C0340106
+acidosis	C0001122
+atrophy	C0333641
+intracardiac shunt	CUI-less
+deformity elbow	C0264138
+to	CUI-less
+left ventricular failure	C0023212
+right ventricular volume overload	CUI-less
+tr	C0040961
+prolonged q-tc interval	CUI-less
+food lower third of the esophagus	CUI-less
+wheezing	C0043144
+uc	C0009324
+liver function tests rise	CUI-less
+additional medical issues	CUI-less
+aids	C0001175
+pulmonary edema	C0034063
+hyperaldo	C0020428
+hypercholestrolemia	C0020443
+small bowel obstruction	C0235329
+thin	CUI-less
+chest pain radiated	C0232289
+vf	C0042510
+tongue atrophy	C0241423
+fistula	C0016169
+tone decreased	C0026827
+failure	C0018801
+thalamic infarcts	C1611171
+rv systolic function depressed	CUI-less
+elevated amylase	CUI-less
+moving abnormally	CUI-less
+chemical pneumonitis	C0264458
+oxygen demands decreased	CUI-less
+nodularity	C0028259
+wound care	CUI-less
+colon adenocarcinoma	C0338106
+increased peak aortic gradient	CUI-less
+hepatosplenomegly	C0019214
+chronically loose stools	C0401151
+enlarged subarachnoid space	CUI-less
+complete heart block	C0151517
+gag	CUI-less
+methicillin-resistant staphylococcus aureus bacteremia	C0343401
+vommiting blood	C0018926
+venous collaterals	C0265074
+elevated inr	CUI-less
+alcoholism	C0001973
+sore throat	C0242429
+overweight	C0497406
+mssa sepsis	CUI-less
+dilated cardiomyopathy	C0007193
+response to pain	CUI-less
+dyscoordination	C0520966
+type 1 diabetes mellitus	C0011854
+gained more than three pounds	CUI-less
+foot pain	C0016512
+pulsation	CUI-less
+response to painful stimulus	CUI-less
+prerenal etiology	CUI-less
+impairment	C0684336
+subarachnoid hemorrhage	C0038525
+elevated transaminases	CUI-less
+presyncopal episode	C0700200
+osa	C0520679
+significant bowel movements	CUI-less
+exertional angina	C0577698
+bibasilar atelectasis	C0004144
+inr reversed	CUI-less
+substernal chest pain	C0151826
+lesions cervix	C0235656
+decreased hearing	CUI-less
+puss	CUI-less
+tachypneic	C0231835
+foot dislocation	C0434694
+gcs	CUI-less
+depressed	CUI-less
+lv inflow pattern	CUI-less
+seized	C0036572
+common iliac aneurysm	C0700638
+ventral hernia	C0019326
+acute respiratory distress	C0748355
+skin dry	C0151908
+sacral mass	CUI-less
+r hemianopsia	CUI-less
+sacral decubitus ulcer	C0558159
+increased speech	CUI-less
+wall motion abnormality	CUI-less
+ischemic cardiomyopathy	C0349782
+right atria dilated	C0344709
+common carotid aneursym	C0264965
+lung abscess	C0024110
+cooling	CUI-less
+lung ca	C0242379
+mm dry	C0854113
+calcification	CUI-less
+perihilar alveolar pattern	CUI-less
+renal mass	CUI-less
+mitral valve leaflets thickened	C3164530
+deconditioning	CUI-less
+copd	C0024117
+sedentary	CUI-less
+abnormal changes	CUI-less
+hematocrit down	CUI-less
+decompressed	CUI-less
+schizoaffective disorder	C0036337
+st dep	CUI-less
+dimples	CUI-less
+non-cardiac chest pain	C0476281
+end organ damage	C0332675
+chronic atrial fibrillation	C0694539
+psoas abscess	C0085222
+iron deficiency anemia	C0162316
+dyspnea on exertion	C0231807
+emaciated	C0013911
+new symptoms	C1457887
+alcoholic cirrhosis	C0023891
+etoh use	C0085762
+pulmonic insufficiency	C0034088
+collapsed lung	C0004144
+vasogenic cerebral edema	C0472387
+nocturia	C0028734
+lower abdominal tenderness	C2585306
+shotty lymph nodes	CUI-less
+fundi obscured	CUI-less
+hepc	C0019196
+increased sputum	CUI-less
+retained products of conception	C0033270
+corn	C0010046
+perfusion defects	CUI-less
+pulmonary infection	C0876973
+right ventricular enlargement	C0344893
+upper respiratory infections	C0041912
+ureter stones	C0041952
+pm failure to capture	C0340923
+liver nodules	CUI-less
+corneal reflex present	CUI-less
+spontaneous movement	CUI-less
+ischemic colonic perforation	CUI-less
+blood in stomach	CUI-less
+visual field cuts	CUI-less
+bright red blood per rectum	CUI-less
+melenic stools	C0025222
+blood pressure stable	CUI-less
+ventricular tachycardia	C0042514
+gastrointestinal upset	C2697368
+iliac vein injured	C0160733
+elevation hemidiaphragm	CUI-less
+murmur radiation	CUI-less
+internal carotid artery stenosis	C0340569
+atrioventricular conduction block	CUI-less
+gib	C0017181
+epileptiform activity	CUI-less
+chronic ventilatory dependence	CUI-less
+valvular regurgitation	C0042300
+atelectatic changes	C0004144
+vegetation	C1285498
+terminal illness	C0679247
+urinary incontinence	C0042024
+tib deformity	C0343294
+abdominal pain	C0000737
+lung lesions	CUI-less
+loss of consiousness	CUI-less
+drainage from incision site	CUI-less
+ganglioma	C0206716
+elevated ce's	CUI-less
+felt tired	C0849970
+obstructive airways disease	C0600260
+drainage wound	C0332799
+retinal detachments	C0339440
+neurofibroma	C0027830
+right ventricular systolic function normal	CUI-less
+loss of consciousness	CUI-less
+accre	C0032044
+high chol	C0020443
+withdrawal symptoms	C0087169
+sigmoid diverticulosis	C0012818
+pharyngeal dysphagia	C0267071
+noncalcified nodule	C0028259
+back injury	C0004601
+polysubstance abuse	C0747752
+brady	C0428977
+vfib	C0042510
+parkinson's disease	C0030567
+thyroid enlarged	C0018021
+tube feed dependence	CUI-less
+hepatitis-c	C0019196
+thickened tricuspid leaflets	C2959459
+three vessel coronary artery disease	C0340285
+pleural effusions bilaterally	C0747635
+rupture	C3203359
+ischemic state	CUI-less
+pedal edema	C0574002
+subcutaneous mass	CUI-less
+comfort measures only	CUI-less
+trauma	C0043251
+rca occlusion	C1290385
+iliac aneurysm	C0162870
+increased tone	C0026826
+abscess flank	C0263108
+cardiac event	CUI-less
+cerebral aneurysm	C0917996
+axillary lymphadenopathy	C0578735
+swallowing problems	C0392678
+dry skin	C0151908
+splenomegaly	CUI-less
+chest pain squeezing	CUI-less
+bleeding ulcer	C0333291
+mesenteric hematoma	C0267767
+leaving ama	CUI-less
+vascular dementia	C0011269
+ankylosing spondylitis	C0038013
+elevated cr	CUI-less
+neuroectodermal tumor	C0206093
+heavier periods	C0025323
+edematous	C0013604
+head injury	C0018674
+unsteady	CUI-less
+pain hip	C0019559
+dyskinetic	C0013384
+stenosis ica	C0340569
+appearance of uterus	CUI-less
+colonization	CUI-less
+hydrosalpinx	C0221376
+non-st-elevation myocardial infarction	C1276061
+sacral fracture	C0435492
+acute st segment elevation myocardial infarction	C1303258
+blood on his tongue	CUI-less
+murmur radiating	CUI-less
+increase in creatinine	CUI-less
+drainage wounds	C0332799
+rashes	C0015230
+elevated bp	CUI-less
+hallucinating	C0018524
+hemorrhagic conversion	CUI-less
+b-cell lymphoma	C0079731
+elevated ck	CUI-less
+angiomyolipoma	C0206633
+psychiatric illnesses	C0004936
+prolonged qtc interval	CUI-less
+wave discharges	CUI-less
+hypercarbia	C0020440
+c. difficile	C0343386
+multiple facial fractures	C0159321
+lung contusion	C0347625
+urinary loss	CUI-less
+chest pain on exersion	C0232288
+right axis deviation	CUI-less
+mediastinal contour	CUI-less
+paf	C0235480
+kidney stone	C0022650
+low grade temperatures	CUI-less
+aspirations	C0700198
+pulmonary simplification	CUI-less
+murmurs	CUI-less
+facial asymmetry	C1306710
+gastritis	C0017152
+hypoxia	C0242184
+hypoxic	C0242184
+rv systolic function	CUI-less
+alcohol abuse	C0085762
+lipase elevated	CUI-less
+stomach polyp	C0236048
+ascending aorta dilated	C0345049
+corneal on r	CUI-less
+elevated esr	CUI-less
+dimished bs	CUI-less
+elevated liver enzymes	CUI-less
+right atrium dilated	C0344709
+ards	C0035222
+trapped ventricle	CUI-less
+akinetic	C0085623
+erythema	C0041834
+presyncope	C0700200
+paraesophageal hernia	C0267725
+epidural mass	CUI-less
+insulin abuse	C0274546
+telangiectasias	C0039446
+terminally ill	C0679247
+ab soft	CUI-less
+inferior ischemia	CUI-less
+rectal masses	CUI-less
+rv function	CUI-less
+loss of gray-white differentiation	CUI-less
+pvcs	C0151636
+vascular calcification	C0342649
+decreasing trop	CUI-less
+spike a temperature	CUI-less
+cirrhotic liver	C0023890
+bactermia	C0004610
+inability to walk	CUI-less
+primary pulmonary hypertension	C0152171
+narcotic overdose	C1578566
+ng tube curled	CUI-less
+inadequate hd	CUI-less
+lucent lesion	CUI-less
+tibia fractures	C0040185
+pcp	C0032305
+infiltrates	C0332448
+blood loss anemia	C0948824
+left ventricular inflow pattern	CUI-less
+left bundle branch block	C0023211
+pda	C0013274
+wound drainage	C0332799
+biliary tree abnormalities	CUI-less
+cavitary lesion	CUI-less
+chest multiple nodules	C0748164
+respiratory failure	C1145670
+tobacco abuse	C0040336
+kidney mass	CUI-less
+pulmonary status	CUI-less
+hydropneumothorax	C0020303
+bleeding	C0019080
+aortic root dilated	C0238669
+thickened wall	CUI-less
+gsw	C0043252
+unable to get up	CUI-less
+lung cancer	C0684249
+dissection abdominal aorta	C0837143
+abscess rt flank	C0263108
+abdominal tenderness	C0232498
+bp dropped	CUI-less
+tremors	C0040822
+incoordination	C0520966
+syst murmur	CUI-less
+intraop bleeding	C0079027
+elevated wbc	C0023518
+hypotonic	C1579769
+bloody stools	C1321898
+arch coarctation	C0003492
+new cough	C2220033
+lung injury via mechanical ventilation	C0340257
+skin yellow	C0022346
+alcoholic liver disease	C0023896
+hct trended down	CUI-less
+pfo	C0016522
+st segment abnormalities	CUI-less
+small-vessel disease	C2733158
+irregular	CUI-less
+groin pain	C0239783
+dysfunction	CUI-less
+chronic schizophrenia	C0221765
+perioperative complications	C0009566
+hepatic encephalopathy	C0019151
+abrasion knee	C0432860
+bleeding blood vessel	C0264940
+afebril	CUI-less
+pulmonary embolism	C0034065
+post nasal drip	C0032781
+esophagitis	C0014868
+dullness to percussion	CUI-less
+ncslc	C0007131
+mural thrombus	C0333205
+conjunctivitis	C0009763
+symptoms persisted	CUI-less
+aorta dilated	C0265004
+hard of hearing	CUI-less
+carotid disease	C0007273
+ventricular tachycardia arrest	CUI-less
+blood pressure drop	C0232107
+od'd	C0029944
+inflammatory material	C0021368
+ms change	C0278061
+resistive indices	CUI-less
+chronic back pain	C0740418
+renal insufficiency	C0035078
+junctional escape rhythm	CUI-less
+abdominal effusions	C0685931
+parenchymal hemorrhage	C2937358
+lmca disease	C1299433
+left ventricular cavity unusually small	CUI-less
+tongue protrudes	CUI-less
+lower gastrointestinal bleed	C0024050
+uterus anteverted	CUI-less
+elevated hr	CUI-less
+decreased tone	C0026827
+hyperchol	C0020443
+equal in height	CUI-less
+mitral valve prolapse	C0026267
+unresponsive	CUI-less
+vifib arrest	CUI-less
+fevers	CUI-less
+left facial numbness	C0015469
+sepsis	C0243026
+hypoactive bowel sounds	CUI-less
+parasthesias	C0030554
+laminar necrosis	C0333517
+dislocation	C0012691
+blood sugar high	CUI-less
+complication	C0009566
+drainage from incision	CUI-less
+free fluid	C0013687
+anticoagulation	CUI-less
+cervical spondylosis	C1384641
+ischemic symptoms	C0022116
+drooling	C0013132
+pancreatic cancer	C0346647
+agitated	C0085631
+small air fluid levels	CUI-less
+electrolyte loss	CUI-less
+cardiac enzymes normal	CUI-less
+contusions	C0009938
+jaundice	C0476232
+dropped gallstone abscess	CUI-less
+wound purulent draiange	CUI-less
+burning	C0085624
+femoral neck fracture	C0015806
+adrenal insufficiency	C0001623
+chronic pulmonary disease	C0746102
+hyponatremia	CUI-less
+drainage	CUI-less
+supraclavicular mass	CUI-less
+syncope	C0039070
+fecalization of bowel contents	CUI-less
+fracture	C0016658
+coarse upper airway sounds	CUI-less
+muscular dystrophy	C0026850
+parasitization	CUI-less
+degloving injury	C0433122
+increased abdominal girth	CUI-less
+tamponade physiology	C0007177
+basilar stenosis	C0265097
+bronchial bs	C0231873
+three-vessel disease	C0340285
+events	CUI-less
+drift	CUI-less
+pna	C0032285
+pnd	C1956415
+chronic parenchymal disease	CUI-less
+vasospasm	C0085616
+oral thrush	C0006849
+palmar erythema	CUI-less
+parkinsons	C0030567
+st segment changes	CUI-less
+shift of midline structures	CUI-less
+toes upgoing	CUI-less
+accreta	C0032044
+heart irregular rate	CUI-less
+stridor	C0038450
+hyperlipidemia	C0020473
+left main coronary artery disease	C1299433
+left hemiparesis	CUI-less
+nystagmus	C0028738
+av block	C0004245
+dysarthric speech	C0013362
+papillary cancer	C0007133
+chronic lung disease	C0746102
+low lung volumes	CUI-less
+breast ca	C0006142
+redness wounds	C0406833
+solid food distal esophagus	CUI-less
+urinary urgency	CUI-less
+coffee grounds	CUI-less
+dark tarry stools	C0025222
+superior pubic rami fracture	C0577726
+multiple sclerosis	C0026769
+inguinal mass	C0240007
+gradient	CUI-less
+infarctions water shed	C0333557
+abdomen rebound	CUI-less
+improved aeration	CUI-less
+scleral icterus	C0240962
+fainting	C0039070
+embolism	C0013922
+iga nephropathy	C0017661
+atherosclerotic plaque	C0333483
+right ventricular pressure overload	CUI-less
+left ventricular systolic dysfunction	C1277187
+erosions	C0333307
+xanthomonas maltophilia	CUI-less
+ureteral calculi	C0041952
+dm 2	C0011860
+head trauma	C0018674
+basal cell cancer	C0007117
+kidney calculi	C0022650
+epigastric tenderness	C0578093
+interstitial basilar abnormality	CUI-less
+condition worsened	CUI-less
+aspiration event	CUI-less
+cystic collection	CUI-less
+obstructive lung disease	C0600260
+a-v conduction	C1627362
+vision changes	C0042798
+intoxication	CUI-less
+rate junctional	CUI-less
+ruptured pica aneurysm	C0349600
+ear fullness	CUI-less
+iron low	CUI-less
+pcp pneumonia	C0032305
+cramping	C0013390
+food got stuck	CUI-less
+subarachnoid hemorrage	C0038525
+breast attenuation	CUI-less
+oversedation	CUI-less
+hepatitis b	C0019163
+hepatitis c	C0019196
+uncomfortable	C0234215
+free air abdomen	C0032320
+abd masses	CUI-less
+hoarse voice	C0019825
+hurt himself	C0480203
+signs or symptoms	C0037088
+warm	C0235218
+rapid heartbeat	CUI-less
+valvular abnormalities	CUI-less
+electrolyte abnormalities	C0342579
+impingement	C0231652
+anterior space	CUI-less
+chest pain with exertion	C0232288
+common carotid artery aneurysm	C0264965
+bladder mass	CUI-less
+high density material	CUI-less
+muscular atrophy	C0026846
+alcohol withdrawal	C0236663
+sodium increased	CUI-less
+cardiomyopathy	C0878544
+ventilator related pneumonia	C1701940
+disease	C0012634
+pale mucosa	CUI-less
+glucose intolerance	C0271650
+loose tooth	CUI-less
+macrocytic	C0002886
+suicidal thoughts	CUI-less
+ptx	C0032326
+nephropathy	C0011881
+redness	CUI-less
+pud	C0030920
+unable to walk	CUI-less
+prerenal azotemia	C0554309
+bloody stool	C1321898
+gi motility disorder	CUI-less
+freckles	CUI-less
+cervical rigidity	C0151315
+foot ulcer	C0085119
+hypernatremia	C0020488
+papilledema	C0030353
+breath sounds diminished	CUI-less
+cyst liver	C0267834
+left-sided weakness	CUI-less
+sciatica	C0036396
+rectal adenocarcinoma	C0149978
+left ventricular systolic function normal	CUI-less
+exposed to asbestos	CUI-less
+pvd	C0085096
+neck pain	C0007859
+bleeding hemorrhoids	C0265031
+knee swollen	CUI-less
+traumatic brain injury	C0876926
+suicidal ideation	CUI-less
+occluded right coronary artery	C1290385
+parkinson's	C0030567
+bruising	C0009938
+mentation	CUI-less
+left ventricular systolic function	CUI-less
+fractures rib	C0035522
+diverticular rupture	CUI-less
+sinus tachy	C0039239
+echogenic kidney	CUI-less
+rcia	CUI-less
+crp elevated	CUI-less
+osteopenia	C0029453
+poor pos	CUI-less
+infection	C0021311
+inferior stemi	C1303258
+hypogammaglobinemia	C0086438
+abd tender	C0232498
+paroxysmal atrial fibrillation	C0235480
+old infarcts	C0333551
+multiple infarcts	C0333547
+bleeding vessels	C0264940
+klebsiella	CUI-less
+thrombophlebitis	C0040046
+retinal hemorrhage	C0035317
+rate is slower	CUI-less
+vertebral compression	CUI-less
+rebound	C0234246
+food impaction	CUI-less
+tender lymph node	C0240273
+anterolateral myocardial injury	CUI-less
+septic emboli	C1955781
+rigors	CUI-less
+bradycardic	C0428977
+ventilator associated pneumonia	C1701940
+pa systolic pressure	CUI-less
+stone bladder	C0005683
+murmur	CUI-less
+gallstones	C0008350
+hand fx	C0435632
+mental status change	C0278061
+adverse events	CUI-less
+dilated pupils	CUI-less
+micturition	CUI-less
+afferent pupillary defect	CUI-less
+dark stools	C0474585
+inferior infarction	C0340305
+gouty nodule	CUI-less
+mass duodenum	CUI-less
+bradycardia	C0428977
+deformed aortic valve leaflets	CUI-less
+nonbleeding esophageal varices	CUI-less
+hocm	C0007194
+uremic encephalopathy	C0268707
+right pneumothorax	C0546333
+bruit	CUI-less
+cardiomegaly	CUI-less
+left ventricular outflow tract obstruction	C0344917
+flash pulm edema	C0155919
+resp symptoms	C0476272
+3 vessel disease	C0340285
+hit	C0272285
+hiv	C0019693
+left lower lobe pneumonia	C0585104
+decreased range of motion	CUI-less
+hypovolemia	CUI-less
+rhonchi	C0035508
+abdominal discomfort	C0232487
+insulin-dependent diabetes mellitus	C0011854
+esophageal perforation	C0014860
+esoph ulcers	C0151970
+elevated lactate	CUI-less
+gurgling gas-like pain	C0016205
+cocaine o/d	C0573196
+etohism	C0001973
+cardiopulmonary abnormality	CUI-less
+no heart sounds	CUI-less
+lv mass	CUI-less
+cystic collectionan	CUI-less
+cerebral vascular accident	C0038454
+intracranial abscess	C0021874
+pain sensation	CUI-less
+avulsion fracture	C0332758
+pathologic adenopathy	CUI-less
+perforated duodenum	C0267356
+vommitting	C0042963
+restenosis	C0333186
+st-tw changes	CUI-less
+infarction	C0021308
+one vessel coronary artery disease	C0581374
+visual changes	C0042798
+syncopal episode	C0039070
+3 vessel coronary artery disease	C0340285
+oropharyngeal swallowing disturbance	C0267071
+acute respiratory failure	C0264490
+gropu b streptococcus	C1960564
+sharp wave discharges	CUI-less
+acute heart failure	C0264714
+tonsillar exudates	CUI-less
+pinprick	CUI-less
+nasal tickle	CUI-less
+acute infarct	C0333548
+chronic anemia	C0581384
+increased white blood cell count	CUI-less
+hypercalcemia malignancy	C0149911
+cva tenderness	C0235634
+lactic acidosis	C0001125
+delayed pp hemorrhage	C0473508
+hemangiomas	C0018916
+stone kidney	C0022650
+sinus	CUI-less
+prior inferior wall myocardial infarction	C2063775
+birthmark	C0265974
+radial ulnar fracture	C0435612
+lbbb	C0023211
+caput medusae	C0221226
+serosanguinous staining	CUI-less
+prolonged qtc	CUI-less
+right sided chest pain	C0563275
+community acquired pneumonia	C0694549
+hypercapnia	C0020440
+elevated cardiac enzymes	CUI-less
+delirium tremens	C0001957
+leg moving	CUI-less
+nodular opacities	CUI-less
+blocked premature atrial contractions	C0428990
+bleeding varices	C0333106
+bladder cancer	C0005684
+thickened aortic valve leaflets	CUI-less
+hemopneumothorax	C0019077
+recent binge	CUI-less
+left lower quadrant pain	C0238551
+esophageal varices	C0014867
+abnormalities	CUI-less
+contusion	C0009938
+supraventricular tachycardia	C0039240
+crepitus	C0277964
+vegetation pulmonic valve	C0577795
+factor deficiency	C0001733
+dilated right atrium	C0344709
+increased lfts	CUI-less
+nondisplaced fracture	C0585058
+peroneal injury	C0272439
+mental condition	CUI-less
+liver was nodular	CUI-less
+low vision	C0042798
+pulmonary nodules	C0748164
+obstruction	C0028778
+poor medicine compliance	CUI-less
+ischemic bowel	C2004435
+low back pain	C0024031
+gi bleed	C0017181
+inflammatory	C0021368
+nosocomial pneumonia	C0949083
+lacerated	C0043246
+lack of function	CUI-less
+stemi	C1303258
+polycystic liver disease	C0158683
+relative afferent defect	C0339663
+pulmonic regurgitation	C0034088
+splenomegalia	CUI-less
+bleeding vessel	C0264940
+changes with subcutaneous air	CUI-less
+hemorrhagic infarction	C0472369
+granulomatous inflammation	C0553697
+non-bleeding esophageal varices	CUI-less
+open pelvic fracture	C0272581
+dehydrated	C0011175
+alteration in mental status	C0278061
+dyspnea	C0013404
+wt loss	CUI-less
+pleural effusion	C0032227
+lethargic	C0023380
+gastrointestinal bleeding	C0017181
+neurologic deficit	CUI-less
+ugi bleed	C0041909
+epigastric mass	CUI-less
+wound infection	C0043241
+respiratory dispress	C0476273
+calcified nodules	CUI-less
+rv hypertrophy	C0162770
+splenic laceration	C0347636
+liver laceration	C0347633
+axillary lad	C0578735
+compromised bowel	CUI-less
+mental status changes	C0278061
+malignancy	C1306459
+regional wall motion	CUI-less
+thickness	CUI-less
+b12 deficiency	C0042847
+abdomen tender	C0232498
+transtentorial hernation	C2937226
+lv function unchanged	CUI-less
+left ventricular delayed relaxation	C1562298
+parenchymal scarring	CUI-less
+three-vessel coronary artery disease	C0340285
+left ventricular cavity dilated	C0344911
+leukopenia	C0023530
+drug abuse	C0013146
+radial neck fracture	C0435579
+peripheral enhancement	CUI-less
+hepatic cyst	C0267834
+renal stenosis	C0035067
+rapid steroid taper	CUI-less
+exudates	CUI-less
+calcific densities	CUI-less
+confusion	C0009676
+amount of stool colon	CUI-less
+residual right-sided weakness	CUI-less
+decrease blood pressure	C0232107
+highly atypical cells	CUI-less
+hsm	C0019214
+spontaneous movements	CUI-less
+diabetic ketoacidosis	C0011880
+hip fracture	C0019557
+shaking chills	C0085593
+bilateral inguinal hernias	C0267672
+elbow fx	C0600106
+worsened aeration	CUI-less
+single vessel coronary artery disease	C0581374
+clostridium difficile infection	C0343386
+arm pain	C0239377
+fixed inferior defect	CUI-less
+liver function tests	CUI-less
+endocarditis	C0014118
+recent trauma	C0332665
+increased cr	CUI-less
+cholangitisepsis	CUI-less
+htn	C0020538
+white blood cells with bacteria	C0023510
+sclerotic lesions	C0221434
+insomnia	C0917801
+inferior wall function	CUI-less
+heart murmur	CUI-less
+positive bowel sounds	CUI-less
+hypertension	C0020538
+not breathing	CUI-less
+wound dehiscence	C0259768
+2-vessel coronary artery disease	C0581375
+blurry vision	C0344232
+scoliosis	C0036439
+hip abrasion	C0432858
+dysrythmias	C0003811
+coarse breath sounds	CUI-less
+barrett's esophagus	C0004763
+tracking	CUI-less
+herpes simplex two	C1318710
+inflammatory reaction	C0021368
+antegrade flow	CUI-less
+itching	C0033774
+redness wound	CUI-less
+t flattening	CUI-less
+poor inspir effort	CUI-less
+elevation of the left mca	CUI-less
+left ventricular end diastolic pressure	CUI-less
+constipation	C0009806
+muddy sclerae	CUI-less
+abdomen shifting dullness	CUI-less
+proximal fibula fracture	C0272766
+hypertrophic obstructive cardiomyopathy	C0007194
+clustered bronchial markings	CUI-less
+sexually transmitted diseases	C0036916
+high grade lymphoma	C1962917
+abdomen nontender	CUI-less
+persistant vomiting	C0152165
+neoplasm	C0027651
+t wave abnormalities	CUI-less
+fibula fractures	C0149699
+delayed precordial r wave	CUI-less
+thick secretions	CUI-less
+recurrent ventral hernia	C0267717
+bone destruction	C0587240
+aortic dissection	C0340647
+illness	CUI-less
+lucid moments	CUI-less
+oriented to person only	CUI-less
+aortic root dilatation	C0238669
+opiod overdose	C0572061
+sacral ulcer	C2919335
+hypertriglyceridemia	CUI-less
+septic	C0243026
+induration	C0332534
+esophageal polyp	C0281838
+etoh cirrhosis	C0023891
+tachcardia	CUI-less
+weakness arms	C0751409
+cyst	C0010709
+over medication	CUI-less
+atheromatous disease	C0264956
+adult respiratory distress syndrome	C0035222
+mobile mass	CUI-less
+cerebral edema	C0006114
+mass right kidney	CUI-less
+air fluid levels	CUI-less
+thrill	CUI-less
+cough	C0010200
+confused	C0009676
+fusiform aneurysm	C0333099
+hematomas	C0018944
+factor viii deficiency	C0272325
+related to chemotherapy	CUI-less
+prior infarctions	CUI-less
+multiple myeloma	C0026764
+lv systolic dysfunction	C1277187
+hypertensive	C0020538
+weight changes	CUI-less
+extraaxial widening	CUI-less
+portal vein thrombosis	C0155773
+movements	CUI-less
+platelet count decreasing	CUI-less
+first degree av-block	C0085614
+carotids murmurs	CUI-less
+consolidation lung	C0521530
+ethanol intoxication	C0001969
+non verbal	CUI-less
+rubs	CUI-less
+incomplete right bundle-branch block	C0262525
+increasing abdominal girth	CUI-less
+urinating multiple times	CUI-less
+oral control	CUI-less
+myopathy	C0026848
+gram negative pneumonia	C0854248
+unknown primary	C0027667
+alcaholic hepatitis	C0019187
+condyloma	C0302180
+irregularly irregular rhythm	CUI-less
+lower extremity edema	C0239340
+without improvement	CUI-less
+chronic mucosal changes	CUI-less
+hernia	C0019270
+abdomen guarding	CUI-less
+epileptiform events	CUI-less
+prostate cancer	C0376358
+intolerance of iron	CUI-less
+serosal small bowel tear	C0434081
+alcohol intoxication	C0001969
+platelet drop	CUI-less
+kyphosis	C0022821
+wounds infection	C0043241
+frontotemporal dementia	C0338451
+toxic metabolic injury	CUI-less
+deep sulcus sign	CUI-less
+bendoziadepine withdrawl seizure	C0234547
+coughing	C0010200
+unwilling to cooperate	CUI-less
+psychosocial stress	C0038443
+av fistula	C0003855
+mets	C2939419
+non-cooperation	CUI-less
+etoh abuse	C0085762
+respiratory function	CUI-less
+head lac	C0856548
+palpitations	CUI-less
+non-oliguric renal failure	CUI-less
+malalignment	C1275957
+symptom	C1457887
+pscyh illness	C0004936
+mass mitral valve	CUI-less
+right ventricular diastolic collapse	CUI-less
+intraoperative bleeding	C0079027
+bilateral hematoma	C0018944
+lung nodule	CUI-less
+respiratory distress	C0476273
+end stage liver disease	CUI-less
+infectious	C0021311
+mucosa friable	CUI-less
+respiratory depression	C0235063
+cocaine abuse	C0009171
+stenoses	C1261287
+internal iliac aneurysm	C0340636
+scaling plaque	CUI-less
+fascicular blocks	C0015643
+slow wave discharges	CUI-less
+upper extremity weakness	C0751409
+jugular venous distension	CUI-less
+stenosed	C1261287
+temperature	CUI-less
+sinus rhythm	CUI-less
+elevated liver function tests	CUI-less
+biatrial enlargement	CUI-less
+impacted	C0333124
+complete effacement	CUI-less
+asystolic arrrest	C0018790
+pneumonia bacterial	C0004626
+qrs	CUI-less
+group a strep	C0554628
+inspiratory wheeze	C0231874
+lateral myocardial infarct	C0340312
+not ambulated	CUI-less
+bilateral pleural effusions	C0747635
+stage 4 ckd	C2317473
+gouty tophus erythematous nodule	CUI-less
+combative	CUI-less
+ich	C2937358
+abnormal septal motion	CUI-less
+abd ntnd	CUI-less
+infections	C0021311
+azotemia	C0242528
+pain abdomen	C0000737
+aortic valve stenotic	C0003507
+prerenal	CUI-less
+aspiration pneumonitis	C1761609
+epistaxis	C0014591
+paroxysmal nocturnal dyspnea	C1956415
+skin breakdown	CUI-less
+loculation effusion	C1265808
+depressed lv systolic function	CUI-less
+pulmonary toilet	CUI-less
+collection	CUI-less
+anemic	C0002871
+anemia	C0002871
+dp pulse	CUI-less
+abdomen obese	CUI-less
+hunger	C0020175
+withdrawal syndrome	C0152128
+skin warm	C0235218
+o2 sats	CUI-less
+neuro deficits	CUI-less
+aneurysmal dilatation	CUI-less
+hemidiaphragm elevated	C0264583
+stenosis	C1261287
+elevated alkaline phosphatase	CUI-less
+poor r wave progression	CUI-less
+right blurriness	C0344232
+non productive cough	C0850149
+hip subluxation	C0019554
+reflux	C0232483
+lightheadedness	C0220870
+right dominant system	C0345135
+urinary frequency	CUI-less
+dilated aortic sinus	C3164718
+traction bronchiectasis	C0264361
+group a streptococcus bacteremia	C0554628
+slowing heart rate	C0428977
+meningitis	C0025289
+vulvar intraepithelial neoplasia	C0346210
+diastolic collapse	C0520863
+dressing saturated with blood	CUI-less
+weiss tears	C0024633
+abcess	C0000833
+depressed cardiac output	CUI-less
+dtrs	CUI-less
+epstein's anomaly	C0013481
+hydro	C0020295
+labored breathing	C0553668
+cholelithiasis	C0008350
+effaced	CUI-less
+bowel movements	CUI-less
+non-sinus supraventricular rhythm	CUI-less
+abnormal alignment	CUI-less
+chest pressure	C0438716
+brain involvement	CUI-less
+stranding	CUI-less
+nuchal rigidity	C1320474
+epigastric ventral hernia	C2242839
+mediastinal widening	CUI-less
+caput medusa	CUI-less
+gallstone	C0008350
+inability to pass stool	CUI-less
+withdraw from pain	CUI-less
+systemic hypertension	C0020538
+liver volume	CUI-less
+widening mediastinum	CUI-less
+swelling	CUI-less
+inferior vena cava dilated	C0685740
+rheumatoid arthritis	C0003873
+paroxysmal atrial flutter	C0741292
+non-insulin-dependent diabetes mellitus	C0011860
+liver problems	CUI-less
+non-verbal status	CUI-less
+gastroesophageal reflux disease	C0017168
+distress	C0476273
+cannot name date	C0233736
+deviation of eyes	C0339614
+epigastric discomfort	C1291078
+inability to drink	CUI-less
+abdominal abcess	C0243001
+shadow lung	CUI-less
+fall	C0000921
+ascities	CUI-less
+chronic aspiration	C0700198
+spinal abscess	C0391986
+pulmonary nodule	CUI-less
+left pneumo	CUI-less
+irregular rhythm	CUI-less
+infxn	C0021311
+non-distended	CUI-less
+heart enlarged	CUI-less
+acute blood loss	C0333276
+following commands	CUI-less
+absent dtrs	CUI-less
+lateral myocardial infarction	C0340312
+hypercapnea	C0020440
+chronic hep c	C0524910
+hypoperfusion	CUI-less
+fluid accumulation	CUI-less
+aortic valve bicuspid	C0149630
+lung consolidation	C0521530
+crohn's flare	C0010346
+high cholesterol	C0020443
+clubbing	C0149651
+wall thickening	CUI-less
+c. diff	C0343386
+herniation	C0019270
+conduction abnormality	C0232219
+diarrhea	C0011991
+oversedated	CUI-less
+diaphoretic	C0700590
+dialysis noncompliance	CUI-less
+lucency	CUI-less
+arthritis	C0003864
+blurring disc margins	CUI-less
+elev. cholesterol	C0020443
+skin infection	C0037278
+cholecystitis	C0008325
+frequent spike	CUI-less
+inspiratory wheezes	C0231874
+wbc elevated	CUI-less
+imi	C0340305
+alcoholic pancreatitis	C2919362
+death	CUI-less
+aspiration pneumonia	C0032290
+thalassemia minor	C0085578
+pneumonia	C0032285
+cellulitis	C0007642
+fracture cervicle spine	C0262414
+aneurysmal renal artery	C0155742
+anechoic collection	CUI-less
+anemia of chronic kidney disease	CUI-less
+inr	CUI-less
+elbow pain	C0239266
+non small cell lung cancer	C0007131
+anemia of chronic disease	C0002873
+step-off	CUI-less
+acute st elevation myocardial infarction	C1303258
+sweating	C0700590
+bradycrdia	C0428977
+inguinal lymphadenopathy	C0578736
+abd tenderness	C0232498
+rales	C0034642
+left ventricular dilatation	C0344911
+pneumonia right lung	C0746226
+nasal fx	C0339848
+hydrocephalus	C0020255
+spiking temperatures	CUI-less
+left palmomental reflex	CUI-less
+breath sounds decreased	CUI-less
+escherichia coli bacteremia infections	C0014836
+volume loss	CUI-less
+pupils fixed dilated	CUI-less
+hemmorhage	C0019080
+phonemic paraphasias	CUI-less
+dysplasia	C0334044
+fibroid	C0042133
+shoulder blade pain	C0231655
+diabetes type 2	C0011860
+seizure d/o	C0014544
+right/left confusion	C0422885
+common carotid artery aneursym	C0264965
+squamous cell cancer	C0007137
+centrilobular emphysema	C0221227
+retrolisthesis	C1562792
+coronary artery stenosis	C0242231
+shaking	C0040822
+perihilar haze	CUI-less
+chronic disease	C0008679
+dementia	C0497327
+lack of safety awareness	CUI-less
+lung mass	CUI-less
+hct improved	CUI-less
+aaa	C0162871
+abdominal distention	CUI-less
+adnexal mass	C2919424
+dark bowel movement	C0025222
+pathologic flow	CUI-less
+non-responsive	CUI-less
+hemrroiids	C0019112
+basal cell carcinoma of the face	C1304291
+skull fractures	C0037304
+tarry stools	C0025222
+chronic cough	C0010201
+sbp fell	CUI-less
+brain metastatic bleed	C0553692
+bloody diarrhea	C0151594
+stop anticoagulation	CUI-less
+hypothermia	C0020672
+patchy opacity	CUI-less
+rbb blocks	C0085615
+herniated	C0019270
+neurologic pain	CUI-less
+large clots	CUI-less
+leak anastomosis	C1265705
+congestion	C0700148
+malaise	C0231218
+bony erosions	C0587240
+moved	CUI-less
+adomen soft	CUI-less
+hepatosplenomegaly	C0019214
+cortical irritability	CUI-less
+multiple ulcers	C1265815
+uncooperative	CUI-less
+cardiogenic shock	C0036980
+bilateral infiltrates	C0332448
+rapid afib	C1281999
+acute events	CUI-less
+fecal incontinence	C0015732
+left ventricular ejection fraction	CUI-less
+elevated cpk	CUI-less
+red	CUI-less
+acs	C0948089
+pupil sluggish	CUI-less
+atrial fibrillation	C0004238
+sternal fracture	C0238436
+atrial pacemaker artifact	C0340914
+resp failure	C1145670
+non-small cell lung cancer	C0007131
+hemoptysis	C0019079
+unresponsive to sternal rub	CUI-less
+r sided neglect	CUI-less
+cardiopulmonary process	CUI-less
+reactive component	CUI-less
+skin lesion	C0037284
+primary pulmonary htn	C0152171
+adnexal tenderness	CUI-less
+reversible anterior defect	CUI-less
+demented	C0497327
+hyperpigmentation	C0162834
+normal p-r interval	CUI-less
+claudication	C1456822
+wall motion abnormalities	CUI-less
+hepatosplenomegally	C0019214
+rca dissection	C0340648
+atrial premature complex	C0033036
+murmur radiated	CUI-less
+catatonic depression	CUI-less
+leptomeningeal disease	CUI-less
+humerus lucency	CUI-less
+abd soft	CUI-less
+global aphasia	C0234469
+tee related complications	C0160815
+arm moving	CUI-less
+skin bleeding	CUI-less
+very low ejection fraction	CUI-less
+posterior displacement	C0333044
+common femoral laceration	C0160755
+cardioembolic event	C1531624
+renal lesions	CUI-less
+indenting	CUI-less
+chronic duodenal ulcers	C0341240
+granulomas	C0018188
+pulmonary sarcoidosis	C0036205
+pernicious anemia	C0002892
+rhf	C2939447
+multiple drug interactions	CUI-less
+varices	C0042345
+c2 fracture	C0349013
+kidney dysfunction	CUI-less
+interstitial opacities	CUI-less
+ulcers	C0041582
+depressed cardiac index	CUI-less
+degenerative	C0011164
+rewarming	CUI-less
+coronary artery disease	C1956346
+acute pulmonary edema	C0155919
+enlarged spleen	CUI-less
+chronic renal failure	C0022661
+irregularity gallbladder	CUI-less
+pneumococcal sepsis	C0152966
+thick neck	CUI-less
+co2 retention	CUI-less
+r sided pressure	CUI-less
+abnormal focal enhancement	CUI-less
+pulmonary contusions	C0347625
+tender to palpation	CUI-less
+defect	C0302142
+mormurs	CUI-less
+respiratoy failure	C1145670
+elevation white blood cell count	C0023510
+nonspecific st-t wave changes	CUI-less
+gastric varix	C0017145
+right-left confusion	C0422885
+asthma exacerbation	CUI-less
+food gastroesophageal junction	CUI-less
+noncyanotic	CUI-less
+l sided hearing loss	C0521785
+syncopal events	C0039070
+position of tracheostomy	CUI-less
+left ventricular function	CUI-less
+la dilated	C0344720
+widening of mediastinal contours	CUI-less
+ethmoid sinus thickening	CUI-less
+masses	CUI-less
+thigh hematoma	C0585250
+obtunded	CUI-less
+renal artery stenosis	C0035067
+t2 signal	CUI-less
+decreased bulk	CUI-less
+psoriasis	C0033860
+defects	C0302142
+sinusitis	C0037199
+food compaction	CUI-less
+mucous membranes dry	C0854113
+hepatitis b carrier	CUI-less
+blood in stool	C1321898
+hand lacerated	C0432975
+cannot swallow	CUI-less
+kidney amls	C0241961
+right flank pain	C0423640
+conolidation	C0521530
+noninsulin dependent diabetes mellitus	C0011860
+ulcerations stomach	C0038358
+wounds drainage	C0332799
+autonomic neuropathy	C0259749
+peripheral hypodensity	CUI-less
+tender	C0234233
+svc syndrome	C0038833
+infected	C0021311
+hypodensities	CUI-less
+bullous disease	C0263220
+community-acquired pneumonia	C0694549
+hepatitis c cirrhosis	CUI-less
+pericardium tamponade	C0007177
+pain swallowing	C0221150
+common carotid aneurysm	C0264965
+first degree a-v block	C0085614
+hypertrophic cardiomyopathy	C0007194
+longterm pain	C0150055
+movement	CUI-less
+left against medical advise	CUI-less
+sydenham's chorea	C0152113
+esophageal ulceration	C0151970
+diabetes mellitus type ii	C0011860
+calcified	CUI-less
+inferior posterolateral defect	CUI-less
+adenomatous polyps	C0206677
+lower lobe consolidation	C0521530
+tricuspid regurgitation	C0040961
+cerebellar stroke	C0451672
+alopecic from radiation	C0034520
+processess	C0012634
+liver fatty infiltration	C0015695
+orthostatic hypotension	CUI-less
+pseudoaneurysm	C1510412
+intra axial hemorrhage	CUI-less
+osteoporosis	C0029456
+tremulous	CUI-less
+diastolic chf	CUI-less
+varicosities	C0042345
+subcutaneous emphysema	C0038536
+sbp's decreased	CUI-less
+tachy	CUI-less
+toe ulcer	C0577717
+lesion	CUI-less
+aml	C0206633
+bleeding diverticula	C0581360
+low iron	CUI-less
+ligamentous injury	C0435001
+suicidal ideations	CUI-less
+ams	C0278061
+intra-cranial bleeding	C0151699
+urinary symptoms	C0426359
+decreased sensation to light touch	C0752255
+weakness	C1883552
+falling down	CUI-less
+shortness of breath	C0013404
+hepatitis b cirrhosis	CUI-less
+flaccid	CUI-less
+elevated left atrial pressure	CUI-less
+insulin dependent diabetes mellitus	C0011854
+herpes simplex one	C1318711
+pneumocephalus	C0032268
+frequent discharges	CUI-less
+ischemic hepatitis	C0473117
+voiding difficulties	C0241705
+pancreatic ascites	C0267772
+sinus tachycardia	C0039239
+psychogenic polydipsia	C0395005
+hyperlucency	CUI-less
+legionella antigen	CUI-less
+ruptured aneurysm	C0162869
+paraparesis	C0221166
+hematoma	C0018944
+collapse	C0004144
+right lower lobe pneumonia	C0585105
+left atrial enlargement	C0238705
+t-wave inversions	CUI-less
+neurologic complaints	C0027765
+right coronary artery occluded	C1290385
+atopic dermatitis	C0011615
+subclavian vein stenosis	C0340754
+low blood pressure	C0232107
+delayed laryngeal valve closure	CUI-less
+st segment depression	CUI-less
+apd	CUI-less
+blood in the urine	CUI-less
+liver metastasis	C0494165
+cardiac index	CUI-less
+inattentive	CUI-less
+lfts increased	CUI-less
+ra dilated	C0344709
+swelling wounds	CUI-less
+spleen is enlarged	CUI-less
+prior inferior myocardial infarction	C0340321
+hematemesis	C0018926
+left hemiplegia	CUI-less
+left atrial dilation	C0344720
+aspiration pna	C0032290
+cataracts	C0086543
+old infarct	C0333551
+arrythmias	CUI-less
+a-v dissociation	C0004331
+mobility	CUI-less
+dislocations	C0012691
+weiss tear	C0024633
+creatinine bumped	CUI-less
+dilatation	C0012359
+pulseless	CUI-less
+responding appropriately	CUI-less
+other acute process	CUI-less
+sores	CUI-less
+sig ekg changes	CUI-less
+cryoglobulinemia	C0010403
+itchy	C0033774
+arf	C0022660
+sternum drainage	CUI-less
+diaphoresis	C0700590
+complications	C0009566
+nonpropulsive tertiary contraction	CUI-less
+junctional rhythm	C0232208
+hypok	C0086439
+traumatic glaucoma	C0339594
+foot fracture	C0272774
+asd	C0018817
+tumor	C0027651
+bleeding gastric ulcer	C0341164
+bile duct obstruction	C0008370
+rub	CUI-less
+asp	C0004030
+kidney non functional	CUI-less
+pupils sluggish	CUI-less
+toxicity	C0013221
+strength	CUI-less
+difficulty eating	CUI-less
+cannot keep in medications	CUI-less
+bradykinesia	C0233565
+thigh wound	C0347569
+phonemic paraphsias	CUI-less
+t wave inversion	CUI-less
+renal cysts	C0268800
+decreased oral intake	CUI-less
+heel ulcer	C0577718
+chronic subdural hematoma	C0582730
+atn	C0022672
+recollection	CUI-less
+cerebeller hemorrhage	C0149854
+benign bony lesion	CUI-less
+iliac vein injury	C0160733
+bilateral perihilar haziness	CUI-less
+a fib	C0004238
+mass lesion	CUI-less
+bleed	C0019080
+rvr	CUI-less
+agitation	C0085631
+rise lft's	CUI-less
+q-t interval prolongation	CUI-less
+hyperdynamic left ventricular function	CUI-less
+drug rash	C0011609
+instability	CUI-less
+disc degeneration	C0158266
+self-harm	C0085271
+abrasions back	C0432807
+positive nitrates	CUI-less
+purulent sputum	C0241235
+blood pressure decreasing	C0232107
+mass pancreas	CUI-less
+aspirated	CUI-less
+pneumomediastinum	C0025062
+hyperdensity	CUI-less
+coughs	C0010200
+avf	C0003855
+crushing chest pain	C0232290
+follow commands	CUI-less
+avn	C0027543
+avr	C0003504
+hypo	C0086439
+increased tb	CUI-less
+loculated effusion	C1265808
+critical aortic stenosis	C1960800
+iga diagnosed	CUI-less
+difficulty naming	C0233736
+jugular venous distention	CUI-less
+skin lesions	C0037284
+laceration	C0043246
+discomfort	CUI-less
+hospital acquired pneumonia	C0949083
+position of trach	CUI-less
+defervesced	CUI-less
+aortic root is dilated	C0238669
+prostate ca	C0376358
+increasing thirst	C0241379
+aortic insufficiency	C0003504
+vascular redistribution	CUI-less
+anxious	CUI-less
+patent foramen ovale	C0016522
+left ventricular systolic function hyperdynamic	CUI-less
+tonsilar hypertrophy	C0155829
+stool rectal vault	CUI-less
+bowel movement	CUI-less
+biliary obstruction	C0400979
+pacemaker capture	C0340923
+elevation left hemidiaphragm	C0264583
+upper gastrointestinal bleed	C0041909
+dizziness	C0012833
+changes in vision	C0042798
+ebsteins anomaly	C0013481
+changes on ekg	CUI-less
+peumonia	C0032285
+heart damage	C0018805
+heart irregular rhythm	CUI-less
+hilar mass	CUI-less
+assault	C0004063
+acute process	CUI-less
+right bundle branch block	C0085615
+disc herniation	C0242362
+perirenal hematoma	CUI-less
+dmii	C0011860
+loculated fluid	CUI-less
+tongue fasciculations	C0239548
+abd tenderness ruq	C3164070
+mucosal ulcerations	C0236053
+recent wounds	C1265680
+p.o. intake	CUI-less
+venous stasis	C1536398
+hypoglycemia	C0020615
+mucosal thickening	CUI-less
+left against medical advice	CUI-less
+occluded svg	C0018128
+responding to voice	CUI-less
+r corneal	CUI-less
+poor foot hygiene	CUI-less
+clots	C0302148
+plaque	CUI-less
+left bundle-branch block	C0023211
+poor renal perfusion	CUI-less
+rectal pain	C0034886
+choking	CUI-less
+posterior-inferior cerebellar artery aneurysm	C0349600
+acute inferior myocardial infarction	C0264700
+work of breathing	C0013404
+anterior myocardial infarction	C0340293
+heavy bleeding	C0232943
+vaginal bleeding	C0151706
+cystinuria	C0010691
+gerd	C0017168
+heart failure	C0018801
+dismal prognosis	CUI-less
+ppd positive	CUI-less
+aortic valve leaflets thickened	CUI-less
+liver disease	C0023895
+grasp bilaterally	CUI-less
+plaques	CUI-less
+ptosis	C0033377
+addiction	C0085281
+using heroin	CUI-less
+opacification	CUI-less
+hct drop	CUI-less
+altered mental status	C0278061
+degenerative change	C0011164
+interatrial septum bowed	C0344794
+abnormality	CUI-less
+neuropathy	C0442874
+aneurysm	C0002940
+tracheo-bronchitis	C0040586
+spine compression fractures	C0262431
+abnormal periods	C0025345
+plaque rupture	CUI-less
+diabetes mellitus	C0011849
+mitral annular calcification	C0428811
+abdomen nondistended	CUI-less
+bowel obstruction	C0021843
+elevated cholesterol	C0020443
+flail chest	C0016196
+sah	C0038525
+poorly controlled blood pressure	CUI-less
+respiratory alkalosis	C0002064
+right-sided weakness	CUI-less
+left pleural effusion	C0032227
+intermittently confused	C0559682
+whites of eyes yellow	C0240962
+edentulous	CUI-less
+left ventricular wall motion abnormalities	CUI-less
+sinus thickening	CUI-less
+hyperpigementation	C0162834
+malnourished	C0162429
+ck trended down	CUI-less
+desaturated	CUI-less
+healed fracture	CUI-less
+depression	C0011581
+intoxicated	CUI-less
+gilberts disease	C0017551
+sbp	C0275551
+delerium tremens	C0001957
+shunt	CUI-less
+angina	C0002962
+psoas abcess	C0085222
+blood in the stomach	CUI-less
+ventriculitis	CUI-less
+scd	C0002895
+pancreas masses	CUI-less
+st elevation myocardial infarction	C1303258
+unarousable	CUI-less
+eosinophilia	C0014457
+fluid	C0013687
+trace aspiration	CUI-less
+decreased rom	CUI-less
+illeus	C1258215
+compresses spinal cord	C0037926
+infarct	C0021308
+gangliogliom	C0206716
+aortic aneurysms	C0003486
+symptoms	C1457887
+prolonged pr interval	CUI-less
+human immunodeficiency virus	C0019693
+dilated left atrium	C0344720
+gastric lesion	C0679408
+pupils sluggishly reactive to light	CUI-less
+nodular	C0028259
+pulmonary artery hypertension	C0020542
+poly substance od	C0029944
+weight gain	CUI-less
+thyroid cancer	C0007115
+rca occlusions	C1290385
+coagulase negative staphylococcus in blood	CUI-less
+restrictive filling abnormality	CUI-less
+delirious mental status changes	CUI-less
+fractures skull	C0037304
+retrocardiac opacity	CUI-less
+sem	CUI-less
+paraphasic errors	CUI-less
+patchy linear opacities	CUI-less
+metabolic	C0025517
+elevation cardiac enzymes	CUI-less
+tremor	C0040822
+alcohol withdrawal seizures	C0586323
+reocclusion rca	C1290385
+vomited	C0042963
+thrombi	C0087086
+widened mediastinum	CUI-less
+tonsil cancer	C0558355
+incisional hernia	C0267716
+mechanical heart sounds	CUI-less
+hearing voices	C0424068
+diast dysf	C0520863
+left atrial dilatation	C0344720
+using dilaudid	CUI-less
+fecalization of bowel	CUI-less
+ostial stenosis	C0345120
+blood in his mouth	CUI-less
+arterial laceration	C0340663
+pelvic fx	C0149531
+dilated bowel segments	CUI-less
+asp pneumonia	C0032290
+duodenal ulcer	C0013295
+exposure to asbestos	CUI-less
+repolarization abnormalities	CUI-less
+ica stenosis	C0340569
+decubitus foot ulcer	C0577716
+discharge	CUI-less
+jvd	CUI-less
+staphylococcus bacteremia	CUI-less
+jvp	CUI-less
+cavity stones	CUI-less
+pleuritic chest pain	C0008033
+hematocrit increased	CUI-less
+anxiety	C0003469
+failure of a-v conduction	CUI-less
+respond to light	CUI-less
+stool impaction	CUI-less
+nodules	C0028259
+ventriciular ectopy	C0151636
+pseudocyst	C0333161
+repiratory failure	C1145670
+retained barium	CUI-less
+thickening mitral valve chordae	CUI-less
+urosepsis	C0149801
+leaving against medical advice	CUI-less
+non functional left kidney	CUI-less
+disruptive	C0012734
+left ventricular cavity small	CUI-less
+left lower lobe collapse	C0004144
+impaired left ventricular ejection fraction	CUI-less
+orthostatic	CUI-less
+cardioembolic	C1531624
+osteophytes	C1956089
+cough productive	C0239134
+tenderness	C0234233
+breathing	CUI-less
+nasal congestion	C0027424
+lymphoma	C0024299
+lateral displacement	CUI-less
+stroke	C0038454
+enteric	CUI-less
+t wave changes	CUI-less
+paradoxic septal motion	CUI-less
+noncompliance hemodialysis	CUI-less
+hypertrophy left ventricular	C0149721
+acute intracranial process	CUI-less
+tone is spastic	C0026838
+hemolytic reaction transfusions	C0221123
+balance issues	C0241981
+nutritional deficiencies	C0154241
+nodule	C0028259
+fatigue	C0015672
+jugular venous pressure	CUI-less
+adenoma	C0001430
+aphagia	C0003537
+guaiac-positive stool	CUI-less
+renal calculi	C0022650
+puncture sites	CUI-less
+chest discomfort with exertion	C0232288
+pea arrest	CUI-less
+small air-fluid level	CUI-less
+loose stools	C0011991
+course bs	CUI-less
+right inguinal hernia	C0262617
+congested	C0700148
+inflammatory process	C0021368
+groin hematoma	C0585249
+rheumatic heart disease	C0035439
+rapid ventricular response	CUI-less
+legionella	CUI-less
+restless legs	C0035258
+neck nontender	CUI-less
+thoracic luminal diameter	CUI-less
+positive gag	CUI-less
+melena	C0025222
+wheelchair bound	CUI-less
+hypertensive nephropathy	C0848548
+inflammation	C0021368
+right middle lobe pneumonia	C0578577
+gastropathy	C0038354
+occluded rca	C1290385
+intermittently violent	CUI-less
+septic arthritis	C0003874
+lower ext edema	C0239340
+ischemic pulmonary edema	CUI-less
+mucus plugging event	CUI-less
+fibroids	C0042133
+yeast growth wounds	C0043241
+l sided pressure	CUI-less
+interatrial septum aneurysmal	C0521533
+non-st segment elevation myocardial infarction	C1276061
+fracture c-spine	C0262414
+extremities clinched together	CUI-less
+psoriatic	C0033860
+ethanol withdrawal	C0236663
+cephalization	CUI-less
+decubitus ulcer	C0011127
+sob	C0013404
+leftward subfalcine shift	CUI-less
+foci right iliac ring	CUI-less
+multiple suicide attempts	C0038663
+heart dilatation	C0264732
+guiac positive brown stool	CUI-less
+falls	C0000921
+lordosis	C0024003
+abdomen tenderness left lower quadrant	C2585306
+blood fourth ventricles	CUI-less
+hypothyroid	C0020676
+infectious source	C0021311
+left sided infarct	C0585629
+drug reaction	C0041755
+liver metastases	C0563490
+egophony	CUI-less
+respiratory improvement	CUI-less
+temperature decreased	CUI-less
+thrombocytosis	C0836924
+brain dead	CUI-less
+left axis deviation	CUI-less
+facial laceration	C1299982
+subdural hematoma	C0018946
+loops of bowel distal	CUI-less
+sternal drainage	CUI-less
+qtc interval	CUI-less
+cerebral infarct	C0007785
+air-fluid level	CUI-less
+tense	CUI-less
+chronic gastritis	C0085695
+acute issues	CUI-less
+bleeding esophagus	C0239293
+pain with swallowing	C0221150
+right ventricular function	CUI-less
+le cellulitis	C0343024
+icteric	C0022346
+unable to drive	CUI-less
+guaiac positive stools	CUI-less
+bph	C0005001
+trace amount of blood flow	C0232340
+primitive neuroectodermal tumor	C0206663
+alert moments	CUI-less
+tearful	C1536289
+gunshot wound	C0043252
+white blood count decreased	CUI-less
+nauseated	C0027497
+tingling	C2242996
+swallow delay	CUI-less
+wbc low	CUI-less
+anuric	C0003460
+elevated la pressure	CUI-less
+aorta tortuous	CUI-less
+c spine fx	C0262414
+urinary tract anomoly	C0158698
+chronic obstructive pulmonary disease	C0024117
+prominent loops of small bowel	CUI-less
+injure	C0175677
+cycling anabolic steroids	C0338671
+passed out	C0312422
+rhabdomyolysis	C0035410
+noncalcified granuloma	C0018188
+heavy vaginal bleeding	CUI-less
+leftward mediastinal shift	CUI-less
+diastasis	C0036679
+injury	C0175677
+carotids bruits	CUI-less
+right-dominant system	C0345135
+std	CUI-less
+breath sounds	CUI-less
+ste	CUI-less
+thyromegaly	C0018021
+asthma	C0004096
+distal flow	CUI-less
+non-bleeding varices	CUI-less
+bowel ischemia	C0341424
+hilar lymphadenopathy	C0456973
+hydroureter	C0521620
+difficulty breathing	C0013404
+atenolol ovedose	C0573210
+against medical advice	CUI-less
+ventricular arrythmias	CUI-less
+breast implant rupture	C0405491
+elevated troponins	CUI-less
+type 2 diabetes mellitus	C0011860
+polyps cervix	C0007855
+diastolic murmur	C0232262
+febrile	CUI-less
+metastases kidneys	C0153685
+pain shoulder blade	C0231655
+fluid collections	C0685931
+surgical pupils	CUI-less
+gagging	CUI-less
+niddm	C0011860
+nonspecific st-t changes	CUI-less
+atrial sensed	CUI-less
+afebrile	CUI-less
+tachypnea	C0231835
+somnolent	C1540721
+stones	C0008350
+feeling tired	C0849970
+crohn's disease	C0010346
+ekg changes	CUI-less
+hemothorax	C0019123
+subcutaneous air	CUI-less
+gastric outlet obstruction	C0162651
+decreased vibration	CUI-less
+slow ventricular response	CUI-less
+depressions in v3 through v6	CUI-less
+frequency	CUI-less
+respiratory arrest	C0162297
+st elevations anteriorly	CUI-less
+seizures	C0014544
+older clotted blood	CUI-less
+left right mismatch	C0422885
+subependymal blood	CUI-less
+microcytic anemia	C0085576
+focal wall motion abnormality	CUI-less
+cirrhosis of the liver	C0023890
+shrunken	CUI-less
+penumonia	C0032285
+heart block	C0018794
+delta ms	CUI-less
+atrial defect	C0018817
+seizure disorder	C0014544
+word finding difficulties	C0454643
+hh hernia	C0019284
+dvts	C0149871
+pleural thickening	C0264545
+tongue protrudes midline	CUI-less
+lightheadness	C0220870
+stoma	C1532681
+pancytopenia	C0030312
+chest pains	C0008031
+flail mitral valve leaflet	CUI-less
+new wheezing	C2128973
+pancytopenic	C0030312
+fibrinous material	CUI-less
+worsening creatinine	CUI-less
+found down	CUI-less
+rul septic emboli	C1955781
+mesenteric stranding	CUI-less
+cardiac process	CUI-less
+strokes	C0038454
+thick whitish secreations	CUI-less
+stone	C0006736
+hypodense lesion	CUI-less
+distended stomach	CUI-less
+vf arrest	C0750189
+inconsistently follows commands	CUI-less
+lipase levels	CUI-less
+hemorrhagic gastritis	C2010560
+could not breathe	CUI-less
+hydronephrosis	C0020295
+hiv+	C0019693
+black stools	C0025222
+battle signs	CUI-less
+responsive to painful stimulation	CUI-less
+biphasis t wave	CUI-less
+left atrial abnormality	C0344711
+white count	CUI-less
+increased total bilirubin	CUI-less
+anemia microcytic	C0085576
+knee pain	C0231749
+liver failure	C0085605
+cerebrovascular accidents	C0038454
+nicotine withdrawal	C0028047
+obstructive jaundice	C0022354
+klebsiella pneumonia	C0519030
+jvp flat	CUI-less
+reversible inferior defect	CUI-less
+ugib	C0041909
+lung volumes	CUI-less
+diverticulitis	C0012813
+sirs	C0242966
+parotid tumor	C0030581
+convulsive seizures	CUI-less
+first-degree atrioventricular block	C0085614
+diverticular disease	C1510475
+slower rate	CUI-less
+t wave inversions 3	C0520888
+moving all extremities	CUI-less
+moving extremities	CUI-less
+aortic valve sclerosis	C1455780
+rib fractures	C0035522
+difficulty swallowing	C0011168
+decubitus	C0011127
+bilateral effusions	C0747635
+alcohol withdrawal symptoms	C0236663
+no speech	CUI-less
+amnestic	C0002623
+weak	C1883552
+distressed	CUI-less
+interstitial markings	CUI-less
+global systolic function	CUI-less
+transient ischemic attacks	C0007787
+hypoadrenalism	C0001623
+tired	C0557875
+hurting someone else	CUI-less
+displaced fracture	C0585059
+acute mi	C0155626
+apnea	C0003578
+nsvt	C2919575
+high blood pressure	C0020538
+hematocrit dropped	CUI-less
+epileptiform seizures	CUI-less
+pin point pupils	CUI-less
+anterior st elevation myocardial infarction	C2882090
+valvular vegetations	C0750125
+thigh lipoma	C0347439
+motrin od	C0572145
+transient visual loss	C0155003
+tachypnic	C0231835
+cardiac index supranormal	CUI-less
+colonic polyps	C0009376
+abdominal wall collection	C0401020
+hyperphosphatemia	C0085681
+air- fluid levels	CUI-less
+ab nd	CUI-less
+obese abd	CUI-less
+lvef	CUI-less
+ulcerative colitis	C0009324
+obesity	C0028754
+hypertensive bleed	CUI-less
+hep c cirrhosis	CUI-less
+decreased breath sounds	CUI-less
+hyperdynamic lvef	CUI-less
+effusion	C0013687
+distressed breathing	C0476273
+ab nt	CUI-less
+repolarization	CUI-less
+dilated ivc	C0685740
+inguinal hernia	C0019294
+flat affect	C0233471
+clonus	C0009024
+left ventricular hypertrophy	C0149721
+chronically infected	C0151317
+three vessel disease	C0340285
+stent re-occlusion	CUI-less
+cad	C1956346
+wasting muscles	C0026846
+bactrim reaction	C0041755
+dysarthria	C0013362
+pilonidal cyst	C0031925
+guarding	CUI-less
+cap	C0694549
+extrem warm	CUI-less
+benzodiazepine abuse	C0572933
+esr elevated	CUI-less
+vascular territorial infarcts	CUI-less
+bruise on forhead	C0432747
+elevated potassium	CUI-less
+difficulty speaking	C1527347
+cardiac silhouette	CUI-less
+joint pains	C0003862
+no acute distress	CUI-less
+inr decreased	CUI-less
+wheezes	C0043144
+small vessel disease	C2733158
+chest pain	C0008031
+viral myocarditis	C0276138
