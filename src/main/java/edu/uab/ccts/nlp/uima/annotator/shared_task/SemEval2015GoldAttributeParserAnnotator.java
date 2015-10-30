@@ -8,19 +8,21 @@ import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
-import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.cas.StringArray;
 import org.apache.uima.resource.ResourceInitializationException;
+
 import org.cleartk.semeval2015.type.DiseaseDisorder;
 import org.cleartk.semeval2015.type.DiseaseDisorderAttribute;
 import org.cleartk.semeval2015.type.DisorderRelation;
 import org.cleartk.semeval2015.type.DisorderSpan;
 import org.cleartk.semeval2015.type.DisorderSpanRelation;
-import org.uimafit.component.JCasAnnotator_ImplBase;
-import org.uimafit.descriptor.ConfigurationParameter;
-import org.uimafit.util.JCasUtil;
+
+import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.util.JCasUtil;
+import org.apache.uima.fit.factory.AnalysisEngineFactory;
 
 import edu.uab.ccts.nlp.shared_task.SemEval2015Constants;
 
@@ -38,7 +40,7 @@ import java.util.List;
  * @author ozborn
  *
  */
-public class SemEval2015ParserAnnotator extends JCasAnnotator_ImplBase
+public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplBase
 {
 	public static final String PARAM_TRAINING = "training";
 	public static final String PARAM_CUI_MAP = "cuiMap";
@@ -407,8 +409,9 @@ public class SemEval2015ParserAnnotator extends JCasAnnotator_ImplBase
 		relation.addToIndexes();
 	}
 
+	
 	public static AnalysisEngineDescription getDescription() throws ResourceInitializationException {
-		return AnalysisEngineFactory.createEngineDescription(SemEval2015ParserAnnotator.class);
+		return AnalysisEngineFactory.createEngineDescription(SemEval2015GoldAttributeParserAnnotator.class);
 	}
 
 }

@@ -55,7 +55,7 @@ public class SemEval2015Constants
                 defaultNorms.put(TEMPORAL_RELATION, "none");
         }
 
-    /** Must be constants for params, change as needed */
+    /** Must be static final constants for java annotations (stupid), change as needed */
 	public static final String updatedTrainingPath = 
 			System.getProperty("user.home")+
 			"/Dropbox/Public_NLP_Data/semeval-2015-task-14_updated/data/train";

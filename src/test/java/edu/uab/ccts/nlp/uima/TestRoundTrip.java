@@ -12,7 +12,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 
 import edu.uab.ccts.nlp.shared_task.SemEval2015Constants;
-import edu.uab.ccts.nlp.uima.annotator.shared_task.SemEval2015ParserAnnotator;
+import edu.uab.ccts.nlp.uima.annotator.shared_task.SemEval2015GoldAttributeParserAnnotator;
 import edu.uab.ccts.nlp.uima.annotator.shared_task.SemEval2015Task2Consumer;
 import edu.uab.ccts.nlp.uima.collection_reader.SemEval2015CollectionReader;
 import junit.framework.Test;
@@ -55,7 +55,7 @@ public class TestRoundTrip extends TestCase {
 			);
 		
 		AggregateBuilder builder = new AggregateBuilder();
-		builder.add(SemEval2015ParserAnnotator.getDescription());
+		builder.add(SemEval2015GoldAttributeParserAnnotator.getDescription());
 		builder.add(SemEval2015Task2Consumer.getCuilessDescription(output_dir));
 		for (JCas jcas : SimplePipeline.iteratePipeline(crd, builder.createAggregateDescription())) {}
 		return passed;
