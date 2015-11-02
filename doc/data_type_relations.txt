@@ -1,0 +1,28 @@
+Text Diagram of Object Relationship
+
+
+JointDisease (1 or more DiseaseDisorder to handle cases where there are more than 2 rows in SemEval)
+
+|
+
+| (not implemented, use FSArray)
+
+|
+v
+
+DiseaseDisorder   <-- DisorderRelation (BinaryTextRelation)
+|			        |
+| (FSArray)		        |
+|			        |
+v			        v
+
+DisorderSpan	<--(FSArray)- DiseaseDisorderAttribute
+
+^  ^
+|  |
+|  |
+
+DisorderSpanRelation (BinaryTextRelation)
+
+
+
