@@ -36,8 +36,8 @@ public class TestRoundTrip extends TestCase {
 	
 	public void testRoundTrip() throws ResourceInitializationException{
 		runRoundTrip(SemEval2015Constants.defaultDevelPath,"target/test/roundtrip/devel");
-		runRoundTrip(SemEval2015Constants.defaultTrainingPath,"target/test/roundtrip/train");
-		runRoundTrip(SemEval2015Constants.updatedTrainingPath,"target/test/roundtrip/updated_train");
+		//runRoundTrip(SemEval2015Constants.defaultTrainingPath,"target/test/roundtrip/train");
+		//runRoundTrip(SemEval2015Constants.updatedTrainingPath,"target/test/roundtrip/updated_train");
 	}
 	
 	

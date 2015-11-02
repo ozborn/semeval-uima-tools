@@ -10,7 +10,7 @@
 	<types>
 		<typeDescription>
 			<name>org.cleartk.semeval2015.type.DisorderRelation</name>
-			<description/>
+			<description>Relation between DiseaseDisorder and DiseaseDisorderAttribute.</description>
 			<supertypeName>org.apache.ctakes.typesystem.type.relation.BinaryTextRelation</supertypeName>
 		</typeDescription>
 	</types>

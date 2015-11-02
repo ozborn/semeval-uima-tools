@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
 	<name>DiseaseDisorderAttribute</name>
-	<description></description>
-	<version></version>
-	<vendor></vendor>
+	<description>An attribute of a DiseaseDisorder such as severity, course, etc...</description>
+	<version/>
+	<vendor/>
 	<imports>
 		<import name="org.cleartk.score.type.TypeSystem"/>
 	</imports>
@@ -15,12 +15,12 @@
 			<features>
 				<featureDescription>
 					<name>attributeType</name>
-					<description></description>
+					<description/>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>norm</name>
-					<description></description>
+					<description/>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>

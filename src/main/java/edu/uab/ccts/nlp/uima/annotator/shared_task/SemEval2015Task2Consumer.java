@@ -118,7 +118,6 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 	}
 
 	/**
-	 * FIXME Need to handle multiple lines
 	 */
 	private String getDiseaseDisorderSemEval2015Format(String docid, DiseaseDisorder dd )
 	{

@@ -10,7 +10,7 @@
 	<types>
 		<typeDescription>
 			<name>org.cleartk.semeval2015.type.DisorderSpanRelation</name>
-			<description/>
+			<description>Relation between 2 DisorderSpans.</description>
 			<supertypeName>org.apache.ctakes.typesystem.type.relation.BinaryTextRelation</supertypeName>
 		</typeDescription>
 	</types>

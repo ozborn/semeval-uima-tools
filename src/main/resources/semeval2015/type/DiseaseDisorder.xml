@@ -32,7 +32,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>cuis</name>
-					<description/>
+					<description>CUIs, originally just 1 CUI in original semeval 2015 data. Not associated with a particular span.</description>
 					<rangeTypeName>uima.cas.StringArray</rangeTypeName>
 				</featureDescription>
 			</features>

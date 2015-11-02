@@ -10,14 +10,9 @@
 	<types>
 		<typeDescription>
 			<name>org.cleartk.semeval2015.type.DisorderSpan</name>
-			<description/>
+			<description>A span of text associated with either a DiseaseDisorder or a DiseaseDisorderAttribute..</description>
 			<supertypeName>org.cleartk.score.type.ScoredAnnotation</supertypeName>
 			<features>
-				<featureDescription>
-					<name>annotation</name>
-					<description/>
-					<rangeTypeName>uima.tcas.Annotation</rangeTypeName>
-				</featureDescription>
 				<featureDescription>
 					<name>chunk</name>
 					<description></description>

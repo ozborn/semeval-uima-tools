@@ -36,7 +36,10 @@ import java.util.List;
  * This should be the parser of choice to read in
  * the multiCUI/multi attribute annotations of SemEval2015
  * (not SemEval2015TaskCGoldAnnotator which is deprecated)
- * The previous disease component does not appear to be working though.
+ * The prev_disease component does work though
+ * 		-relevant even in the updated data set
+ *      -problem is need  fixing this also requires fixing output to put it back in SemEval format
+ *      -will make new type joining DiseaseDisorderTogether -> JoinedDisease
  * @author ozborn
  *
  */
@@ -78,6 +81,8 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 			name = PARAM_CUI_MAP,
 			description = "file to read CUI map from in testing and application")
 	protected String cuiMap = null;
+	
+	
 	public static void writeMapToFile(HashMap<String, String> stringCUIMap, File outputFile)
 	{
 		StringBuilder output = new StringBuilder();
@@ -91,6 +96,8 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 			e.printStackTrace();
 		}
 	}
+	
+	
 	public static HashMap<String, String> getMap(File outputFile)
 	{
 		String input;
@@ -110,6 +117,9 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 		}
 		return cuiMap;
 	}
+	
+	
+	
 	public static void createDiseaseAttributeRelation(JCas jCas, DiseaseDisorder disease, DiseaseDisorderAttribute att)
 	{
 		for (DisorderSpan span : JCasUtil.select(disease.getSpans(), DisorderSpan.class))
@@ -117,6 +127,8 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 			createAttributeRelation(jCas, att, span, att.getAttributeType());
 		}
 	}
+	
+	
 	public void initialize(UimaContext context) throws ResourceInitializationException
 	{
 		super.initialize(context);
@@ -191,6 +203,7 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 				}
 				//Determine if we have seen this disease before 
 				//Required to handle situation where next line is NOT a new disease but an additional anatomical mapping
+				//Doesn't appear to be needed with updated data, still seen with updated data (10 times in devel)
 				boolean seen_before = true;
 				for(int i=0;i<cur_spans.size();i++){
 					DisorderSpan cur = cur_spans.get(i);
