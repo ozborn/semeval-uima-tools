@@ -4,7 +4,7 @@
 
 	<groupId>edu.uab.ccts.nlp.uima</groupId>
 	<artifactId>semeval2015</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.2</version>
 	<packaging>jar</packaging>
 
 	<name>semeval2015</name>
