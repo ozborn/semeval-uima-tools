@@ -165,7 +165,7 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 			String[] fields = line.split("\\|");
 			if (fields.length < totalFields)
 			{
-				System.out.println("Wrong format: " + line);
+				System.out.println("Wrong format ("+fields.length+"): " + line);
 				continue;
 			}
 			docId = fields[dd_doc];

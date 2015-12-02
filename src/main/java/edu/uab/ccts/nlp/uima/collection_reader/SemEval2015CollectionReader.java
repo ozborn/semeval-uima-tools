@@ -12,12 +12,14 @@ import org.apache.uima.util.ProgressImpl;
 import org.cleartk.util.ViewUriUtil;
 import org.apache.uima.fit.component.JCasCollectionReader_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.util.JCasUtil;
 
 import edu.uab.ccts.nlp.shared_task.SemEval2015Constants;
 
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -79,30 +81,26 @@ public class SemEval2015CollectionReader extends JCasCollectionReader_ImplBase
 			{
 				pipedFiles.add(f);
 				textFiles.add(textFile);
-			}
+			} else { throw new ResourceInitializationException("Semeval files missing",null); }
 		}
 		totalFiles = pipedFiles.size();
 	}
 
 	public void getNext(JCas jCas) throws IOException, CollectionException
 	{
-		JCas pipedView;
-		try
-		{
-			pipedView = jCas.createView(SemEval2015Constants.PIPED_VIEW);
-		} catch (CASException ce)
-		{
-			throw new CollectionException(ce);
-		}
+		JCas pipedView, semevalTextView;
+		pipedView = JCasUtil.getView(jCas, SemEval2015Constants.PIPED_VIEW, true);
+		semevalTextView = JCasUtil.getView(jCas, SemEval2015Constants.GOLD_VIEW, true);
 
 		File pipeFile = pipedFiles.remove(0);
-		String annotations = FileUtils.readFileToString(pipeFile);
+		String annotations = FileUtils.readFileToString(pipeFile,"US-ASCII");
 		File textFile = textFiles.remove(0);
 		String fileText = FileUtils.readFileToString(textFile);
 
-		jCas.setDocumentText(fileText);
-		ViewUriUtil.setURI(jCas, textFile.toURI());
+		semevalTextView.setDocumentText(fileText);
+		ViewUriUtil.setURI(semevalTextView, textFile.toURI());
 		pipedView.setDocumentText(annotations);
+		//ViewUriUtil.setURI(pipedView, pipeFile.toURI());
 	}
 
 	public boolean hasNext() throws IOException, CollectionException
