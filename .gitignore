@@ -2,3 +2,4 @@
 .settings
 .classpath
 .project
+src/main/resources/semeval_2015_task14_data.tar.gpg
