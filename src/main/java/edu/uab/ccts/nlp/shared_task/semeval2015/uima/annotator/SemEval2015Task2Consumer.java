@@ -1,6 +1,4 @@
-package edu.uab.ccts.nlp.uima.annotator.shared_task;
-
-import edu.uab.ccts.nlp.shared_task.SemEval2015Constants;
+package edu.uab.ccts.nlp.shared_task.semeval2015.uima.annotator;
 
 import org.apache.ctakes.typesystem.type.structured.DocumentID;
 import org.apache.uima.UimaContext;
@@ -14,6 +12,9 @@ import org.cleartk.semeval2015.type.DiseaseDisorder;
 import org.cleartk.semeval2015.type.DiseaseDisorderAttribute;
 import org.cleartk.semeval2015.type.DisorderRelation;
 import org.cleartk.semeval2015.type.DisorderSpan;
+
+import edu.uab.ccts.nlp.shared_task.semeval2015.SemEval2015Constants;
+
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;

@@ -1,4 +1,4 @@
-package edu.uab.ccts.nlp.uima.collection_reader;
+package edu.uab.ccts.nlp.shared_task.semeval2015.uima;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.HiddenFileFilter;
@@ -10,11 +10,12 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Progress;
 import org.apache.uima.util.ProgressImpl;
 import org.cleartk.util.ViewUriUtil;
+
+import edu.uab.ccts.nlp.shared_task.semeval2015.SemEval2015Constants;
+
 import org.apache.uima.fit.component.JCasCollectionReader_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.util.JCasUtil;
-
-import edu.uab.ccts.nlp.shared_task.SemEval2015Constants;
 
 import java.io.File;
 import java.io.FileFilter;

@@ -1,4 +1,4 @@
-package edu.uab.ccts.nlp.uima.annotator.shared_task;
+package edu.uab.ccts.nlp.shared_task.semeval2015.uima.annotator;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +14,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.uimafit.descriptor.ConfigurationParameter;
 
-import edu.uab.ccts.nlp.shared_task.SemEval2015Constants;
+import edu.uab.ccts.nlp.shared_task.semeval2015.SemEval2015Constants;
 
 /**
  * This file reads in piped annotation SemEval 2015 files into the PIPED_VIEW 

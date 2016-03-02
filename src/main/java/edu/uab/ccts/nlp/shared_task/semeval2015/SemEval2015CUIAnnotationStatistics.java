@@ -1,4 +1,4 @@
-package edu.uab.ccts.nlp.shared_task;
+package edu.uab.ccts.nlp.shared_task.semeval2015;
 
 import java.util.Collection;
 import java.util.HashSet;

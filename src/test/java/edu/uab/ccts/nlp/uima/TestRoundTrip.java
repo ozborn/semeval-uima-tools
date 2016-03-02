@@ -11,10 +11,10 @@ import org.apache.uima.fit.pipeline.SimplePipeline;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 
-import edu.uab.ccts.nlp.shared_task.SemEval2015Constants;
-import edu.uab.ccts.nlp.uima.annotator.shared_task.SemEval2015GoldAttributeParserAnnotator;
-import edu.uab.ccts.nlp.uima.annotator.shared_task.SemEval2015Task2Consumer;
-import edu.uab.ccts.nlp.uima.collection_reader.SemEval2015CollectionReader;
+import edu.uab.ccts.nlp.shared_task.semeval2015.SemEval2015Constants;
+import edu.uab.ccts.nlp.shared_task.semeval2015.uima.SemEval2015CollectionReader;
+import edu.uab.ccts.nlp.shared_task.semeval2015.uima.annotator.SemEval2015GoldAttributeParserAnnotator;
+import edu.uab.ccts.nlp.shared_task.semeval2015.uima.annotator.SemEval2015Task2Consumer;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;

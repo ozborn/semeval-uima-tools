@@ -1,4 +1,4 @@
-package edu.uab.ccts.nlp.uima.collection_reader;
+package edu.uab.ccts.nlp.shared_task.semeval2015.uima;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -19,11 +19,12 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Progress;
 import org.apache.uima.util.ProgressImpl;
 import org.cleartk.util.ViewUriUtil;
+
+import edu.uab.ccts.nlp.shared_task.semeval2015.SemEval2015Constants;
+
 import org.apache.uima.fit.component.JCasCollectionReader_ImplBase;
 import org.apache.uima.fit.component.ViewCreatorAnnotator;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
-
-import edu.uab.ccts.nlp.shared_task.SemEval2015Constants;
 
 public class SemEval2015CorpusCollectionReader extends
 JCasCollectionReader_ImplBase {

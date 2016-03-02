@@ -1,6 +1,4 @@
-package edu.uab.ccts.nlp.uima.annotator.shared_task;
-
-import edu.uab.ccts.nlp.shared_task.SemEval2015Constants;
+package edu.uab.ccts.nlp.shared_task.semeval2015.uima.annotator;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.ctakes.typesystem.type.structured.DocumentID;
@@ -11,6 +9,9 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.cleartk.semeval2015.type.DisorderSpan;
 import org.cleartk.util.ViewUriUtil;
+
+import edu.uab.ccts.nlp.shared_task.semeval2015.SemEval2015Constants;
+
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 
