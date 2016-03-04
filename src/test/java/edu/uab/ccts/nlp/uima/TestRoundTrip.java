@@ -15,26 +15,15 @@ import edu.uab.ccts.nlp.shared_task.semeval2015.SemEval2015Constants;
 import edu.uab.ccts.nlp.shared_task.semeval2015.uima.SemEval2015CollectionReader;
 import edu.uab.ccts.nlp.shared_task.semeval2015.uima.annotator.SemEval2015GoldAttributeParserAnnotator;
 import edu.uab.ccts.nlp.shared_task.semeval2015.uima.annotator.SemEval2015Task2Consumer;
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
 
-public class TestRoundTrip extends TestCase {
+import static org.junit.Assume.*;
+import org.junit.Test;
+
+public class TestRoundTrip {
 	
-	public TestRoundTrip(String testname) {
-		super(testname);
-	}
-	
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( TestRoundTrip.class );
-    }
-    
-	
+	@Test 
 	public void testRoundTrip() throws ResourceInitializationException{
+		assumeTrue((new File(SemEval2015Constants.defaultDevelPath)).isDirectory());
 		runRoundTrip(SemEval2015Constants.defaultDevelPath,"target/test/roundtrip/devel");
 		//runRoundTrip(SemEval2015Constants.defaultTrainingPath,"target/test/roundtrip/train");
 		//runRoundTrip(SemEval2015Constants.updatedTrainingPath,"target/test/roundtrip/updated_train");
@@ -57,7 +46,7 @@ public class TestRoundTrip extends TestCase {
 		AggregateBuilder builder = new AggregateBuilder();
 		builder.add(SemEval2015GoldAttributeParserAnnotator.getTestingDescription());
 		builder.add(SemEval2015Task2Consumer.getCuilessDescription(output_dir));
-		for (JCas jcas : SimplePipeline.iteratePipeline(crd, builder.createAggregateDescription())) {}
+		for (@SuppressWarnings("unused") JCas jcas : SimplePipeline.iteratePipeline(crd, builder.createAggregateDescription())) {}
 		return passed;
 	}
 	
