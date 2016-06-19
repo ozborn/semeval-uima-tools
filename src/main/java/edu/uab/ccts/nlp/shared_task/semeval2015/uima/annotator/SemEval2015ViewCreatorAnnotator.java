@@ -16,9 +16,13 @@ import org.uimafit.descriptor.ConfigurationParameter;
 
 import edu.uab.ccts.nlp.shared_task.semeval2015.SemEval2015Constants;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 /**
  * This file reads in piped annotation SemEval 2015 files into the PIPED_VIEW 
- * and the text into defeault/GOLD_VIEW
+ * and the text into default/GOLD_VIEW
  * @author ozborn
  *
  */
@@ -33,6 +37,7 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 			name = PARAM_TRAINING_PATH,
 			description = "path to training directory")
 	private String SemEval2015TrainingPath = SemEval2015Constants.defaultTrainingPath; //Needed default not working FIXME
+	private static final Logger LOG  = LoggerFactory.getLogger(SemEval2015ViewCreatorAnnotator.class);
 
 
 	@Override
@@ -41,7 +46,7 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 		pipedView = JCasUtil.getView(jcas, SemEval2015Constants.PIPED_VIEW, true);
 		semevalTextView = JCasUtil.getView(jcas, SemEval2015Constants.GOLD_VIEW, true);
 		String name = new File(ViewUriUtil.getURI(jcas).getPath()).getName();
-		System.out.println(ViewUriUtil.getURI(jcas).getPath()); System.out.flush();
+		LOG.info("Processing:"+ViewUriUtil.getURI(jcas).getPath());
 		String[] bits = name.split("-");
 		String prefix = bits[0]+"-"+bits[1];
 		//System.out.println("Prefix was:"+prefix);System.out.flush();
@@ -75,7 +80,7 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 					String otext = FileUtils.readFileToString(ofile);
 					semevalTextView.setDocumentText(otext);
 				} else {
-					System.err.println("Could not find expected devel text file:"+ofile.getPath());
+					LOG.error("Could not find expected devel text file:"+ofile.getPath());
 				}
 			}
 			File pfile = new File(pipefilename);
@@ -90,7 +95,7 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 					String ptext = FileUtils.readFileToString(pfile);
 					pipedView.setDocumentText(ptext);
 				} else {
-					System.err.println("Could not find expected pipe file:"+pfile.getPath());
+					LOG.error("Could not find expected pipe file:"+pfile.getPath());
 				}
 			}
 		} catch (IOException e) {
