@@ -3,10 +3,10 @@ package edu.uab.ccts.nlp.shared_task.semeval2015.uima;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.HiddenFileFilter;
 import org.apache.uima.UimaContext;
-import org.apache.uima.cas.CASException;
 import org.apache.uima.collection.CollectionException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
+import org.apache.uima.util.Level;
 import org.apache.uima.util.Progress;
 import org.apache.uima.util.ProgressImpl;
 import org.cleartk.util.ViewUriUtil;
@@ -20,7 +20,6 @@ import org.apache.uima.fit.util.JCasUtil;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -85,6 +84,7 @@ public class SemEval2015CollectionReader extends JCasCollectionReader_ImplBase
 			} else { throw new ResourceInitializationException("Semeval files missing",null); }
 		}
 		totalFiles = pipedFiles.size();
+		this.getUimaContext().getLogger().log(Level.INFO,"Got "+totalFiles+" files.");
 	}
 
 	public void getNext(JCas jCas) throws IOException, CollectionException
