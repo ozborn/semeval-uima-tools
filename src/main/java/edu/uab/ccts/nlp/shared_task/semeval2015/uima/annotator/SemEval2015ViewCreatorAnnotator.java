@@ -12,12 +12,11 @@ import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
+import org.apache.uima.util.Level;
+import org.apache.uima.util.Logger;
 import org.uimafit.descriptor.ConfigurationParameter;
 
 import edu.uab.ccts.nlp.shared_task.semeval2015.SemEval2015Constants;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 
 /**
@@ -37,16 +36,17 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 			name = PARAM_TRAINING_PATH,
 			description = "path to training directory")
 	private String SemEval2015TrainingPath = SemEval2015Constants.defaultTrainingPath; //Needed default not working FIXME
-	private static final Logger LOG  = LoggerFactory.getLogger(SemEval2015ViewCreatorAnnotator.class);
+	private Logger LOG = null; 
 
 
 	@Override
 	public void process(JCas jcas) throws AnalysisEngineProcessException {
+		LOG = this.getContext().getLogger();
 		JCas pipedView = null, semevalTextView = null;
 		pipedView = JCasUtil.getView(jcas, SemEval2015Constants.PIPED_VIEW, true);
 		semevalTextView = JCasUtil.getView(jcas, SemEval2015Constants.GOLD_VIEW, true);
 		String name = new File(ViewUriUtil.getURI(jcas).getPath()).getName();
-		LOG.info("Processing:"+ViewUriUtil.getURI(jcas).getPath());
+		LOG.log(Level.INFO,"Processing:"+ViewUriUtil.getURI(jcas).getPath());
 		String[] bits = name.split("-");
 		String prefix = bits[0]+"-"+bits[1];
 		//System.out.println("Prefix was:"+prefix);System.out.flush();
@@ -80,7 +80,7 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 					String otext = FileUtils.readFileToString(ofile);
 					semevalTextView.setDocumentText(otext);
 				} else {
-					LOG.error("Could not find expected devel text file:"+ofile.getPath());
+					LOG.log(Level.WARNING,"Could not find expected devel text file:"+ofile.getPath());
 				}
 			}
 			File pfile = new File(pipefilename);
@@ -95,7 +95,7 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 					String ptext = FileUtils.readFileToString(pfile);
 					pipedView.setDocumentText(ptext);
 				} else {
-					LOG.error("Could not find expected pipe file:"+pfile.getPath());
+					LOG.log(Level.WARNING,"Could not find expected pipe file:"+pfile.getPath());
 				}
 			}
 		} catch (IOException e) {
