@@ -213,7 +213,7 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 					}
 				}
 				if(seen_before) {
-					System.out.println(docId+" seen before!"+line); System.out.flush();
+					System.out.println("This line was seen before:"+line); System.out.flush();
 				}
 				if (cur_spans.size() > 1) /* multi-span disorder */
 				{

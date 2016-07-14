@@ -46,7 +46,7 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 		pipedView = JCasUtil.getView(jcas, SemEval2015Constants.PIPED_VIEW, true);
 		semevalTextView = JCasUtil.getView(jcas, SemEval2015Constants.GOLD_VIEW, true);
 		String name = new File(ViewUriUtil.getURI(jcas).getPath()).getName();
-		LOG.log(Level.INFO,"Processing:"+ViewUriUtil.getURI(jcas).getPath());
+		LOG.log(Level.FINE,"Processing:"+ViewUriUtil.getURI(jcas).getPath());
 		String[] bits = name.split("-");
 		String prefix = bits[0]+"-"+bits[1];
 		//System.out.println("Prefix was:"+prefix);System.out.flush();
