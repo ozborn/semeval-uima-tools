@@ -423,8 +423,15 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 	}
 
 	
+	public static AnalysisEngineDescription getTrainingDescription() throws ResourceInitializationException {
+		return AnalysisEngineFactory.createEngineDescription(SemEval2015GoldAttributeParserAnnotator.class,
+				SemEval2015GoldAttributeParserAnnotator.PARAM_TRAINING, true,
+				SemEval2015GoldAttributeParserAnnotator.PARAM_CUI_MAP,"src/main/resources/data/cuiMap.txt");
+	}
+	
 	public static AnalysisEngineDescription getDescription() throws ResourceInitializationException {
-		return AnalysisEngineFactory.createEngineDescription(SemEval2015GoldAttributeParserAnnotator.class);
+		return AnalysisEngineFactory.createEngineDescription(SemEval2015GoldAttributeParserAnnotator.class
+				);
 	}
 	
 	
