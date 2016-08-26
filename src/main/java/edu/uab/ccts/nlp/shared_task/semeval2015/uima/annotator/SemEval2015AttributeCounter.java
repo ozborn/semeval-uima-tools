@@ -95,6 +95,7 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 		try
 		{
 			Writer writer = new FileWriter(filepath);
+			writer.write("DocID|Spans|Disorder|Negation|Subject|Uncertainity|Course|Severity|Conditional|Generic|Body|\n");
 			//TreeSet<String> ordered_doc = new TreeSet<String>();
 			for (DiseaseDisorder ds : JCasUtil.select(appView, DiseaseDisorder.class))
 			{
@@ -167,7 +168,7 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 				}
 			}
 		}
-		String out = Integer.toString(theattcount);
+		String out = Integer.toString(theattcount)+SemEval2015Constants.OUTPUT_SEPERATOR;
 		return out;
 	}
 
@@ -205,22 +206,9 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 
 
 	public static AnalysisEngineDescription getDescription() throws ResourceInitializationException {
-		return AnalysisEngineFactory.createEngineDescription(SemEval2015Task2Consumer.class);
+		return AnalysisEngineFactory.createEngineDescription(SemEval2015AttributeCounter.class,
+				PARAM_OUTPUT_DIRECTORY,"target/Semeval2015CountResults");
 	}	
 
-
-	/**
-	 * Returns a descriptor for a Consumer that writes annotations to target directory
-	 * @param target_directory
-	 * @return
-	 * @throws ResourceInitializationException
-	 */
-	public static AnalysisEngineDescription getCuilessDescription(String target_directory) throws ResourceInitializationException {
-		return AnalysisEngineFactory.createEngineDescription(
-				SemEval2015Task2Consumer.class
-				,PARAM_OUTPUT_DIRECTORY
-				,target_directory
-				);
-	}	
 
 }

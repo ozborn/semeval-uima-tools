@@ -81,7 +81,7 @@ public class SemEval2015CollectionReader extends JCasCollectionReader_ImplBase
 			{
 				pipedFiles.add(f);
 				textFiles.add(textFile);
-			} else { throw new ResourceInitializationException("Semeval files missing",null); }
+			} else { throw new ResourceInitializationException("Semeval files missing, ex)"+f.getAbsolutePath(),null); }
 		}
 		totalFiles = pipedFiles.size();
 		this.getUimaContext().getLogger().log(Level.INFO,"Got "+totalFiles+" files.");
