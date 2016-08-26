@@ -128,7 +128,7 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 			if (i != spans.size() - 1) output_lines.append(",");
 		}
 		output_lines.append(SemEval2015Constants.OUTPUT_SEPERATOR);
-		output_lines.append(dd.getCuis().size());
+		output_lines.append(dd.getCuis().get(0).split(",").length);
 		/*
 		for(int i=0;i<dd.getCuis().size();i++){
 			if(i!=dd.getCuis().size()-1) output_lines.append(dd.getCuis(i)+" ");
@@ -165,6 +165,7 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 				if (type.equals(dda.getAttributeType()))
 				{
 					theattcount++;
+					break;
 				}
 			}
 		}
