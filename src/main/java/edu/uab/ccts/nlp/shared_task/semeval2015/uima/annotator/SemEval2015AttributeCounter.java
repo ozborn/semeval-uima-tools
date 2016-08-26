@@ -27,24 +27,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Originally used to writes out the ClearClinical results for 
- * SemEval2015 (Task 14) Task 2 (formerly Task C) using APPLICATION_VIEW,
- * where it assumes the text and annotations are
- * 
- * Now additionally writes out results in extended SemEval2015 format 
- * (includes multi disease CUIs). If the APPLICATION_VIEW is not there,
- * then it looks in the default view for DiseaseDisorders 
+ * Counts the number of attributes in a disorder in SemEval format files
  * @author ozborn
  *
  */
-public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
+public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 
 	public static final String PARAM_OUTPUT_DIRECTORY = "outputDir";
 	@ConfigurationParameter(
 			name = PARAM_OUTPUT_DIRECTORY,
-			description = "Path to the output directory for SemEval Annotations",
-			defaultValue="target/template_results/")
-	private String outputDir = "target/semeval_formt_output/";
+			description = "Path to the output directory for SemEval Counting",
+			defaultValue="target/")
+	private String outputDir = "target/Semeval2015CountResults.tsv";
 
 
 	public static boolean VERBOSE = false;
@@ -105,7 +99,7 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 			for (DiseaseDisorder ds : JCasUtil.select(appView, DiseaseDisorder.class))
 			{
 				associateSpans(appView, ds);
-				String results = getDiseaseDisorderSemEval2015Format(docid, ds);
+				String results = getDiseaseDisorderSemEval2015Counts(docid, ds);
 				//ordered_doc.add(results);
 				if (VERBOSE) System.out.println(results);
 				writer.write(results + "\n"); 
@@ -120,7 +114,7 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 
 	/**
 	 */
-	private String getDiseaseDisorderSemEval2015Format(String docid, DiseaseDisorder dd )
+	private String getDiseaseDisorderSemEval2015Counts(String docid, DiseaseDisorder dd )
 	{
 		StringBuffer output_lines = new StringBuffer(2000);
 		output_lines.append(docid);
@@ -131,25 +125,27 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 			DisorderSpan ds = (DisorderSpan) spans.get(i);
 			output_lines.append(ds.getBegin() + "-" + ds.getEnd());
 			if (i != spans.size() - 1) output_lines.append(",");
-			//			System.out.print(ds.getCoveredText() + "\t");
 		}
 		output_lines.append(SemEval2015Constants.OUTPUT_SEPERATOR);
+		output_lines.append(dd.getCuis().size());
+		/*
 		for(int i=0;i<dd.getCuis().size();i++){
 			if(i!=dd.getCuis().size()-1) output_lines.append(dd.getCuis(i)+" ");
 			else output_lines.append(dd.getCuis(i));
 		}
+		*/
 		output_lines.append(SemEval2015Constants.OUTPUT_SEPERATOR);
 		FSArray atts = dd.getAttributes();
-		output_lines.append(fetchAttributeString(atts, SemEval2015Constants.NEGATION_RELATION));
-		output_lines.append(fetchAttributeString(atts, SemEval2015Constants.SUBJECT_RELATION));
-		output_lines.append(fetchAttributeString(atts, SemEval2015Constants.UNCERTAINITY_RELATION));
-		output_lines.append(fetchAttributeString(atts, SemEval2015Constants.COURSE_RELATION));
-		output_lines.append(fetchAttributeString(atts, SemEval2015Constants.SEVERITY_RELATION));
-		output_lines.append(fetchAttributeString(atts, SemEval2015Constants.CONDITIONAL_RELATION));
-		output_lines.append(fetchAttributeString(atts, SemEval2015Constants.GENERIC_RELATION));
-		output_lines.append(fetchAttributeString(atts, SemEval2015Constants.BODY_RELATION));
-		//output_lines.append(fetchAttributeString(atts, SemEval2015Constants.DOCTIME_RELATION));
-		//output_lines.append(fetchAttributeString(atts, SemEval2015Constants.TEMPORAL_RELATION));
+		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.NEGATION_RELATION));
+		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.SUBJECT_RELATION));
+		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.UNCERTAINITY_RELATION));
+		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.COURSE_RELATION));
+		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.SEVERITY_RELATION));
+		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.CONDITIONAL_RELATION));
+		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.GENERIC_RELATION));
+		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.BODY_RELATION));
+		//output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.DOCTIME_RELATION));
+		//output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.TEMPORAL_RELATION));
 		//		System.out.println();
 		return output_lines.toString();
 	}
@@ -157,10 +153,9 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 	/**
 	 * Too bad UIMA doesn't have built in hashtables...
 	 */
-	private String fetchAttributeString(FSArray atts, String type)
+	private String fetchAttributeCount(FSArray atts, String type)
 	{
-		String norm = SemEval2015Constants.defaultNorms.get(type);
-		String cue = "null";
+		int theattcount = 0;
 		if (atts != null)
 		{
 			for (int i = 0; i < atts.size(); i++)
@@ -168,34 +163,11 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 				DiseaseDisorderAttribute dda = (DiseaseDisorderAttribute) atts.get(i);
 				if (type.equals(dda.getAttributeType()))
 				{
-					norm = dda.getNorm();
-					if (!type.equals(SemEval2015Constants.DOCTIME_RELATION))
-					{
-						FSArray attspans = dda.getSpans();
-						if (attspans == null)
-						{
-							//							System.out.println(dda.getBegin() + " to " + dda.getEnd() + " has no atts!!!!");
-							continue;
-						}
-						for (int j = 0; j < attspans.size(); j++)
-						{
-							//Not sure why this used to try to get DiseaseDisorderAttribute instead of spans
-							//DiseaseDisorderAttribute ds = (DiseaseDisorderAttribute) attspans.get(j);
-							DisorderSpan ds = (DisorderSpan) attspans.get(j);
-							if (j == 0) cue = (ds.getBegin() + "-" + ds.getEnd());
-							else
-							{
-								cue = cue + "," + ds.getBegin() + "-" + ds.getEnd();
-							}
-							//							System.out.print(ds.getCoveredText() + "\t");
-
-						}
-					} 
+					theattcount++;
 				}
 			}
 		}
-		String out = norm + SemEval2015Constants.OUTPUT_SEPERATOR + cue;
-		if (!type.equals(SemEval2015Constants.BODY_RELATION)) out += SemEval2015Constants.OUTPUT_SEPERATOR;
+		String out = Integer.toString(theattcount);
 		return out;
 	}
 
