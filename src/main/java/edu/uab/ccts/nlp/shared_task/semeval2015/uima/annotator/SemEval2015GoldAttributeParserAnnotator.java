@@ -12,7 +12,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.cas.StringArray;
 import org.apache.uima.resource.ResourceInitializationException;
-
+import org.apache.uima.util.Level;
 import org.cleartk.semeval2015.type.DiseaseDisorder;
 import org.cleartk.semeval2015.type.DiseaseDisorderAttribute;
 import org.cleartk.semeval2015.type.DisorderRelation;
@@ -70,7 +70,6 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 	public static final int te_norm = 20;
 	public static final int te_cue = 21;
 	public static final int totalFields = SemEval2015Constants.TOTAL_FIELDS;
-	public static boolean VERBOSE = false;
 	public static final String DISJOINT_SPAN = "dspan";
 	public static HashMap<String, String> stringCUIMap;
 	@ConfigurationParameter(
@@ -165,7 +164,7 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 			String[] fields = line.split("\\|");
 			if (fields.length < totalFields)
 			{
-				System.out.println("Wrong format ("+fields.length+"): " + line);
+				this.getContext().getLogger().log(Level.WARNING,"Wrong format ("+fields.length+"): " + line);
 				continue;
 			}
 			docId = fields[dd_doc];
@@ -213,7 +212,7 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 					}
 				}
 				if(seen_before) {
-					System.out.println("This line was seen before:"+line); System.out.flush();
+					this.getContext().getLogger().log(Level.FINE,"This line was seen before:"+line);
 				}
 				if (cur_spans.size() > 1) /* multi-span disorder */
 				{
@@ -298,10 +297,10 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 					diseaseAttributes.set(i, diseaseAtts.get(i));
 				}
 				disease.setAttributes(diseaseAttributes);
-				//System.out.println("Disease ("+fields[1]+") in "+fields[0]+" set "+diseaseAttributes.size()+" attributes.");
+				this.getContext().getLogger().log(Level.FINEST,"Disease ("+fields[1]+") in "+fields[0]+" set "+diseaseAttributes.size()+" attributes.");
 			} catch (NumberFormatException e)
 			{
-				System.out.println("Piped format error in line: " + line);
+				this.getContext().getLogger().log(Level.WARNING,"Piped format error in line: " + line);
 				e.printStackTrace();
 			}
 		}
@@ -313,8 +312,7 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 				DisorderSpan arg1 = multiSpanDisorder.remove(0);
 				DisorderSpan arg2 = multiSpanDisorder.get(0);
 				createDisjointSpanRelation(goldTextView, arg1, arg2, DISJOINT_SPAN);
-				if (VERBOSE)
-					System.out.println("Added relation: " + arg1.getCoveredText() + "--" + arg2.getCoveredText());
+				this.getContext().getLogger().log(Level.FINER,"Added relation: " + arg1.getCoveredText() + "--" + arg2.getCoveredText());
 			}
 		}
 		/* add doc id for output purposes */
