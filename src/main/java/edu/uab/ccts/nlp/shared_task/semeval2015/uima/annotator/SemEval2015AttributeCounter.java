@@ -8,6 +8,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Level;
+import org.apache.uima.util.Logger;
 import org.cleartk.semeval2015.type.DiseaseDisorder;
 import org.cleartk.semeval2015.type.DiseaseDisorderAttribute;
 import org.cleartk.semeval2015.type.DisorderRelation;
@@ -41,8 +42,6 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 	private String outputDir = "target/Semeval2015CountResults.tsv";
 
 
-	public static boolean VERBOSE = false;
-
 	public void initialize(UimaContext context) throws ResourceInitializationException
 	{
 		super.initialize(context);
@@ -50,10 +49,11 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 			File out = new File(outputDir);
 			if (!out.exists())
 			{
-				if (!out.mkdirs()) System.out.println("Could not make directory " + outputDir);
+				if (!out.mkdirs()) this.getContext().getLogger().log(Level.WARNING,""
+						+ "Could not make directory " + outputDir);
 			} else
 			{
-				if (VERBOSE) System.out.println(outputDir + " exists!");
+				this.getContext().getLogger().log(Level.CONFIG,outputDir + " exists!");
 			}
 		} catch (Exception e)
 		{
@@ -99,10 +99,10 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 			//TreeSet<String> ordered_doc = new TreeSet<String>();
 			for (DiseaseDisorder ds : JCasUtil.select(appView, DiseaseDisorder.class))
 			{
-				associateSpans(appView, ds);
+				associateSpans(appView, ds,this.getContext().getLogger());
 				String results = getDiseaseDisorderSemEval2015Counts(docid, ds);
 				//ordered_doc.add(results);
-				if (VERBOSE) System.out.println(results);
+				this.getContext().getLogger().log(Level.FINEST,results);
 				writer.write(results + "\n"); 
 			}
 			//for(String s : ordered_doc) { writer.write(s + "\n"); }
@@ -174,11 +174,13 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 	}
 
 	
-	
-	public static FSArray associateSpans(JCas jCas, DiseaseDisorder dd)
+	public static FSArray associateSpans(JCas jCas, DiseaseDisorder dd, Logger logger)
 	{
 		List<DiseaseDisorderAttribute> atts = new ArrayList<>();
-		if(!JCasUtil.exists(jCas, DisorderRelation.class)) System.out.println("No disorder relations!");
+		if(!JCasUtil.exists(jCas, DisorderRelation.class)) {
+			logger.log(Level.WARNING,"No disorder relations in "
+		    +dd.getCoveredText()+" from:"+dd.getBegin()+"="+dd.getEnd());
+		}
 		for (DisorderRelation rel: JCasUtil.select(jCas, DisorderRelation.class))
 		{
 			DisorderSpan s = (DisorderSpan) rel.getArg2().getArgument();
@@ -191,7 +193,7 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 				}
 			}
 		}
-		if(VERBOSE) System.out.println("Found "+atts.size()+" attributes in last annotator.");
+		logger.log(Level.FINER,"Found "+atts.size()+" attributes in last annotator.");
 		FSArray relSpans = new FSArray(jCas, atts.size());
 		int min_begin = -1, max_end = -1;
 		for (int i = 0; i < atts.size(); i++)
