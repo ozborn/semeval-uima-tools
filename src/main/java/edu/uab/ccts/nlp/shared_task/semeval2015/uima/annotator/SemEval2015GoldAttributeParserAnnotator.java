@@ -47,6 +47,7 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 {
 	public static final String PARAM_TRAINING = "training";
 	public static final String PARAM_CUI_MAP = "cuiMap";
+	public static final String PARAM_DEST_VIEW = "destView";
 	public static final int dd_doc = 0;
 	public static final int dd_spans = 1;
 	public static final int dd_cui = 2;
@@ -80,6 +81,10 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 			name = PARAM_CUI_MAP,
 			description = "file to read CUI map from in testing and application")
 	protected String cuiMap = null;
+	@ConfigurationParameter(
+			name = PARAM_DEST_VIEW,
+			description = "View to place SemEval parsed attributes in ")
+	protected String destView = null;
 	
 	
 	public static void writeMapToFile(HashMap<String, String> stringCUIMap, File outputFile)
@@ -143,11 +148,12 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 	 */
 	public void process(JCas jcas) throws AnalysisEngineProcessException
 	{
-		JCas pipedView = null, goldTextView = null;
+		JCas pipedView = null, targetDestView = null;
 		try
 		{
 			pipedView = jcas.getView(SemEval2015Constants.PIPED_VIEW);
-			goldTextView = jcas.getView(SemEval2015Constants.GOLD_VIEW);
+			//targetDestView = jcas.getView(SemEval2015Constants.GOLD_VIEW);
+			targetDestView = jcas.getView(destView);
 		} catch (CASException e)
 		{
 			e.printStackTrace();
@@ -185,10 +191,10 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 					String[] startBegin = ddSpan.split("-");
 					int begin = Integer.parseInt(startBegin[0]);
 					int end = Integer.parseInt(startBegin[1]);
-					DisorderSpan dspan = new DisorderSpan(goldTextView, begin, end);
+					DisorderSpan dspan = new DisorderSpan(targetDestView, begin, end);
 					dspan.setChunk("");
 					dspan.setCui(cui_string);
-					dspan.addToIndexes(goldTextView);
+					dspan.addToIndexes(targetDestView);
 					cur_spans.add(dspan);
 					String disorderText = dspan.getCoveredText().trim().toLowerCase();
 					text += disorderText + " "; //Used only for CUI map
@@ -219,8 +225,8 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 					disjointSpans.add(cur_spans);
 				}
 				//Set up disease
-				DiseaseDisorder disease = new DiseaseDisorder(goldTextView);
-				FSArray relSpans = new FSArray(goldTextView, cur_spans.size());
+				DiseaseDisorder disease = new DiseaseDisorder(targetDestView);
+				FSArray relSpans = new FSArray(targetDestView, cur_spans.size());
 				int min_begin = -1, max_end = -1;
 				for (int i = 0; i < cur_spans.size(); i++)
 				{
@@ -233,29 +239,29 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 				disease.setBegin(min_begin);
 				disease.setEnd(max_end);
 				String[] cuis = cui_string.split(" ");
-				StringArray usa = new StringArray(goldTextView,cuis.length);
+				StringArray usa = new StringArray(targetDestView,cuis.length);
 				for(int i=0;i<cuis.length;i++){ usa.set(i,cuis[i]); }
 				usa.addToIndexes();
 				disease.setCuis(usa);
 
 				docdiseases.add(disease);
-				disease.addToIndexes(goldTextView);
+				disease.addToIndexes(targetDestView);
 				/* Extract attributes */
-				extractAttribute(goldTextView, diseaseAtts, fields,
+				extractAttribute(targetDestView, diseaseAtts, fields,
 						bl_norm, bl_cue, SemEval2015Constants.BODY_RELATION, disease);
-				extractAttribute(goldTextView, diseaseAtts, fields,
+				extractAttribute(targetDestView, diseaseAtts, fields,
 						co_norm, co_cue, SemEval2015Constants.CONDITIONAL_RELATION, disease);
-				extractAttribute(goldTextView, diseaseAtts, fields,
+				extractAttribute(targetDestView, diseaseAtts, fields,
 						gc_norm, gc_cue, SemEval2015Constants.GENERIC_RELATION, disease);
-				extractAttribute(goldTextView, diseaseAtts, fields,
+				extractAttribute(targetDestView, diseaseAtts, fields,
 						ni_norm, ni_cue, SemEval2015Constants.NEGATION_RELATION, disease);
-				extractAttribute(goldTextView, diseaseAtts, fields,
+				extractAttribute(targetDestView, diseaseAtts, fields,
 						sv_norm, sv_cue, SemEval2015Constants.SEVERITY_RELATION, disease);
-				extractAttribute(goldTextView, diseaseAtts, fields,
+				extractAttribute(targetDestView, diseaseAtts, fields,
 						sc_norm, sc_cue, SemEval2015Constants.SUBJECT_RELATION, disease);
-				extractAttribute(goldTextView, diseaseAtts, fields,
+				extractAttribute(targetDestView, diseaseAtts, fields,
 						ui_norm, ui_cue, SemEval2015Constants.UNCERTAINITY_RELATION, disease);
-				extractAttribute(goldTextView, diseaseAtts, fields,
+				extractAttribute(targetDestView, diseaseAtts, fields,
 						cc_norm, cc_cue, SemEval2015Constants.COURSE_RELATION, disease);
 				/*
 	String ccNorm = fields[cc_norm];
@@ -277,21 +283,21 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 				 */
 				if (totalFields > 19)
 				{
-					extractAttribute(goldTextView, diseaseAtts, fields,
+					extractAttribute(targetDestView, diseaseAtts, fields,
 							te_norm, te_cue, SemEval2015Constants.TEMPORAL_RELATION, disease);
 					String dtNorm = fields[dt_norm];
 					if (!dtNorm.equals(SemEval2015Constants.defaultNorms.get(SemEval2015Constants.DOCTIME_RELATION)))
 					{
 						int begin = 1;
-						int end = goldTextView.getDocumentText().length() - 1;
-						DiseaseDisorderAttribute dt = new DiseaseDisorderAttribute(goldTextView, begin, end);
+						int end = targetDestView.getDocumentText().length() - 1;
+						DiseaseDisorderAttribute dt = new DiseaseDisorderAttribute(targetDestView, begin, end);
 						dt.setNorm(dtNorm);
 						dt.setAttributeType(SemEval2015Constants.DOCTIME_RELATION);
 						dt.addToIndexes();
 						diseaseAtts.add(dt);
 					}
 				}
-				FSArray diseaseAttributes = new FSArray(goldTextView, diseaseAtts.size());
+				FSArray diseaseAttributes = new FSArray(targetDestView, diseaseAtts.size());
 				for (int i = 0; i < diseaseAtts.size(); i++)
 				{
 					diseaseAttributes.set(i, diseaseAtts.get(i));
@@ -318,7 +324,7 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 		/* add doc id for output purposes */
 		DocumentID id = new DocumentID(pipedView);
 		id.setDocumentID(docId);
-        id.addToIndexes(pipedView); id.addToIndexes(goldTextView);
+        id.addToIndexes(pipedView); id.addToIndexes(targetDestView);
 	}
 	private void extractAttribute(JCas jCas,
 			List<DiseaseDisorderAttribute> dAtts, String[] fields,
@@ -424,19 +430,34 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 	public static AnalysisEngineDescription getTrainingDescription() throws ResourceInitializationException {
 		return AnalysisEngineFactory.createEngineDescription(SemEval2015GoldAttributeParserAnnotator.class,
 				SemEval2015GoldAttributeParserAnnotator.PARAM_TRAINING, true,
-				SemEval2015GoldAttributeParserAnnotator.PARAM_CUI_MAP,"src/main/resources/data/cuiMap.txt");
-	}
-	
-	public static AnalysisEngineDescription getDescription() throws ResourceInitializationException {
-		return AnalysisEngineFactory.createEngineDescription(SemEval2015GoldAttributeParserAnnotator.class
-				);
+				SemEval2015GoldAttributeParserAnnotator.PARAM_CUI_MAP,"src/main/resources/data/cuiMap.txt",
+				SemEval2015GoldAttributeParserAnnotator.PARAM_DEST_VIEW,SemEval2015Constants.GOLD_VIEW
+		);
 	}
 	
 	
 	public static AnalysisEngineDescription getTestingDescription() throws ResourceInitializationException {
 		return AnalysisEngineFactory.createEngineDescription(SemEval2015GoldAttributeParserAnnotator.class,
 				SemEval2015GoldAttributeParserAnnotator.PARAM_TRAINING, false,
-				SemEval2015GoldAttributeParserAnnotator.PARAM_CUI_MAP,"src/main/resources/data/cuiMap.txt");
+				SemEval2015GoldAttributeParserAnnotator.PARAM_CUI_MAP,"src/main/resources/data/cuiMap.txt",
+				SemEval2015GoldAttributeParserAnnotator.PARAM_DEST_VIEW,SemEval2015Constants.GOLD_VIEW
+				);
 	}
+	
+	public static AnalysisEngineDescription getDescription() throws ResourceInitializationException {
+			return AnalysisEngineFactory.createEngineDescription(SemEval2015GoldAttributeParserAnnotator.class);
+	}
+	
+		
+	public static AnalysisEngineDescription getAppDescription() throws ResourceInitializationException {
+		return AnalysisEngineFactory.createEngineDescription(SemEval2015GoldAttributeParserAnnotator.class,
+				SemEval2015GoldAttributeParserAnnotator.PARAM_TRAINING, false,
+				SemEval2015GoldAttributeParserAnnotator.PARAM_CUI_MAP,"src/main/resources/data/cuiMap.txt",
+				SemEval2015GoldAttributeParserAnnotator.PARAM_DEST_VIEW,SemEval2015Constants.APP_VIEW
+				);
+	}
+
+	
+	
 
 }
