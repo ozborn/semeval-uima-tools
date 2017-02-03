@@ -68,7 +68,7 @@
 				<artifactId>jcasgen-maven-plugin</artifactId>
 				<configuration>
 					<typeSystemIncludes>
-						<typeSystemInclude>src/main/resources/semeval2015/TypeSystem.xml</typeSystemInclude>
+						<typeSystemInclude>src/main/resources/desc/types/semeval2015/TypeSystem.xml</typeSystemInclude>
 					</typeSystemIncludes>
 				</configuration>
 				<version>2.4.2</version>

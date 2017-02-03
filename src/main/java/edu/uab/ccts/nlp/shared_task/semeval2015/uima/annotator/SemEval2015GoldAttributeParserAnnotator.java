@@ -317,7 +317,7 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 			{
 				DisorderSpan arg1 = multiSpanDisorder.remove(0);
 				DisorderSpan arg2 = multiSpanDisorder.get(0);
-				createDisjointSpanRelation(goldTextView, arg1, arg2, DISJOINT_SPAN);
+				createDisjointSpanRelation(targetDestView, arg1, arg2, DISJOINT_SPAN);
 				this.getContext().getLogger().log(Level.FINER,"Added relation: " + arg1.getCoveredText() + "--" + arg2.getCoveredText());
 			}
 		}
