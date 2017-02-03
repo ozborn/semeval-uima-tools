@@ -28,9 +28,6 @@ import edu.uab.ccts.nlp.shared_task.semeval2015.SemEval2015Constants;
 public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 
 
-	/**
-	 * FIXME Does not populate below
-	 */
 	public static final String PARAM_TRAINING_PATH = "SemEval2015TrainingPath";
 	@ConfigurationParameter(
 			name = PARAM_TRAINING_PATH,
@@ -60,9 +57,7 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 		} 
 		//System.out.println("Type:"+type);
 		//System.out.println("Prefix:"+prefix);
-		//System.out.println("Type:"+type);
-		//Fails, FIXME
-		//System.out.println("Not working?! - SemPath:"+SemEval2015TrainingPath);
+		LOG.log(Level.FINE,"SemEval2015 Training Path:"+SemEval2015TrainingPath);
 		String original_textfile_name = SemEval2015Constants.defaultTrainingPath+File.separator+type+
 				File.separator+prefix+"."+SemEval2015Constants.SEMEVAL_TEXT_FILE_EXTENSION;
 		String pipefilename = SemEval2015Constants.defaultTrainingPath+File.separator+type+
