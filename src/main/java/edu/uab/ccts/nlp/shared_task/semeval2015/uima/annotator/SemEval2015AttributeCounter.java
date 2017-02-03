@@ -99,7 +99,7 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 			//TreeSet<String> ordered_doc = new TreeSet<String>();
 			for (DiseaseDisorder ds : JCasUtil.select(appView, DiseaseDisorder.class))
 			{
-				associateSpans(appView, ds,this.getContext().getLogger());
+				associateSpans(appView, ds);
 				String results = getDiseaseDisorderSemEval2015Counts(docid, ds);
 				//ordered_doc.add(results);
 				this.getContext().getLogger().log(Level.FINEST,results);
@@ -174,8 +174,9 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 	}
 
 	
-	public static FSArray associateSpans(JCas jCas, DiseaseDisorder dd, Logger logger)
+	private FSArray associateSpans(JCas jCas, DiseaseDisorder dd)
 	{
+		Logger logger = this.getContext().getLogger();
 		List<DiseaseDisorderAttribute> atts = new ArrayList<>();
 		if(!JCasUtil.exists(jCas, DisorderRelation.class)) {
 			logger.log(Level.WARNING,"No disorder relations in "
