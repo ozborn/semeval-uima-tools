@@ -59,7 +59,7 @@ public class SemEval2015Constants
 	public static final String updatedTrainingPath = 
 			System.getProperty("user.home")+
 			"/Dropbox/Public_NLP_Data/semeval-2015-task-14_updated/data/train";
-	public static final String defaultTrainingPath = 
+	public static final String oldTrainingPath = 
 			System.getProperty("user.home")+
 			"/Dropbox/Public_NLP_Data/semeval-2015-task-14_old/semeval-2015-task-14/subtask-c/data/train";
 	public static final String defaultDevelPath = 

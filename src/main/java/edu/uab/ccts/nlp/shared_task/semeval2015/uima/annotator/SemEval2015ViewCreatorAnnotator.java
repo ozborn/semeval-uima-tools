@@ -31,8 +31,9 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 	public static final String PARAM_TRAINING_PATH = "SemEval2015TrainingPath";
 	@ConfigurationParameter(
 			name = PARAM_TRAINING_PATH,
-			description = "path to training directory")
-	private String SemEval2015TrainingPath = SemEval2015Constants.defaultTrainingPath; //Needed default not working FIXME
+			description = "path to training directory"
+	)
+	private String SemEval2015TrainingPath = SemEval2015Constants.oldTrainingPath; //Needed default not working FIXME
 	private Logger LOG = null; 
 
 
@@ -43,10 +44,11 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 		pipedView = JCasUtil.getView(jcas, SemEval2015Constants.PIPED_VIEW, true);
 		semevalTextView = JCasUtil.getView(jcas, SemEval2015Constants.GOLD_VIEW, true);
 		String name = new File(ViewUriUtil.getURI(jcas).getPath()).getName();
-		LOG.log(Level.FINE,"Processing:"+ViewUriUtil.getURI(jcas).getPath());
+		LOG.log(Level.FINE,"Determining SemEval2015 prefix and type from URI:"+
+		ViewUriUtil.getURI(jcas).getPath());
 		String[] bits = name.split("-");
 		String prefix = bits[0]+"-"+bits[1];
-		//System.out.println("Prefix was:"+prefix);System.out.flush();
+		LOG.log(Level.FINEST,"Prefix was:"+prefix);
 		String type = "discharge"; //Default type
 		if(bits.length>=3){
 			type = bits[2];
@@ -55,12 +57,11 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 			if(type.toLowerCase().startsWith("echo")) type="echo";
 			if(type.toLowerCase().startsWith("radio")) type="radiology";
 		} 
-		//System.out.println("Type:"+type);
-		//System.out.println("Prefix:"+prefix);
+		LOG.log(Level.FINEST,"Type:"+type+" Prefix:"+prefix);
 		LOG.log(Level.FINE,"SemEval2015 Training Path:"+SemEval2015TrainingPath);
-		String original_textfile_name = SemEval2015Constants.defaultTrainingPath+File.separator+type+
+		String original_textfile_name = SemEval2015TrainingPath+File.separator+type+
 				File.separator+prefix+"."+SemEval2015Constants.SEMEVAL_TEXT_FILE_EXTENSION;
-		String pipefilename = SemEval2015Constants.defaultTrainingPath+File.separator+type+
+		String pipefilename = SemEval2015TrainingPath+File.separator+type+
 				File.separator+prefix+"."+SemEval2015Constants.SEMEVAL_PIPED_EXTENSION;
 		try {
 			File ofile = new File(original_textfile_name);
@@ -68,7 +69,7 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 				String otext = FileUtils.readFileToString(ofile);
 				semevalTextView.setDocumentText(otext);
 			} else {
-				//System.out.println("Did not find training text file:"+ofile);
+				LOG.log(Level.INFO,"Did not find training text file:"+ofile+", trying devel file formatting");
 				ofile = new File(SemEval2015Constants.defaultDevelPath+File.separator+type+
 						File.separator+prefix.split("\\.")[0]+"."+SemEval2015Constants.SEMEVAL_TEXT_FILE_EXTENSION);
 				if(ofile.exists()){
@@ -105,7 +106,6 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 		return AnalysisEngineFactory.createEngineDescription(
 				SemEval2015ViewCreatorAnnotator.class,
 				SemEval2015ViewCreatorAnnotator.PARAM_TRAINING_PATH,
-				//SemEval2015ViewCreatorAnnotator.defaultTrainingPath
 				training_path
 				);
 	}

@@ -326,6 +326,10 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 		id.setDocumentID(docId);
         id.addToIndexes(pipedView); id.addToIndexes(targetDestView);
 	}
+	
+	
+	
+	
 	private void extractAttribute(JCas jCas,
 			List<DiseaseDisorderAttribute> dAtts, String[] fields,
 			int input_norm, int input_cue, String relation, DiseaseDisorder disease)
