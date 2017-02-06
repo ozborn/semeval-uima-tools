@@ -75,11 +75,13 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 		try
 		{
 			appView = JCasUtil.getView(aJCas,SemEval2015Constants.APP_VIEW,aJCas.getView(SemEval2015Constants.GOLD_VIEW));
+
 			if(!JCasUtil.exists(appView, DiseaseDisorder.class)) {
 				this.getContext().getLogger().log(Level.WARNING,
-						"No DiseaseDisorders found in either APP_VIEW or GOLD_VIEW/default");
+				"No DiseaseDisorders found in either APP_VIEW or GOLD_VIEW/default "+
+				"nothing to write, exiting.");
+				return;
 			}
-
 			for (DocumentID di : JCasUtil.select(appView, DocumentID.class))
 			{
 				docid = di.getDocumentID();
@@ -87,7 +89,7 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 			}
 			if(docid==null) {
 				this.getContext().getLogger().log(Level.WARNING,
-						"No DocumentID found in either APP_VIEW or GOLD_VIEW/default");
+						"No DocumentID found in either APP_VIEW or GOLD_VIEW/default, exiting.");
 				return;
 			}
 			filepath = outputDir + File.separator +

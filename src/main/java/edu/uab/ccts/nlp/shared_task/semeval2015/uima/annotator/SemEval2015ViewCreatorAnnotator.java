@@ -2,6 +2,13 @@ package edu.uab.ccts.nlp.shared_task.semeval2015.uima.annotator;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
@@ -97,8 +104,23 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 			}
 			File pfile = new File(pipefilename);
 			if(pfile.exists()) {
-				String ptext = FileUtils.readFileToString(pfile);
-				pipedView.setDocumentText(ptext);
+				//String ptext = FileUtils.readFileToString(pfile);
+					
+				try (Stream<String> stream = Files.lines(Paths.get(pipefilename),Charset.forName("UTF-8"))) {
+					String ptext = null;
+					if(cuilessOnly) { 
+							LOG.log(Level.FINE,"Doing CUILESS only");
+							ptext = stream
+							.filter(line -> line.indexOf("|CUI-less")!=-1)
+							.collect(Collectors.joining("\n"));
+					} else {
+						ptext = stream.collect(Collectors.joining("\n"));
+					}
+					pipedView.setDocumentText(ptext);
+					LOG.log(Level.FINE,"INFO document text to:"+ptext);
+				} catch (IOException ioe) { ioe.printStackTrace(); throw new AnalysisEngineProcessException(ioe);}
+
+
 			} else {
 				//System.out.println("Could not find expected pipe file:"+pfile.getPath());
 				pfile = new File(SemEval2015Constants.defaultDevelPath+File.separator+type+
