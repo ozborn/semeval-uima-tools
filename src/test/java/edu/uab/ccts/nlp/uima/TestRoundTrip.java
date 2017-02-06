@@ -45,7 +45,7 @@ public class TestRoundTrip {
 		
 		AggregateBuilder builder = new AggregateBuilder();
 		builder.add(SemEval2015GoldAttributeParserAnnotator.getTestingDescription());
-		builder.add(SemEval2015Task2Consumer.getCuilessDescription(output_dir));
+		builder.add(SemEval2015Task2Consumer.getDescription(output_dir));
 		for (@SuppressWarnings("unused") JCas jcas : SimplePipeline.iteratePipeline(crd, builder.createAggregateDescription())) {}
 		return passed;
 	}

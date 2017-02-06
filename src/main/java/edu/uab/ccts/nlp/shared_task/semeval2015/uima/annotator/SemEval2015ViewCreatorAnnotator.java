@@ -14,7 +14,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Level;
 import org.apache.uima.util.Logger;
-import org.uimafit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
 
 import edu.uab.ccts.nlp.shared_task.semeval2015.SemEval2015Constants;
 
@@ -31,9 +31,21 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 	public static final String PARAM_TRAINING_PATH = "SemEval2015TrainingPath";
 	@ConfigurationParameter(
 			name = PARAM_TRAINING_PATH,
-			description = "path to training directory"
+			description="Path of SemEval 2015 Training files",
+			mandatory=true
 	)
-	private String SemEval2015TrainingPath = SemEval2015Constants.oldTrainingPath; //Needed default not working FIXME
+	private String SemEval2015TrainingPath; 
+	
+	public static final String PARAM_CUILESS_ONLY = "cuilessOnly";
+	@ConfigurationParameter(
+			name = PARAM_CUILESS_ONLY,
+			description="True if only CUI-less disorders should be read into views ",
+			mandatory=false,
+			defaultValue="false"
+	)
+	private boolean cuilessOnly; 
+
+	
 	private Logger LOG = null; 
 
 
@@ -59,6 +71,10 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 		} 
 		LOG.log(Level.FINEST,"Type:"+type+" Prefix:"+prefix);
 		LOG.log(Level.FINE,"SemEval2015 Training Path:"+SemEval2015TrainingPath);
+		if(SemEval2015TrainingPath==null) {
+			LOG.log(Level.SEVERE,"Null value for SemEval2015TrainingPath");
+			throw new AnalysisEngineProcessException();
+		}
 		String original_textfile_name = SemEval2015TrainingPath+File.separator+type+
 				File.separator+prefix+"."+SemEval2015Constants.SEMEVAL_TEXT_FILE_EXTENSION;
 		String pipefilename = SemEval2015TrainingPath+File.separator+type+
@@ -101,13 +117,33 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 
 
 	public static AnalysisEngineDescription createAnnotatorDescription(String training_path)
-			throws ResourceInitializationException {
-
-		return AnalysisEngineFactory.createEngineDescription(
+		throws ResourceInitializationException {
+			return AnalysisEngineFactory.createEngineDescription(
 				SemEval2015ViewCreatorAnnotator.class,
 				SemEval2015ViewCreatorAnnotator.PARAM_TRAINING_PATH,
 				training_path
-				);
+			);
+	}
+
+	
+	
+	/**
+	 * 
+	 * @param training_path Path of SemEval 2015 data
+	 * @param createOnlyCuiless true if only CUI-less annotations should be read in
+	 * @return
+	 * @throws ResourceInitializationException
+	 */
+	public static AnalysisEngineDescription createDescription(String training_path,
+			boolean createOnlyCuiless)
+		throws ResourceInitializationException {
+			return AnalysisEngineFactory.createEngineDescription(
+				SemEval2015ViewCreatorAnnotator.class,
+				SemEval2015ViewCreatorAnnotator.PARAM_TRAINING_PATH,
+				training_path,
+				SemEval2015ViewCreatorAnnotator.PARAM_CUILESS_ONLY,
+				createOnlyCuiless
+			);
 	}
 
 

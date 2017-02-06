@@ -47,7 +47,6 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 			defaultValue="target/template_results/")
 	private String outputDir = "target/semeval_formt_output/";
 
-
 	public static boolean VERBOSE = false;
 
 	public void initialize(UimaContext context) throws ResourceInitializationException
@@ -242,11 +241,11 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 
 	/**
 	 * Returns a descriptor for a Consumer that writes annotations to target directory
-	 * @param target_directory
+	 * @param target_directory Path to write SemEval Formatted DiseaseDisorders to
 	 * @return
 	 * @throws ResourceInitializationException
 	 */
-	public static AnalysisEngineDescription getCuilessDescription(String target_directory) throws ResourceInitializationException {
+	public static AnalysisEngineDescription getDescription(String target_directory) throws ResourceInitializationException {
 		return AnalysisEngineFactory.createEngineDescription(
 				SemEval2015Task2Consumer.class
 				,PARAM_OUTPUT_DIRECTORY
