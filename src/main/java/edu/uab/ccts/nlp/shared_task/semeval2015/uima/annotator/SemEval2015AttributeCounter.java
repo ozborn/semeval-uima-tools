@@ -17,6 +17,7 @@ import org.cleartk.semeval2015.type.DisorderSpan;
 import edu.uab.ccts.nlp.shared_task.semeval2015.SemEval2015Constants;
 
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
+import org.apache.uima.fit.component.JCasConsumer_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.fit.util.JCasUtil;
@@ -32,6 +33,7 @@ import java.util.List;
  * @author ozborn
  *
  */
+//public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 
 	public static final String PARAM_OUTPUT_DIRECTORY = "outputDir";
@@ -39,39 +41,32 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 			name = PARAM_OUTPUT_DIRECTORY,
 			description = "Path to the output directory for SemEval Counting",
 			defaultValue="target/")
-	private String outputDir = "target/Semeval2015CountResults.tsv";
+	private String outputDir = "target/Semeval2015CountResults";
 
+	public static final String PARAM_OUTPUT_FILENAME = "allData";
+	@ConfigurationParameter(
+			name = PARAM_OUTPUT_FILENAME,
+			description = "Filename in output directory for SemEval Counting",
+			defaultValue="allCounts.txt")
+	private String allData;
 
-	public void initialize(UimaContext context) throws ResourceInitializationException
-	{
-		super.initialize(context);
-		try {
-			File out = new File(outputDir);
-			if (!out.exists())
-			{
-				if (!out.mkdirs()) this.getContext().getLogger().log(Level.WARNING,""
-						+ "Could not make directory " + outputDir);
-			} else
-			{
-				this.getContext().getLogger().log(Level.CONFIG,outputDir + " exists!");
-			}
-		} catch (Exception e)
-		{
-			e.printStackTrace();
-		}
-	}
+	private String allCountPath=outputDir+File.separator+allData;
+
 
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException
 	{
 		JCas appView = null;
 		String docid = null, filepath = null;
+		this.getContext().getLogger().log(Level.FINE,"Writing to directory:"+outputDir);
+		this.getContext().getLogger().log(Level.FINE,"Writing globally to filename:"+allCountPath);
 		try
 		{
-			appView = JCasUtil.getView(aJCas,SemEval2015Constants.APP_VIEW,aJCas.getView(SemEval2015Constants.GOLD_VIEW));
+			appView = JCasUtil.getView(aJCas,SemEval2015Constants.GOLD_VIEW,false);
+			//appView = JCasUtil.getView(aJCas,SemEval2015Constants.APP_VIEW,aJCas.getView(SemEval2015Constants.GOLD_VIEW));
 			if(!JCasUtil.exists(appView, DiseaseDisorder.class)) {
 				this.getContext().getLogger().log(Level.WARNING,
-						"No DiseaseDisorders found in either APP_VIEW or GOLD_VIEW/default");
+						"No DiseaseDisorders found in GOLD_VIEW/default");
 			}
 
 			for (DocumentID di : JCasUtil.select(appView, DocumentID.class))
@@ -92,20 +87,17 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 			e.printStackTrace();
 			throw new AnalysisEngineProcessException(e);
 		}
-		try
-		{
+		
+		try (Writer allwriter = new FileWriter(allCountPath,true)){
 			Writer writer = new FileWriter(filepath);
-			writer.write("DocID|Spans|Disorder|Negation|Subject|Uncertainity|Course|Severity|Conditional|Generic|Body|\n");
-			//TreeSet<String> ordered_doc = new TreeSet<String>();
 			for (DiseaseDisorder ds : JCasUtil.select(appView, DiseaseDisorder.class))
 			{
 				associateSpans(appView, ds);
 				String results = getDiseaseDisorderSemEval2015Counts(docid, ds);
-				//ordered_doc.add(results);
-				this.getContext().getLogger().log(Level.FINEST,results);
+				this.getContext().getLogger().log(Level.FINER,results);
 				writer.write(results + "\n"); 
+				allwriter.write(results + "\n"); 
 			}
-			//for(String s : ordered_doc) { writer.write(s + "\n"); }
 			writer.close();
 		} catch (Exception e)
 		{
@@ -117,6 +109,7 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 	 */
 	private String getDiseaseDisorderSemEval2015Counts(String docid, DiseaseDisorder dd )
 	{
+		int countall = 0;
 		StringBuffer output_lines = new StringBuffer(2000);
 		output_lines.append(docid);
 		output_lines.append(SemEval2015Constants.OUTPUT_SEPERATOR);
@@ -128,15 +121,26 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 			if (i != spans.size() - 1) output_lines.append(",");
 		}
 		output_lines.append(SemEval2015Constants.OUTPUT_SEPERATOR);
-		output_lines.append(dd.getCuis().get(0).split(",").length);
-		/*
-		for(int i=0;i<dd.getCuis().size();i++){
-			if(i!=dd.getCuis().size()-1) output_lines.append(dd.getCuis(i)+" ");
-			else output_lines.append(dd.getCuis(i));
-		}
-		*/
+		//output_lines.append(dd.getCuis().get(0).split(" ").length);
+		output_lines.append(dd.getCuis().size());
+		countall = dd.getCuis().size();
+		//for(int i=0;i<dd.getCuis().size();i++){
+		//	this.getContext().getLogger().log(Level.INFO,i+":"+dd.getCuis(i));
+			//if(i!=dd.getCuis().size()-1) output_lines.append(dd.getCuis(i)+" ");
+			//else output_lines.append(dd.getCuis(i));
+		//}
 		output_lines.append(SemEval2015Constants.OUTPUT_SEPERATOR);
 		FSArray atts = dd.getAttributes();
+	
+		if( fetchAttributeCount(atts, SemEval2015Constants.NEGATION_RELATION).indexOf("0")==-1) countall++;
+		if( fetchAttributeCount(atts, SemEval2015Constants.SUBJECT_RELATION).indexOf("0")==-1) countall++;
+		if( fetchAttributeCount(atts, SemEval2015Constants.UNCERTAINITY_RELATION).indexOf("0")==-1) countall++;
+		if( fetchAttributeCount(atts, SemEval2015Constants.COURSE_RELATION).indexOf("0")==-1) countall++;
+		if( fetchAttributeCount(atts, SemEval2015Constants.SEVERITY_RELATION).indexOf("0")==-1) countall++;
+		if( fetchAttributeCount(atts, SemEval2015Constants.CONDITIONAL_RELATION).indexOf("0")==-1) countall++;
+		if( fetchAttributeCount(atts, SemEval2015Constants.GENERIC_RELATION).indexOf("0")==-1) countall++;
+		if( fetchAttributeCount(atts, SemEval2015Constants.BODY_RELATION).indexOf("0")==-1) countall++;
+		
 		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.NEGATION_RELATION));
 		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.SUBJECT_RELATION));
 		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.UNCERTAINITY_RELATION));
@@ -147,7 +151,7 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.BODY_RELATION));
 		//output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.DOCTIME_RELATION));
 		//output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.TEMPORAL_RELATION));
-		//		System.out.println();
+		output_lines.append(countall+"|");
 		return output_lines.toString();
 	}
 
@@ -209,9 +213,13 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 	}
 
 
-	public static AnalysisEngineDescription getDescription() throws ResourceInitializationException {
-		return AnalysisEngineFactory.createEngineDescription(SemEval2015AttributeCounter.class,
-				PARAM_OUTPUT_DIRECTORY,"target/Semeval2015CountResults");
+	public static AnalysisEngineDescription getDescription(String dir, String fn) 
+			throws ResourceInitializationException {
+		return AnalysisEngineFactory.createEngineDescription(
+				SemEval2015AttributeCounter.class,
+				PARAM_OUTPUT_DIRECTORY,dir,
+				PARAM_OUTPUT_FILENAME,fn
+				);
 	}	
 
 

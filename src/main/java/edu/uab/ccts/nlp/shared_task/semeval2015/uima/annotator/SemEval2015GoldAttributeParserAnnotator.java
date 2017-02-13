@@ -152,8 +152,8 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 		try
 		{
 			pipedView = jcas.getView(SemEval2015Constants.PIPED_VIEW);
-			//targetDestView = jcas.getView(SemEval2015Constants.GOLD_VIEW);
 			targetDestView = jcas.getView(destView);
+			this.getContext().getLogger().log(Level.FINEST,"Writing parsed semeval annotations to:"+destView);
 		} catch (CASException e)
 		{
 			e.printStackTrace();
@@ -175,6 +175,7 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 			}
 			docId = fields[dd_doc];
 			String cui_string = fields[dd_cui];
+			this.getContext().getLogger().log(Level.FINEST,"CUI_STRING:" + cui_string);
 			
 			//Handle Discontinuous Spans
 			String[] ddSpans = fields[dd_spans].split(",");
