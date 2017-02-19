@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -135,11 +136,12 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 	 */
 	private String readSemEvalFile(String pipedFilename, boolean cuilessonly) throws AnalysisEngineProcessException {
 		String ptext = null;
+		String regex = "(.)*\\d\\|CUI-less\\|(.)*";
 		try (Stream<String> stream = Files.lines(Paths.get(pipedFilename),Charset.forName("UTF-8"))) {
 			if(cuilessonly) { 
 					LOG.log(Level.FINE,"Doing CUILESS only");
 					ptext = stream
-					.filter(line -> line.indexOf("|CUI-less")!=-1)
+					.filter(line -> line.matches(regex))
 					.collect(Collectors.joining("\n"));
 			} else {
 				ptext = stream.collect(Collectors.joining("\n"));
