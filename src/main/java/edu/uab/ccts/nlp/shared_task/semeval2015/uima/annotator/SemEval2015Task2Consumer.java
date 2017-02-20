@@ -48,6 +48,7 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 	private String outputDir = "target/semeval_formt_output/";
 
 	public static boolean VERBOSE = false;
+	String docid = null;
 
 	public void initialize(UimaContext context) throws ResourceInitializationException
 	{
@@ -71,7 +72,7 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 	public void process(JCas aJCas) throws AnalysisEngineProcessException
 	{
 		JCas appView = null;
-		String docid = null, filepath = null;
+		String filepath = null;
 		try
 		{
 			appView = JCasUtil.getView(aJCas,SemEval2015Constants.APP_VIEW,aJCas.getView(SemEval2015Constants.GOLD_VIEW));
@@ -81,6 +82,8 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 				"No DiseaseDisorders found in either APP_VIEW or GOLD_VIEW/default "+
 				"nothing to write, exiting.");
 				return;
+			} else {
+				this.getContext().getLogger().log(Level.FINE,"Writing SemEval annotations from "+appView.getViewName());
 			}
 			for (DocumentID di : JCasUtil.select(appView, DocumentID.class))
 			{
@@ -205,9 +208,15 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 	public static FSArray associateSpans(JCas jCas, DiseaseDisorder dd, Logger logger)
 	{
 		List<DiseaseDisorderAttribute> atts = new ArrayList<>();
+		String docid=null;
+		for (DocumentID di : JCasUtil.select(jCas, DocumentID.class)) {
+			docid = di.getDocumentID();
+			break;
+		}
 		if(!JCasUtil.exists(jCas, DisorderRelation.class)) {
-			logger.log(Level.WARNING,"No disorder relations in "
-		    +dd.getCoveredText()+" from:"+dd.getBegin()+"="+dd.getEnd());
+			logger.log(Level.FINE,"No disorder relations in "+docid+"|"
+		    +dd.getCoveredText()+"|"+dd.getBegin()+"-"+dd.getEnd());
+			
 		}
 		for (DisorderRelation rel: JCasUtil.select(jCas, DisorderRelation.class))
 		{

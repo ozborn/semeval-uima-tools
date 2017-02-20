@@ -70,7 +70,8 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 	public static final int dt_norm = 19;
 	public static final int te_norm = 20;
 	public static final int te_cue = 21;
-	public static final int totalFields = SemEval2015Constants.TOTAL_FIELDS;
+	
+	
 	public static final String DISJOINT_SPAN = "dspan";
 	public static HashMap<String, String> stringCUIMap;
 	@ConfigurationParameter(
@@ -85,7 +86,17 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 			name = PARAM_DEST_VIEW,
 			description = "View to place SemEval parsed attributes in ")
 	protected String destView = null;
-	
+
+	public static final String PARAM_DO_TEMPORAL = "doTemporal";
+	@ConfigurationParameter(
+			name = PARAM_DO_TEMPORAL,
+			description = "Read in temporal semeval 2014 files",
+			mandatory = false
+			)
+	private boolean doTemporal = false;
+
+	public static int totalFields = SemEval2015Constants.TOTAL_FIELDS;
+
 	
 	public static void writeMapToFile(HashMap<String, String> stringCUIMap, File outputFile)
 	{
@@ -264,25 +275,7 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 						ui_norm, ui_cue, SemEval2015Constants.UNCERTAINITY_RELATION, disease);
 				extractAttribute(targetDestView, diseaseAtts, fields,
 						cc_norm, cc_cue, SemEval2015Constants.COURSE_RELATION, disease);
-				/*
-	String ccNorm = fields[cc_norm];
-	String ccOffsets = fields[cc_cue];
-	//Hack to handle errors in training discharge task 2 data (03087-026480.pipe, 17644-017974.pipe,15230-012950.pipe )
-	if(ccOffsets.equals("nul") || ccOffsets.equals("unmarked")) ccOffsets="null";
-	if (!ccOffsets.equals("null"))
-	{
-	String[] offsets = ccOffsets.split("-");
-	int begin = Integer.parseInt(offsets[0]);
-	int end = Integer.parseInt(offsets[1]);
-	DiseaseDisorderAttribute cc = new DiseaseDisorderAttribute(goldTextView, begin, end);
-	cc.setNorm(ccNorm);
-	cc.setAttributeType(SemEval2015Constants.COURSE_RELATION);
-	cc.addToIndexes();
-	diseaseAtts.add(cc);
-	createAttributeRelation(goldTextView, disease, cc);
-	}
-				 */
-				if (totalFields > 19)
+				if (doTemporal)
 				{
 					extractAttribute(targetDestView, diseaseAtts, fields,
 							te_norm, te_cue, SemEval2015Constants.TEMPORAL_RELATION, disease);

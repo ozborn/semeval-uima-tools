@@ -1,7 +1,6 @@
 package edu.uab.ccts.nlp.shared_task.semeval2015.uima.annotator;
 
 import org.apache.ctakes.typesystem.type.structured.DocumentID;
-import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
@@ -17,7 +16,6 @@ import org.cleartk.semeval2015.type.DisorderSpan;
 import edu.uab.ccts.nlp.shared_task.semeval2015.SemEval2015Constants;
 
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
-import org.apache.uima.fit.component.JCasConsumer_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.fit.util.JCasUtil;
@@ -33,7 +31,6 @@ import java.util.List;
  * @author ozborn
  *
  */
-//public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 
 	public static final String PARAM_OUTPUT_DIRECTORY = "outputDir";
@@ -51,13 +48,14 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 	private String allData;
 
 	private String allCountPath=outputDir+File.separator+allData;
+	String docid = null;
 
 
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException
 	{
 		JCas appView = null;
-		String docid = null, filepath = null;
+		String filepath = null;
 		this.getContext().getLogger().log(Level.FINE,"Writing to directory:"+outputDir);
 		this.getContext().getLogger().log(Level.FINE,"Writing globally to filename:"+allCountPath);
 		try
@@ -183,8 +181,8 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 		Logger logger = this.getContext().getLogger();
 		List<DiseaseDisorderAttribute> atts = new ArrayList<>();
 		if(!JCasUtil.exists(jCas, DisorderRelation.class)) {
-			logger.log(Level.WARNING,"No disorder relations in "
-		    +dd.getCoveredText()+" from:"+dd.getBegin()+"="+dd.getEnd());
+			logger.log(Level.FINE,"No disorder relations in "+docid+"|"
+		    +dd.getCoveredText()+"|"+dd.getBegin()+"-"+dd.getEnd());
 		}
 		for (DisorderRelation rel: JCasUtil.select(jCas, DisorderRelation.class))
 		{

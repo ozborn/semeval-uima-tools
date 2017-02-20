@@ -136,7 +136,7 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 	 */
 	private String readSemEvalFile(String pipedFilename, boolean cuilessonly) throws AnalysisEngineProcessException {
 		String ptext = null;
-		String regex = "(.)*\\d\\|CUI-less\\|(.)*";
+		String regex = "(.)*\\d\\|[Cc][Uu][Ii]-less\\|(.)*";
 		try (Stream<String> stream = Files.lines(Paths.get(pipedFilename),Charset.forName("UTF-8"))) {
 			if(cuilessonly) { 
 					LOG.log(Level.FINE,"Doing CUILESS only");
