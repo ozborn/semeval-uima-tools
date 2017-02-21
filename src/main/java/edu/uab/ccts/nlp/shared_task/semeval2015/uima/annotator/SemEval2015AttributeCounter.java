@@ -47,7 +47,6 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 			defaultValue="allCounts.txt")
 	private String allData;
 
-	private String allCountPath=outputDir+File.separator+allData;
 	String docid = null;
 
 
@@ -57,7 +56,7 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 		JCas appView = null;
 		String filepath = null;
 		this.getContext().getLogger().log(Level.FINE,"Writing to directory:"+outputDir);
-		this.getContext().getLogger().log(Level.FINE,"Writing globally to filename:"+allCountPath);
+		this.getContext().getLogger().log(Level.FINE,"Writing globally to filename:"+allData);
 		try
 		{
 			appView = JCasUtil.getView(aJCas,SemEval2015Constants.GOLD_VIEW,false);
@@ -86,7 +85,7 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 			throw new AnalysisEngineProcessException(e);
 		}
 		
-		try (Writer allwriter = new FileWriter(allCountPath,true)){
+		try (Writer allwriter = new FileWriter(allData,true)){
 			Writer writer = new FileWriter(filepath);
 			for (DiseaseDisorder ds : JCasUtil.select(appView, DiseaseDisorder.class))
 			{
