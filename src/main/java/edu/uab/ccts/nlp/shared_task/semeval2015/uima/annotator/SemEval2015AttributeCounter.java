@@ -1,6 +1,7 @@
 package edu.uab.ccts.nlp.shared_task.semeval2015.uima.annotator;
 
 import org.apache.ctakes.typesystem.type.structured.DocumentID;
+import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
@@ -14,6 +15,7 @@ import org.cleartk.semeval2015.type.DisorderRelation;
 import org.cleartk.semeval2015.type.DisorderSpan;
 
 import edu.uab.ccts.nlp.shared_task.semeval2015.SemEval2015Constants;
+import edu.uab.ccts.nlp.shared_task.semeval2015.SemEvalConfig;
 
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
@@ -22,9 +24,14 @@ import org.apache.uima.fit.util.JCasUtil;
 
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.Writer;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Properties;
+import java.util.Set;
 
 /**
  * Counts the number of attributes in a disorder in SemEval format files
@@ -48,6 +55,15 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 	private String allData;
 
 	String docid = null;
+	SemEvalConfig semconfig;
+
+
+	@Override
+	public void initialize(UimaContext context) throws ResourceInitializationException
+	{
+		super.initialize(context);
+		semconfig = new SemEvalConfig();
+	}
 
 
 	@Override
@@ -84,7 +100,7 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 			e.printStackTrace();
 			throw new AnalysisEngineProcessException(e);
 		}
-		
+
 		try (Writer allwriter = new FileWriter(allData,true)){
 			Writer writer = new FileWriter(filepath);
 			for (DiseaseDisorder ds : JCasUtil.select(appView, DiseaseDisorder.class))
@@ -106,6 +122,7 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 	 */
 	private String getDiseaseDisorderSemEval2015Counts(String docid, DiseaseDisorder dd )
 	{
+		Logger logger = this.getContext().getLogger();
 		int countall = 0;
 		StringBuffer output_lines = new StringBuffer(2000);
 		output_lines.append(docid);
@@ -118,29 +135,37 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 			if (i != spans.size() - 1) output_lines.append(",");
 		}
 		output_lines.append(SemEval2015Constants.OUTPUT_SEPERATOR);
-		//output_lines.append(dd.getCuis().get(0).split(" ").length);
 		output_lines.append(dd.getCuis().size());
 		countall = dd.getCuis().size();
-		//for(int i=0;i<dd.getCuis().size();i++){
-		//	this.getContext().getLogger().log(Level.INFO,i+":"+dd.getCuis(i));
-			//if(i!=dd.getCuis().size()-1) output_lines.append(dd.getCuis(i)+" ");
-			//else output_lines.append(dd.getCuis(i));
-		//}
+		HashSet<String>cuiSet = new HashSet<String>();
+		for(int i=0;i<dd.getCuis().size();i++){
+			this.getContext().getLogger().log(Level.FINER,"CUI@i"+i+":"+dd.getCuis(i));
+			cuiSet.add(dd.getCuis(i));
+		}
 		output_lines.append(SemEval2015Constants.OUTPUT_SEPERATOR);
 		FSArray atts = dd.getAttributes();
-	
+
+		cuiSet.addAll(fetchAttributeCuis(atts,SemEval2015Constants.NEGATION_RELATION));
+		cuiSet.addAll(fetchAttributeCuis(atts,SemEval2015Constants.SUBJECT_RELATION));
+		cuiSet.addAll(fetchAttributeCuis(atts,SemEval2015Constants.UNCERTAINTY_RELATION));
+		cuiSet.addAll(fetchAttributeCuis(atts,SemEval2015Constants.COURSE_RELATION));
+		cuiSet.addAll(fetchAttributeCuis(atts,SemEval2015Constants.SEVERITY_RELATION));
+		cuiSet.addAll(fetchAttributeCuis(atts,SemEval2015Constants.CONDITIONAL_RELATION));
+		cuiSet.addAll(fetchAttributeCuis(atts,SemEval2015Constants.GENERIC_RELATION));
+		cuiSet.addAll(fetchAttributeCuis(atts,SemEval2015Constants.BODY_RELATION));
+
 		if( fetchAttributeCount(atts, SemEval2015Constants.NEGATION_RELATION).indexOf("0")==-1) countall++;
 		if( fetchAttributeCount(atts, SemEval2015Constants.SUBJECT_RELATION).indexOf("0")==-1) countall++;
-		if( fetchAttributeCount(atts, SemEval2015Constants.UNCERTAINITY_RELATION).indexOf("0")==-1) countall++;
+		if( fetchAttributeCount(atts, SemEval2015Constants.UNCERTAINTY_RELATION).indexOf("0")==-1) countall++;
 		if( fetchAttributeCount(atts, SemEval2015Constants.COURSE_RELATION).indexOf("0")==-1) countall++;
 		if( fetchAttributeCount(atts, SemEval2015Constants.SEVERITY_RELATION).indexOf("0")==-1) countall++;
 		if( fetchAttributeCount(atts, SemEval2015Constants.CONDITIONAL_RELATION).indexOf("0")==-1) countall++;
 		if( fetchAttributeCount(atts, SemEval2015Constants.GENERIC_RELATION).indexOf("0")==-1) countall++;
 		if( fetchAttributeCount(atts, SemEval2015Constants.BODY_RELATION).indexOf("0")==-1) countall++;
-		
+
 		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.NEGATION_RELATION));
 		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.SUBJECT_RELATION));
-		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.UNCERTAINITY_RELATION));
+		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.UNCERTAINTY_RELATION));
 		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.COURSE_RELATION));
 		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.SEVERITY_RELATION));
 		output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.CONDITIONAL_RELATION));
@@ -149,6 +174,9 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 		//output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.DOCTIME_RELATION));
 		//output_lines.append(fetchAttributeCount(atts, SemEval2015Constants.TEMPORAL_RELATION));
 		output_lines.append(countall+"|");
+		output_lines.append(cuiSet.size()+"|");
+		if(countall!=cuiSet.size()) logger.log(Level.WARNING,"Disease CUI Counts not matching ("+
+				cuiSet.toString()+") for:"+output_lines);
 		return output_lines.toString();
 	}
 
@@ -174,14 +202,33 @@ public class SemEval2015AttributeCounter extends JCasAnnotator_ImplBase {
 		return out;
 	}
 
-	
+
+	private Set<String> fetchAttributeCuis(FSArray atts, String type)
+	{
+		HashSet<String> thecuis = new HashSet<String>();
+		if (atts != null)
+		{
+			for (int i = 0; i < atts.size(); i++)
+			{
+				DiseaseDisorderAttribute dda = (DiseaseDisorderAttribute) atts.get(i);
+				if (type.equals(dda.getAttributeType()))
+				{
+					String norm = dda.getNorm();
+					thecuis.addAll(semconfig.semevalNorm2Cui(type, norm));
+				}
+			}
+		}
+		return thecuis;
+	}
+
+
 	private FSArray associateSpans(JCas jCas, DiseaseDisorder dd)
 	{
 		Logger logger = this.getContext().getLogger();
 		List<DiseaseDisorderAttribute> atts = new ArrayList<>();
 		if(!JCasUtil.exists(jCas, DisorderRelation.class)) {
 			logger.log(Level.FINE,"No disorder relations in "+docid+"|"
-		    +dd.getCoveredText()+"|"+dd.getBegin()+"-"+dd.getEnd());
+					+dd.getCoveredText()+"|"+dd.getBegin()+"-"+dd.getEnd());
 		}
 		for (DisorderRelation rel: JCasUtil.select(jCas, DisorderRelation.class))
 		{

@@ -147,7 +147,7 @@ public class SemEval2015Task2Consumer extends JCasAnnotator_ImplBase {
 		FSArray atts = dd.getAttributes();
 		output_lines.append(fetchAttributeString(atts, SemEval2015Constants.NEGATION_RELATION));
 		output_lines.append(fetchAttributeString(atts, SemEval2015Constants.SUBJECT_RELATION));
-		output_lines.append(fetchAttributeString(atts, SemEval2015Constants.UNCERTAINITY_RELATION));
+		output_lines.append(fetchAttributeString(atts, SemEval2015Constants.UNCERTAINTY_RELATION));
 		output_lines.append(fetchAttributeString(atts, SemEval2015Constants.COURSE_RELATION));
 		output_lines.append(fetchAttributeString(atts, SemEval2015Constants.SEVERITY_RELATION));
 		output_lines.append(fetchAttributeString(atts, SemEval2015Constants.CONDITIONAL_RELATION));

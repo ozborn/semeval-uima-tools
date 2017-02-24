@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -142,7 +141,9 @@ public class SemEval2015ViewCreatorAnnotator extends JCasAnnotator_ImplBase {
 					LOG.log(Level.FINE,"Doing CUILESS only");
 					ptext = stream
 					.filter(line -> line.matches(regex))
-					.collect(Collectors.joining("\n"));
+					.distinct()
+					.collect(Collectors.joining("\n"))
+					;
 			} else {
 				ptext = stream.collect(Collectors.joining("\n"));
 			}

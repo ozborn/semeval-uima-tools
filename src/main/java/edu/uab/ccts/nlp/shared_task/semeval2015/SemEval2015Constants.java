@@ -3,6 +3,7 @@ package edu.uab.ccts.nlp.shared_task.semeval2015;
 import java.util.Hashtable;
 
 import org.apache.uima.cas.CAS;
+import org.apache.uima.util.Level;
 
 public class SemEval2015Constants
 {
@@ -30,8 +31,7 @@ public class SemEval2015Constants
 
         public static final String NEGATION_RELATION = "Negation";
         public static final String SUBJECT_RELATION = "Subject";
-        public static final String UNCERTAINITY_RELATION = "Uncertainity";
-        //public static final String UNCERTAINITY_RELATION = "Uncertainty"; //Correct spelling
+        public static final String UNCERTAINTY_RELATION = "Uncertainty";
         public static final String COURSE_RELATION = "Course";
         public static final String SEVERITY_RELATION = "Severity";
         public static final String CONDITIONAL_RELATION = "Conditional";
@@ -45,7 +45,7 @@ public class SemEval2015Constants
         static {
                 defaultNorms.put(NEGATION_RELATION, "no");
                 defaultNorms.put(SUBJECT_RELATION, "patient");
-                defaultNorms.put(UNCERTAINITY_RELATION, "no");
+                defaultNorms.put(UNCERTAINTY_RELATION, "no");
                 defaultNorms.put(COURSE_RELATION, "unmarked");
                 defaultNorms.put(SEVERITY_RELATION, "unmarked");
                 defaultNorms.put(CONDITIONAL_RELATION, "false");
@@ -66,5 +66,6 @@ public class SemEval2015Constants
 			System.getProperty("user.home")+
 			"/Dropbox/Public_NLP_Data/semeval-2015-task-14_updated/data/devel";
 
-
+	
+	
 }

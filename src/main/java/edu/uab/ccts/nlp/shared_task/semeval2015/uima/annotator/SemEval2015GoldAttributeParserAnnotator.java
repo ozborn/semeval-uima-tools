@@ -272,7 +272,7 @@ public class SemEval2015GoldAttributeParserAnnotator extends JCasAnnotator_ImplB
 				extractAttribute(targetDestView, diseaseAtts, fields,
 						sc_norm, sc_cue, SemEval2015Constants.SUBJECT_RELATION, disease);
 				extractAttribute(targetDestView, diseaseAtts, fields,
-						ui_norm, ui_cue, SemEval2015Constants.UNCERTAINITY_RELATION, disease);
+						ui_norm, ui_cue, SemEval2015Constants.UNCERTAINTY_RELATION, disease);
 				extractAttribute(targetDestView, diseaseAtts, fields,
 						cc_norm, cc_cue, SemEval2015Constants.COURSE_RELATION, disease);
 				if (doTemporal)
