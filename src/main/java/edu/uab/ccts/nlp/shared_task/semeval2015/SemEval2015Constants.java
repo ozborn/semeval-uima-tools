@@ -28,6 +28,7 @@ public class SemEval2015Constants
 
         public static final String OUTPUT_SEPERATOR = "|";
         public static final int TOTAL_FIELDS = 19; //22 in previous version
+        public static final String CUILESS = "CUI-less";
 
         public static final String NEGATION_RELATION = "Negation";
         public static final String SUBJECT_RELATION = "Subject";
